@@ -1,0 +1,15 @@
+Cara buka =
+<!-- ! localhost/collaboration (salah) -->
+masuk git bash/cmd/terminal = ketik php artisan serve, ambil http://127.0.0.1:8000, paste di url (benar)
+
+folder resources/views = folder tampat bikin halaman views
+
+folder public = tampat naro img, css, js, secara terpisah
+
+contoh
+<link rel="stylesheet" href="css/style.css">, <link rel="stylesheet" href="js/style.js">
+
+Kalo ekstensi file nya php, tambahkan blade di tengahnya, seperti welcome
+Kalo js bebas
+
+gud luk
