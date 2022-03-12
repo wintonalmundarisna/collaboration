@@ -14,6 +14,8 @@ class User extends Authenticatable
 
     protected $guarded = ['id'];
 
+    protected $table = 'users';
+
     protected $hidden = [
         'password',
         'remember_token',
@@ -24,6 +26,6 @@ class User extends Authenticatable
     ];
 
     public function quotes() {
-        return $this->hasMany(Quotes::class);
+        return $this->hasOne(Quotes::class);
     }
 }

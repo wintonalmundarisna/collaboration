@@ -52,7 +52,7 @@
       <div class="container">
         <div class="row mt-2">
           <div class="col-md-6 my-auto">
-            <h3 class="mb-2"><span>Hai</span>, {{ auth()->user()->nama }} :)</h3>
+            <h3 class="mb-2"><span>Hai</span>, Nama :)</h3>
             <h1 class="mb-3">Ayo Mulai Membuat Quote-mu Sekarang!</h1>
             <button class="btn-buat mt-3 mb-3"><a href="/daftar" target="_blank">Buat Quote</a></button>
             <button class="btn-edit mt-3 mb-3"><a href="/daftar" target="_blank">Edit Quote</a></button>
@@ -82,7 +82,7 @@
                             <div class="col-md-4 m-auto">
                                 <div class="card-box text-center py-5">
                                     <div class="img-card">
-                                        <img src="/asset/postingan/profile.png" alt="Quottime">
+                                        <img src="/asset/postingan/Winton Almundarisna.jpg" alt="Quottime">
                                     </div>
                                     <div class="img-body">
                                         <p>ryan</p>
@@ -159,13 +159,13 @@
               <div class="col-md-4 mt-3">
                 <div class="card-box text-center py-5">
                         <div class="img-card">
-                            <img src="/asset/postingan/profile.png" alt="Quottime">
+                            <img src="https://source.unsplash.com/random/373x373?{{ $u->quotes->gambar }}" alt="Quottime">
                         </div>
                         <div class="img-body">
                             <p>{{ $u->nama }} </p>
                         </div>
                         <div class="quote-text p-2">
-                          <p><i>Isi</i></p>
+                          <p><i>{{ $u->quotes->isi }}</i></p>
                         </div>
                       </div>  
                     </div>

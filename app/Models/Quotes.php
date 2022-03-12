@@ -8,8 +8,9 @@ use Illuminate\Database\Eloquent\Model;
 class Quotes extends Model
 {
     use HasFactory;
+    protected $guarded = ['id'];
 
-    public function user() {
+    public function users() {
         return $this->belongsTo(User::class);
     }
 }
