@@ -12,10 +12,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Quicksand:wght@300;600;700&display=swap" rel="stylesheet" />
 
     <!-- CSS -->
-    <link rel="stylesheet" href="../../public/css/quottime.css" />
+    <link rel="stylesheet" href="/css/quottime.css" />
 
     <!-- Fav-icon -->
-    <link rel="shortcut icon" href="../../public/asset/logo-quottime.png" />
+    <link rel="shortcut icon" href="/asset/logo-quottime.png" />
 
     <title>Quottime | Temukan Quote-mu Disini.</title>
   </head>
@@ -23,20 +23,23 @@
     <!-- start navbar -->
     <nav class="navbar sticky-top navbar-expand-lg navbar-light">
       <div class="container">
-        <a class="navbar-brand" href="quottime.html" style="color: #6c63ff"><img src="../../public/asset/logo-quottime.png" alt="" width="30" height="30" class="d-inline-block align-text-center" /> Quottime</a>
+        <a class="navbar-brand" href="/quottime" style="color: #6c63ff"><img src="/asset/logo-quottime.png" alt="" width="30" height="30" class="d-inline-block align-text-center" /> Quottime</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav ms-auto">
             <li class="nav-item">
-              <a class="nav-link active" style="color: #6c63ff" aria-current="page" href="quottime.html">Beranda</a>
+              <a class="nav-link active" style="color: #6c63ff" aria-current="page" href="/quottime">Beranda</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" style="color: #6c63ff" aria-current="page" href="quotes.html">Quotes</a>
+              <a class="nav-link" style="color: #6c63ff" aria-current="page" href="/quotes">Quotes</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" style="color: #6c63ff" aria-current="page" href="login.html">Logout</a>
+              <form action="/logout" method="post">
+                @csrf
+              <button class="nav-link bg-transparent border-0" style="color: #6c63ff" aria-current="page" type="submit">Logout</button>
+            </form>
             </li>
           </ul>
         </div>
@@ -49,13 +52,13 @@
       <div class="container">
         <div class="row mt-2">
           <div class="col-md-6 my-auto">
-            <h3 class="mb-2"><span>Hai</span>, Nama User :)</h3>
+            <h3 class="mb-2"><span>Hai</span>, {{ auth()->user()->nama }} :)</h3>
             <h1 class="mb-3">Ayo Mulai Membuat Quote-mu Sekarang!</h1>
-            <button class="btn-buat mt-3 mb-3"><a href="daftar.html" target="_blank">Buat Quote</a></button>
-            <button class="btn-edit mt-3 mb-3"><a href="daftar.html" target="_blank">Edit Quote</a></button>
+            <button class="btn-buat mt-3 mb-3"><a href="/daftar" target="_blank">Buat Quote</a></button>
+            <button class="btn-edit mt-3 mb-3"><a href="/daftar" target="_blank">Edit Quote</a></button>
           </div>
           <div class="col-md-6">
-            <img src="../../public/asset/hero-img-1.png" alt="Quottime" class="w-100" />
+            <img src="/asset/hero-img-1.png" alt="Quottime" class="w-100" />
           </div>
         </div>
       </div>
@@ -79,7 +82,7 @@
                             <div class="col-md-4 m-auto">
                                 <div class="card-box text-center py-5">
                                     <div class="img-card">
-                                        <img src="../../public/asset/postingan/profile.png" alt="Quottime">
+                                        <img src="/asset/postingan/profile.png" alt="Quottime">
                                     </div>
                                     <div class="img-body">
                                         <p>ryan</p>
@@ -96,7 +99,7 @@
                             <div class="col-md-4 m-auto">
                                 <div class="card-box text-center py-5">
                                     <div class="img-card">
-                                        <img src="../../public/asset/postingan/profile.png" alt="Quottime">
+                                        <img src="/asset/postingan/profile.png" alt="Quottime">
                                     </div>
                                     <div class="img-body">
                                         <p>winton</p>
@@ -113,7 +116,7 @@
                             <div class="col-md-4 m-auto">
                                 <div class="card-box text-center py-5">
                                     <div class="img-card">
-                                        <img src="../../public/asset/postingan/profile.png" alt="Quottime">
+                                        <img src="/asset/postingan/profile.png" alt="Quottime">
                                     </div>
                                     <div class="img-body">
                                         <p>ryan</p>
@@ -150,89 +153,28 @@
                     <h4 class="title-judul">Quotes</h4>
                 </div>
             </div>
+            
             <div class="row mt-4">
-                <div class="col-md-4 mt-3">
-                    <div class="card-box text-center py-5">
+              @foreach ($user as $u)
+              <div class="col-md-4 mt-3">
+                <div class="card-box text-center py-5">
                         <div class="img-card">
-                            <img src="../../public/asset/postingan/profile.png" alt="Quottime">
+                            <img src="/asset/postingan/profile.png" alt="Quottime">
                         </div>
                         <div class="img-body">
-                            <p>ryan</p>
+                            <p>{{ $u->nama }} </p>
                         </div>
                         <div class="quote-text p-2">
-                            <p><i>"Berbuat baik adalah kewajiban, tetapi merasa lebih baik adalah sebuah kesalahan."</i></p>
+                          <p><i>Isi</i></p>
                         </div>
-                    </div>  
-                </div>
-                <div class="col-md-4 mt-3">
-                    <div class="card-box text-center py-5">
-                        <div class="img-card">
-                            <img src="../../public/asset/postingan/profile.png" alt="Quottime">
-                        </div>
-                        <div class="img-body">
-                            <p>winton</p>
-                        </div>
-                        <div class="quote-text p-2 ">
-                            <p><i>"Berbuat baik adalah kewajiban, tetapi merasa lebih baik adalah sebuah kesalahan."</i></p>
-                        </div>
-                    </div>  
-                </div>
-                <div class="col-md-4 mt-3">
-                    <div class="card-box text-center py-5">
-                        <div class="img-card">
-                            <img src="../../public/asset/postingan/profile.png" alt="Quottime">
-                        </div>
-                        <div class="img-body">
-                            <p>ryan</p>
-                        </div>
-                        <div class="quote-text p-2">
-                            <p><i>"Berbuat baik adalah kewajiban, tetapi merasa lebih baik adalah sebuah kesalahan."</i></p>
-                        </div>
-                    </div>  
-                </div>
-                <div class="col-md-4 mt-3">
-                    <div class="card-box text-center py-5">
-                        <div class="img-card">
-                            <img src="../../public/asset/postingan/profile.png" alt="Quottime">
-                        </div>
-                        <div class="img-body">
-                            <p>ryan</p>
-                        </div>
-                        <div class="quote-text p-2">
-                            <p><i>"Berbuat baik adalah kewajiban, tetapi merasa lebih baik adalah sebuah kesalahan."</i></p>
-                        </div>
-                    </div>  
-                </div>
-                <div class="col-md-4 mt-3">
-                    <div class="card-box text-center py-5">
-                        <div class="img-card">
-                            <img src="../../public/asset/postingan/profile.png" alt="Quottime">
-                        </div>
-                        <div class="img-body">
-                            <p>winton</p>
-                        </div>
-                        <div class="quote-text p-2">
-                            <p><i>"Berbuat baik adalah kewajiban, tetapi merasa lebih baik adalah sebuah kesalahan."</i></p>
-                        </div>
-                    </div>  
-                </div>
-                <div class="col-md-4 mt-3">
-                    <div class="card-box text-center py-5">
-                        <div class="img-card">
-                            <img src="../../public/asset/postingan/profile.png" alt="Quottime">
-                        </div>
-                        <div class="img-body">
-                            <p>ryan</p>
-                        </div>
-                        <div class="quote-text p-2">
-                            <p><i>"Berbuat baik adalah kewajiban, tetapi merasa lebih baik adalah sebuah kesalahan."</i></p>
-                        </div>
-                    </div>  
-                </div>
-            </div>
+                      </div>  
+                    </div>
+                    @endforeach
+                  </div>
+
             <div class="row text-center">
                 <div class="col-md-12">
-                    <button class="btn-read-more"><a href="quotes.html">Seluruhnya</a></button>
+                    <button class="btn-read-more"><a href="/quotes">Seluruhnya</a></button>
                 </div>
             </div>
         </div>

@@ -20,12 +20,12 @@
         />
 
         <!-- CSS -->
-        <link rel="stylesheet" href="../../public/css/style.css" />
+        <link rel="stylesheet" href="/css/style.css" />
 
         <!-- Fav-icon -->
-        <link rel="shortcut icon" href="../../public/asset/logo-quottime.png" />
+        <link rel="shortcut icon" href="/asset/logo-quottime.png" />
 
-        <title>Quottime | Login</title>
+        <title>Quottime | Daftar</title>
     </head>
     <body>
         <!-- start navbar -->
@@ -50,9 +50,54 @@
         <section>
             <div class="container">
                 <div class="row mt-2">
+                    <div class="col-md-6 mt-3 img-daftar">
+                        <img
+                            src="/asset/Sign-Up-img.png"
+                            alt="Quottime"
+                            class="w-100"
+                        />
+                    </div>
                     <div class="col-md-6 my-auto">
-                        <form>
-                            <h4 class="text-header mb-4">Login</h4>
+                        
+                        @if (session()->has('success'))
+                        <div class="alert alert-success alert-dismissible fade show" role="alert">
+                            <strong>{{ session('success') }}</strong>
+                            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                        </div>
+                        @endif
+
+                        @if (session()->has('hasError'))
+                        <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                            <strong>{{ session('hasError') }}</strong>
+                            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                        </div>
+                        @endif
+
+                        <form action="/daftar" method="POST">
+                            @csrf
+                            <h4 class="text-header mb-4">Daftar</h4>
+                            <div class="mb-3">
+                                <label
+                                    for="exampleFormControlInput1"
+                                    class="form-label"
+                                    >Nama Lengkap</label
+                                >
+                                <input
+                                    type="text"
+                                    id="exampleFormControlInput1"
+                                    placeholder="Nama Lengkap"
+                                    name="nama"
+                                    class="form-control @error('nama') is-invalid @enderror"
+                                    required
+                                    autofocus
+                                    value="{{ old('nama') }}"
+                                />
+                                @error('nama')
+                                    <div class="invalid-feedback">
+                                        {{ $message }}
+                                    </div>
+                                @enderror
+                            </div>
                             <div class="mb-3">
                                 <label
                                     for="exampleFormControlInput1"
@@ -61,11 +106,18 @@
                                 >
                                 <input
                                     type="email"
-                                    class="form-control"
+                                    class="form-control @error('email') is-invalid @enderror"
                                     id="exampleFormControlInput1"
                                     placeholder="name@example.com"
                                     name="email"
+                                    required
+                                    value="{{ old('email') }}"
                                 />
+                            @error('email')
+                                <div class="invalid-feedback">
+                                    {{ $message }}
+                                </div>
+                            @enderror
                             </div>
                             <div class="mb-3">
                                 <label
@@ -75,33 +127,26 @@
                                 >
                                 <input
                                     type="password"
-                                    class="form-control"
+                                    class="form-control @error('password') is-invalid @enderror"
                                     id="exampleFormControlInput1"
                                     placeholder="Password"
                                     name="password"
+                                    required
                                 />
+                                @error('password')
+                                <div class="invalid-feedback">
+                                    {{ $message }}
+                                </div>
+                            @enderror
                             </div>
 
-                            <button class="btn-daftar-login mt-2">
-                                <a href="#">Login</a>
-                            </button>
+                            <button class="btn-daftar-login mt-2 text-light" type="submit">Daftar</button>
 
                             <p class="mt-2">
-                                <a href="lupa-password.html">Lupa Password?</a>
-                            </p>
-
-                            <p class="mt-2">
-                                Tidak Memiliki Akun?
-                                <a href="daftar.html">Daftar</a>
+                                Sudah Memiliki Akun?
+                                <a href="/login">Login</a>
                             </p>
                         </form>
-                    </div>
-                    <div class="col-md-6 mt-3 img-daftar">
-                        <img
-                            src="../../public/asset/Sign-In-img.png"
-                            alt="Quottime"
-                            class="w-100"
-                        />
                     </div>
                 </div>
             </div>
