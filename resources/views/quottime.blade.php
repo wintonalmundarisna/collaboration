@@ -52,7 +52,7 @@
       <div class="container">
         <div class="row mt-2">
           <div class="col-md-6 my-auto">
-            <h3 class="mb-2"><span>Hai</span>, Nama :)</h3>
+            <h3 class="mb-2"><span>Hai</span>, {{ auth()->user()->nama }} :)</h3>
             <h1 class="mb-3">Ayo Mulai Membuat Quote-mu Sekarang!</h1>
             <button class="btn-buat mt-3 mb-3"><a href="/daftar" target="_blank">Buat Quote</a></button>
             <button class="btn-edit mt-3 mb-3"><a href="/daftar" target="_blank">Edit Quote</a></button>
