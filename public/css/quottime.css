@@ -117,15 +117,23 @@ h1 {
     background-color: var(--color-1);
     border-radius: 10px;
     box-sizing: border-box;
+    position: relative;
 }
 
 .img-card {
-    width: 200px;
-    height: auto;
+    width: 60px;
+    height: 60px;
     border-radius: 50%;
-    background-size: contain;
-    position: absolute;
-    background-color: #0c1b31;
+    background-color: transparent;
+    position: relative;
+    margin-right: auto;
+    margin-left: auto;
+    overflow: hidden;
+}
+
+.img-card img {
+    width: 100%;
+    background-size: cover;
 }
 
 .img-body p {

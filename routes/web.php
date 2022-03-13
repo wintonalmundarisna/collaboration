@@ -23,7 +23,7 @@ Route::post('/login', [LoginController::class, 'login']);
 Route::post('/logout', [LoginController::class, 'logout']);
 
 
-Route::get('/quottime', [QuottimeController::class, 'index'])->middleware('guest');
+Route::get('/quottime', [QuottimeController::class, 'index'])->middleware('auth');
 
 
 Route::get('/lupa-password', function () {

@@ -82,7 +82,7 @@
                             <div class="col-md-4 m-auto">
                                 <div class="card-box text-center py-5">
                                     <div class="img-card">
-                                        <img src="/asset/postingan/Winton Almundarisna.jpg" alt="Quottime">
+                                        <img src="https://source.unsplash.com/random/201x201" alt="Quottime">
                                     </div>
                                     <div class="img-body">
                                         <p>ryan</p>
@@ -99,7 +99,7 @@
                             <div class="col-md-4 m-auto">
                                 <div class="card-box text-center py-5">
                                     <div class="img-card">
-                                        <img src="/asset/postingan/profile.png" alt="Quottime">
+                                        <img src="https://source.unsplash.com/random/201x201" alt="Quottime">
                                     </div>
                                     <div class="img-body">
                                         <p>winton</p>
@@ -116,7 +116,7 @@
                             <div class="col-md-4 m-auto">
                                 <div class="card-box text-center py-5">
                                     <div class="img-card">
-                                        <img src="/asset/postingan/profile.png" alt="Quottime">
+                                        <img src="https://source.unsplash.com/random/201x201" alt="Quottime">
                                     </div>
                                     <div class="img-body">
                                         <p>ryan</p>
@@ -158,14 +158,14 @@
               @foreach ($user as $u)
               <div class="col-md-4 mt-3">
                 <div class="card-box text-center py-5">
-                        <div class="img-card">
-                            <img src="https://source.unsplash.com/random/373x373?{{ $u->quotes->gambar }}" alt="Quottime">
+                        <div class="img-card position-relative mx-auto">
+                            <img src="asset/postingan/Winton Almundarisna.jpg" alt="Quottime" class="position-absolute top-50 start-50 translate-middle">
                         </div>
                         <div class="img-body">
                             <p>{{ $u->nama }} </p>
                         </div>
                         <div class="quote-text p-2">
-                          <p><i>{{ $u->quotes->isi }}</i></p>
+                          <p><i>isi</i></p>
                         </div>
                       </div>  
                     </div>
