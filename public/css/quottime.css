@@ -112,16 +112,28 @@ h1 {
 
 /* postingan */
 .card-box {
-  width: 100%;
-  height: 350px;
-  background-color: var(--color-1);
-  border-radius: 10px;
-  box-sizing: border-box;
+    width: 100%;
+    height: 350px;
+    background-color: var(--color-1);
+    border-radius: 10px;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.img-card {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: transparent;
+    position: relative;
+    margin-right: auto;
+    margin-left: auto;
+    overflow: hidden;
 }
 
 .img-card img {
-  width: 20%;
-  border-radius: 50%;
+    width: 100%;
+    background-size: cover;
 }
 
 .img-body p {

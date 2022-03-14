@@ -84,7 +84,7 @@
                             <div class="col-md-4 m-auto">
                                 <div class="card-box text-center py-5">
                                     <div class="img-card">
-                                        <img src="/asset/postingan/Winton Almundarisna.jpg" alt="Quottime">
+                                        <img src="https://source.unsplash.com/random/201x201" alt="Quottime">
                                     </div>
                                     <div class="img-body">
                                         <p>{{ $data[0]->user->nama }}</p>
@@ -124,7 +124,7 @@
                               <div class="col-md-4 m-auto">
                                 <div class="card-box text-center py-5">
                                     <div class="img-card">
-                                        <img src="/asset/postingan/profile.png" alt="Quottime">
+                                        <img src="https://source.unsplash.com/random/201x201" alt="Quottime">
                                     </div>
                                     <div class="img-body">
                                       <p>{{ $data[2]->user->nama }}</p>
@@ -136,13 +136,30 @@
                                 </div>
                               </div>
                             </div>
-                            @endif
-
-                          </div>
-                          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
-                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                            <span class="visually-hidden">Previous</span>
-                          </button>
+                        </div>
+                      </div>
+                      <div class="carousel-item">
+                        <div class="row">
+                            <div class="col-md-4 m-auto">
+                                <div class="card-box text-center py-5">
+                                    <div class="img-card">
+                                        <img src="https://source.unsplash.com/random/201x201" alt="Quottime">
+                                    </div>
+                                    <div class="img-body">
+                                        <p>ryan</p>
+                                    </div>
+                                    <div class="quote-text p-2">
+                                        <p><i>"Berbuat baik adalah kewajiban, tetapi merasa lebih baik adalah sebuah kesalahan."</i></p>
+                                    </div>
+                                </div>  
+                            </div>
+                        </div>
+                      </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Previous</span>
+                    </button>
                     <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
                       <span class="carousel-control-next-icon" aria-hidden="true"></span>
                       <span class="visually-hidden">Next</span>
@@ -171,9 +188,18 @@
               @foreach ($data as $u)
               <div class="col-md-4 mt-3">
                 <div class="card-box text-center py-5">
-                  <div class="img-card">
-                    {{-- <img src="https://source.unsplash.com/random/373x373?{{ $u->quotes->gambar }}" alt="Quottime"> --}}
-                    <img src="/asset/postingan/Winton Almundarisna.jpg" alt="Quottime">
+                        <div class="img-card position-relative mx-auto">
+                            <img src="asset/postingan/Winton Almundarisna.jpg" alt="Quottime" class="position-absolute top-50 start-50 translate-middle">
+                        </div>
+                        <div class="img-body">
+                            <p>{{ $u->nama }} </p>
+                        </div>
+                        <div class="quote-text p-2">
+                          <p><i>isi</i></p>
+                        </div>
+                      </div>  
+                    </div>
+                    @endforeach
                   </div>
                   <div class="img-body">
                     <p>{{ $u->user->nama }} </p>
