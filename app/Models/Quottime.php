@@ -10,6 +10,7 @@ class Quottime extends Model
     use HasFactory;
 
     protected $guarded = ['id'];
+    // protected $with = ['nama'];
 
     public function user() {
         return $this->belongsTo(User::class);

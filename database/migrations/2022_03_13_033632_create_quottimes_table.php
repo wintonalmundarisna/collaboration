@@ -9,6 +9,7 @@ return new class extends Migration
     /**
      * Run the migrations.
      *
+     * 
      * @return void
      */
     public function up()
@@ -18,6 +19,7 @@ return new class extends Migration
             $table->foreignId('user_id');
             $table->string('gambar');
             $table->text('isi');
+            $table->timestamp('published_at')->nullable();
             $table->timestamps();
         });
     }

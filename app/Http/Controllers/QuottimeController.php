@@ -11,7 +11,9 @@ class QuottimeController extends Controller
     public function user()
     {
         return view('/quottime', [
-            'data' => Quottime::latest()
+            'data' => Quottime::latest()->get(),
+            // 'latest' => Quottime::latest()
         ]);
+        
     }
 }
