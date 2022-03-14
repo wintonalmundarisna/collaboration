@@ -122,6 +122,32 @@ body {
 .btn-login-hero:hover a {
     color: var(--color-3);
 }
+
+.btn-batal {
+    padding: 8px 20px;
+    border: none;
+    background-color: #dc3545;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+.btn-batal a {
+    text-decoration: none;
+    color: var(--color-3);
+}
+
+.btn-buat-quote {
+    padding: 8px 20px;
+    border: none;
+    background-color: #198754;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+.btn-buat-quote a {
+    text-decoration: none;
+    color: var(--color-3);
+}
 /* button */
 
 /* start navbar */
@@ -202,6 +228,12 @@ h2 span {
 
 .form-control {
     border: 1px solid var(--color-1);
+    padding: 10px 5px;
+}
+
+.form-control-buat {
+    border: none;
+    display: block;
     padding: 10px 5px;
 }
 
@@ -299,11 +331,23 @@ h1 {
     background-color: var(--color-1);
     border-radius: 10px;
     box-sizing: border-box;
+    position: relative;
+}
+
+.img-card {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: transparent;
+    position: relative;
+    margin-right: auto;
+    margin-left: auto;
+    overflow: hidden;
 }
 
 .img-card img {
-    width: 20%;
-    border-radius: 50%;
+    width: 100%;
+    background-size: cover;
 }
 
 .img-body p {
