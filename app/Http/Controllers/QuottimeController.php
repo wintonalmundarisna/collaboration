@@ -2,17 +2,16 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
+use App\Models\Quottime;
 use App\Models\User;
-use App\Models\Quotes;
-use League\CommonMark\Extension\SmartPunct\Quote;
 
 class QuottimeController extends Controller
 {
-    public function index()
+
+    public function user()
     {
-        return view('quottime', [
-            'user' => User::all()
+        return view('/quottime', [
+            'data' => Quottime::latest()
         ]);
     }
 }

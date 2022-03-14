@@ -23,12 +23,11 @@ Route::post('/login', [LoginController::class, 'login']);
 Route::post('/logout', [LoginController::class, 'logout']);
 
 
-Route::get('/quottime', [QuottimeController::class, 'index'])->middleware('auth');
+Route::get('/quottime', [QuottimeController::class, 'user'])->middleware('auth');
+
+Route::get('quotes', [QuotesController::class, 'index'])->middleware('auth');
 
 
 Route::get('/lupa-password', function () {
     return view('lupa-password');
 })->middleware('guest');
-
-
-Route::get('quotes', [QuotesController::class, 'index'])->middleware('auth');

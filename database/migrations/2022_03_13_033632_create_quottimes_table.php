@@ -13,11 +13,10 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('quotes', function (Blueprint $table) {
+        Schema::create('quottimes', function (Blueprint $table) {
             $table->id();
             $table->foreignId('user_id');
             $table->string('gambar');
-            $table->string('judul');
             $table->text('isi');
             $table->timestamps();
         });
@@ -30,6 +29,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('quotes');
+        Schema::dropIfExists('quottimes');
     }
 };

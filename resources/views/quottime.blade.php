@@ -67,17 +67,19 @@
 
     <!-- start Postingan terbaru -->
     <section id="post">
-      <div class="container">
+      <div classz="container">
         <div class="row text-center">
           <div class="col">
             <h4 class="title-judul">Postingan Terbaru</h4>
           </div>
         </div>
         <div class="row justify-content-center mt-5">
-            <div class="col-md-12">
-                <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
-                    <div class="carousel-inner">
-                      <div class="carousel-item active">
+              
+          <div class="col-md-12">
+            <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+              <div class="carousel-inner">
+                @if ($data->count())
+                <div class="carousel-item active">
                         <div class="row">
                             <div class="col-md-4 m-auto">
                                 <div class="card-box text-center py-5">
@@ -85,67 +87,75 @@
                                         <img src="/asset/postingan/Winton Almundarisna.jpg" alt="Quottime">
                                     </div>
                                     <div class="img-body">
-                                        <p>ryan</p>
+                                        <p>{{ $data[0]->user->nama }}</p>
                                     </div>
                                     <div class="quote-text p-2">
-                                        <p><i>"Berbuat baik adalah kewajiban, tetapi merasa lebih baik adalah sebuah kesalahan."</i></p>
+                                        <p><i>"{{ $data[0]->isi }}"</i></p>
                                     </div>
                                 </div>  
                             </div>
                         </div>
                       </div>
+                      @endif
+                      
+                      @if ($data->count())
                       <div class="carousel-item">
                         <div class="row">
-                            <div class="col-md-4 m-auto">
+                          <div class="col-md-4 m-auto">
+                            <div class="card-box text-center py-5">
+                                    <div class="img-card">
+                                        <img src="/asset/postingan/profile.png" alt="Quottime">
+                                    </div>
+                                    <div class="img-body">
+                                        <p>{{ $data[1]->user->nama }}</p>
+                                      </div>
+                                      <div class="quote-text p-2">
+                                        <p><i>{{ $data[1]->isi }}</i></p>
+                                      </div>
+                                    </div>  
+                                  </div>
+                                </div>
+                              </div>
+                              @endif
+                              
+                          @if ($data->count())
+                          <div class="carousel-item">
+                            <div class="row">
+                              <div class="col-md-4 m-auto">
                                 <div class="card-box text-center py-5">
                                     <div class="img-card">
                                         <img src="/asset/postingan/profile.png" alt="Quottime">
                                     </div>
                                     <div class="img-body">
-                                        <p>winton</p>
+                                      <p>{{ $data[2]->user->nama }}</p>
                                     </div>
                                     <div class="quote-text p-2">
-                                        <p><i>"Berbuat baik adalah kewajiban, tetapi merasa lebih baik adalah sebuah kesalahan."</i></p>
+                                        <p><i>{{ $data[2]->isi }}</i></p>
                                     </div>
-                                </div>  
+                                  </div>  
+                                </div>
+                              </div>
                             </div>
-                        </div>
-                      </div>
-                      <div class="carousel-item">
-                        <div class="row">
-                            <div class="col-md-4 m-auto">
-                                <div class="card-box text-center py-5">
-                                    <div class="img-card">
-                                        <img src="/asset/postingan/profile.png" alt="Quottime">
-                                    </div>
-                                    <div class="img-body">
-                                        <p>ryan</p>
-                                    </div>
-                                    <div class="quote-text p-2">
-                                        <p><i>"Berbuat baik adalah kewajiban, tetapi merasa lebih baik adalah sebuah kesalahan."</i></p>
-                                    </div>
-                                </div>  
-                            </div>
-                        </div>
-                      </div>
-                    </div>
-                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
-                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                      <span class="visually-hidden">Previous</span>
-                    </button>
+                            @endif
+
+                          </div>
+                          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                          </button>
                     <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
                       <span class="carousel-control-next-icon" aria-hidden="true"></span>
                       <span class="visually-hidden">Next</span>
                     </button>
                   </div>
+                </div>
+              </div>
             </div>
-        </div>
-        </div>
-      </div>
-    </section>
-    <!-- end Postingan terbaru -->
-
-    <!-- start quotes -->
+          </div>
+        </section>
+        <!-- end Postingan terbaru -->
+        
+        <!-- start quotes -->
     <section id="quotes">
         <div class="container">
             <div class="row text-center">
@@ -154,23 +164,29 @@
                 </div>
             </div>
             
+            
+            {{-- @if ($data->count()) --}}
             <div class="row mt-4">
-              @foreach ($user as $u)
+              {{-- @for ($i = 0; $i < 4; $i++) --}}
+              @foreach ($data as $u)
               <div class="col-md-4 mt-3">
                 <div class="card-box text-center py-5">
-                        <div class="img-card">
-                            <img src="https://source.unsplash.com/random/373x373?{{ $u->quotes->gambar }}" alt="Quottime">
-                        </div>
-                        <div class="img-body">
-                            <p>{{ $u->nama }} </p>
-                        </div>
-                        <div class="quote-text p-2">
-                          <p><i>{{ $u->quotes->isi }}</i></p>
-                        </div>
-                      </div>  
-                    </div>
-                    @endforeach
+                  <div class="img-card">
+                    {{-- <img src="https://source.unsplash.com/random/373x373?{{ $u->quotes->gambar }}" alt="Quottime"> --}}
+                    <img src="/asset/postingan/Winton Almundarisna.jpg" alt="Quottime">
                   </div>
+                  <div class="img-body">
+                    <p>{{ $u->user->nama }} </p>
+                  </div>
+                  <div class="quote-text p-2">
+                    <p><i>{{ $u->isi }}</i></p>
+                  </div>
+                </div>  
+              </div>
+              @endforeach
+              {{-- @endfor --}}
+            </div>
+            {{-- @endif --}}
 
             <div class="row text-center">
                 <div class="col-md-12">
@@ -180,7 +196,7 @@
         </div>
     </section>
     <!-- end quotes -->
-
+    
     <!-- start footer -->
     <section id="footer">
       <div class="container">

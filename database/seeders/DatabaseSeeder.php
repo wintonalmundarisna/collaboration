@@ -4,6 +4,7 @@ namespace Database\Seeders;
 
 use App\Models\User;
 use App\Models\Quotes;
+use App\Models\Quottime;
 use Illuminate\Database\Seeder;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 
@@ -16,7 +17,7 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        User::factory(5)->create();
-        Quotes::factory(6)->create();
+        User::factory(10)->create();
+        Quottime::factory(10)->create();
     }
 }

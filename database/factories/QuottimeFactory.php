@@ -5,9 +5,9 @@ namespace Database\Factories;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
- * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Quotes>
+ * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Quottime>
  */
-class QuotesFactory extends Factory
+class QuottimeFactory extends Factory
 {
     /**
      * Define the model's default state.
@@ -17,7 +17,9 @@ class QuotesFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'user_id' => mt_rand(1,6),
+            'gambar' => $this->faker->sentence(mt_rand(1,2)),
+            'isi' => $this->faker->paragraph()
         ];
     }
 }
