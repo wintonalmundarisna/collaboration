@@ -2,12 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Quotes;
-use App\Http\Requests\StoreQuotesRequest;
-use App\Http\Requests\UpdateQuotesRequest;
-use App\Models\Quottime;
+use App\Models\EditQuote;
+use App\Http\Requests\StoreEditQuoteRequest;
+use App\Http\Requests\UpdateEditQuoteRequest;
 
-class QuotesController extends Controller
+class EditQuoteController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -16,9 +15,7 @@ class QuotesController extends Controller
      */
     public function index()
     {
-        return view('/quotes', [
-            'data' => Quottime::all()
-        ]);
+        //
     }
 
     /**
@@ -34,10 +31,10 @@ class QuotesController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \App\Http\Requests\StoreQuotesRequest  $request
+     * @param  \App\Http\Requests\StoreEditQuoteRequest  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(StoreQuotesRequest $request)
+    public function store(StoreEditQuoteRequest $request)
     {
         //
     }
@@ -45,10 +42,10 @@ class QuotesController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Quotes  $quotes
+     * @param  \App\Models\EditQuote  $editQuote
      * @return \Illuminate\Http\Response
      */
-    public function show(Quotes $quotes)
+    public function show(EditQuote $editQuote)
     {
         //
     }
@@ -56,10 +53,10 @@ class QuotesController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Quotes  $quotes
+     * @param  \App\Models\EditQuote  $editQuote
      * @return \Illuminate\Http\Response
      */
-    public function edit(Quotes $quotes)
+    public function edit(EditQuote $editQuote)
     {
         //
     }
@@ -67,11 +64,11 @@ class QuotesController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  \App\Http\Requests\UpdateQuotesRequest  $request
-     * @param  \App\Models\Quotes  $quotes
+     * @param  \App\Http\Requests\UpdateEditQuoteRequest  $request
+     * @param  \App\Models\EditQuote  $editQuote
      * @return \Illuminate\Http\Response
      */
-    public function update(UpdateQuotesRequest $request, Quotes $quotes)
+    public function update(UpdateEditQuoteRequest $request, EditQuote $editQuote)
     {
         //
     }
@@ -79,10 +76,10 @@ class QuotesController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Quotes  $quotes
+     * @param  \App\Models\EditQuote  $editQuote
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Quotes $quotes)
+    public function destroy(EditQuote $editQuote)
     {
         //
     }
