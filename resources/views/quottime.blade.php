@@ -68,86 +68,188 @@
     <!-- start Postingan terbaru -->                                      
     <section id="post">
       <div class="container">
-        <div class="row text-center">
+        <div class="row text-center mb-5">
           <div class="col">
             <h4 class="title-judul">Postingan Terbaru</h4>
           </div>
         </div>
-        <div class="row justify-content-center mt-5">
-            <div class="col-md-12">
-              @if ($data->count())
-              <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
-                <div class="carousel-inner">
-                      <div class="carousel-item active">
-                        <div class="row">
-                            <div class="col-md-4 m-auto">
-                                <div class="card-box text-center py-5">
-                                    <div class="img-card">
-                                        <img src="https://source.unsplash.com/random/201x201?{{ $data[0]->gambar }}" alt="Quottime">
-                                    </div>
-                                    <div class="img-body">
-                                        <p>{{ $data[0]->user->nama }}</p>
-                                    </div>
-                                    <div class="quote-text p-2">
-                                        <p><i>" {{ $data[0]->isi }} "</i></p>
-                                    </div>
-                                </div>  
-                            </div>
-                        </div>
+        
+        <!-- carousel -->
+        <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-inner">
+            <div class="container">
+              <div class="carousel-item active pe-3">
+                <div class="row justify-content-center">
+                  <div class="col-md-4 d-none d-sm-block">
+                    <div class="card-box text-center py-5">
+                      <div class="img-card">
+                        <img src="https://source.unsplash.com/random/201x201" alt="Quottime" />
                       </div>
-                      @endif
-                      @if ($data->count())
-                      <div class="carousel-item">
-                        <div class="row">
-                            <div class="col-md-4 m-auto">
-                                <div class="card-box text-center py-5">
-                                    <div class="img-card">
-                                        <img src="https://source.unsplash.com/random/201x201?{{ $data[1]->gambar }}" alt="Quottime">
-                                    </div>
-                                    <div class="img-body">
-                                        <p>{{ $data[1]->user->nama }}</p>
-                                    </div>
-                                    <div class="quote-text p-2">
-                                        <p><i>" {{ $data[1]->isi }} "</i></p>
-                                    </div>
-                                </div>  
-                            </div>
-                        </div>
+                      <div class="img-body">
+                        <p>Nama</p>
                       </div>
-                      @endif
-                      @if ($data->count())
-                      <div class="carousel-item">
-                        <div class="row">
-                            <div class="col-md-4 m-auto">
-                                <div class="card-box text-center py-5">
-                                    <div class="img-card">
-                                        <img src="https://source.unsplash.com/random/201x201?{{ $data[2]->gambar }}" alt="Quottime">
-                                    </div>
-                                    <div class="img-body">
-                                        <p>{{ $data[2]->user->nama }}</p>
-                                    </div>
-                                    <div class="quote-text p-2">
-                                        <p><i>" {{ $data[2]->isi }} "</i></p>
-                                    </div>
-                                </div>  
-                            </div>
-                        </div>
+                      <div class="quote-text p-2">
+                        <p><i>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis, praesentium architecto. Quo ipsum reiciendis ipsam eius commodi autem expedita non!</i></p>
                       </div>
-                      @endif
-
                     </div>
-                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
-                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                      <span class="visually-hidden">Previous</span>
-                    </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
-                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                      <span class="visually-hidden">Next</span>
-                    </button>
                   </div>
+
+                  <div class="col-md-4 d-none d-sm-block">
+                    <div class="card-box text-center py-5">
+                      <div class="img-card">
+                        <img src="https://source.unsplash.com/random/201x201" alt="Quottime" />
+                      </div>
+                      <div class="img-body">
+                        <p>Nama</p>
+                      </div>
+                      <div class="quote-text p-2">
+                        <p><i>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis, praesentium architecto. Quo ipsum reiciendis ipsam eius commodi autem expedita non!</i></p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-md-4 d-none d-sm-block">
+                    <div class="card-box text-center py-5">
+                      <div class="img-card">
+                        <img src="https://source.unsplash.com/random/201x201" alt="Quottime" />
+                      </div>
+                      <div class="img-body">
+                        <p>Nama</p>
+                      </div>
+                      <div class="quote-text p-2">
+                        <p><i>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis, praesentium architecto. Quo ipsum reiciendis ipsam eius commodi autem expedita non!</i></p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="carousel-item pe-3">
+                <div class="row justify-content-center">
+                  <div class="col-md-4 d-none d-sm-block">
+                    <div class="card-box text-center py-5">
+                      <div class="img-card">
+                        <img src="https://source.unsplash.com/random/201x201" alt="Quottime" />
+                      </div>
+                      <div class="img-body">
+                        <p>Nama</p>
+                      </div>
+                      <div class="quote-text p-2">
+                        <p><i>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis, praesentium architecto. Quo ipsum reiciendis ipsam eius commodi autem expedita non!</i></p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-md-4 d-none d-sm-block">
+                    <div class="card-box text-center py-5">
+                      <div class="img-card">
+                        <img src="https://source.unsplash.com/random/201x201" alt="Quottime" />
+                      </div>
+                      <div class="img-body">
+                        <p>Nama</p>
+                      </div>
+                      <div class="quote-text p-2">
+                        <p><i>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis, praesentium architecto. Quo ipsum reiciendis ipsam eius commodi autem expedita non!</i></p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-md-4 d-none d-sm-block">
+                    <div class="card-box text-center py-5">
+                      <div class="img-card">
+                        <img src="https://source.unsplash.com/random/201x201" alt="Quottime" />
+                      </div>
+                      <div class="img-body">
+                        <p>Nama</p>
+                      </div>
+                      <div class="quote-text p-2">
+                        <p><i>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis, praesentium architecto. Quo ipsum reiciendis ipsam eius commodi autem expedita non!</i></p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
+          </div>
+
+          <button class="carousel-control-prev d-none d-sm-block" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next d-none d-sm-block" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
         </div>
+
+        <!-- mobile -->
+        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+          </div>
+          <div class="carousel-inner">
+            <div class="container">
+              <div class="carousel-item active p-3">
+                <div class="row justify-content-center">
+                  <div class="col-md-12 d-block d-sm-none">
+                    <div class="card-box text-center py-5">
+                      <div class="img-card">
+                        <img src="https://source.unsplash.com/random/201x201" alt="Quottime" />
+                      </div>
+                      <div class="img-body">
+                        <p>Nama</p>
+                      </div>
+                      <div class="quote-text p-2">
+                        <p><i>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis, praesentium architecto. Quo ipsum reiciendis ipsam eius commodi autem expedita non!</i></p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="carousel-item p-3">
+                <div class="row justify-content-center">
+                  <div class="col-md-12 d-block d-sm-none">
+                    <div class="card-box text-center py-5">
+                      <div class="img-card">
+                        <img src="https://source.unsplash.com/random/201x201" alt="Quottime" />
+                      </div>
+                      <div class="img-body">
+                        <p>Nama</p>
+                      </div>
+                      <div class="quote-text p-2">
+                        <p><i>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis, praesentium architecto. Quo ipsum reiciendis ipsam eius commodi autem expedita non!</i></p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="carousel-item p-3">
+                <div class="row justify-content-center">
+                  <div class="col-md-12 d-block d-sm-none">
+                    <div class="card-box text-center py-5">
+                      <div class="img-card">
+                        <img src="https://source.unsplash.com/random/201x201" alt="Quottime" />
+                      </div>
+                      <div class="img-body">
+                        <p>Nama</p>
+                      </div>
+                      <div class="quote-text p-2">
+                        <p><i>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis, praesentium architecto. Quo ipsum reiciendis ipsam eius commodi autem expedita non!</i></p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
+        <!-- mobile -->
+        <!-- carousel -->
+
       </div>
     </section>
     <!-- end Postingan terbaru -->
