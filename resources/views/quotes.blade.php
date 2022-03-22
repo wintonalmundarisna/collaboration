@@ -104,7 +104,7 @@
                         <div class="card-box text-center py-5">
                             <div class="img-card">
                                 <img
-                                    src="/asset/postingan/profile.png"
+                                    src="https://source.unsplash.com/random/201x201?{{ $d->gambar }}"
                                     alt="Quottime"
                                 />
                             </div>
