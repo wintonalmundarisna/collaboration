@@ -6,6 +6,7 @@ use App\Models\Quotes;
 use App\Http\Requests\StoreQuotesRequest;
 use App\Http\Requests\UpdateQuotesRequest;
 use App\Models\Quottime;
+use App\Models\User;
 
 class QuotesController extends Controller
 {
@@ -16,9 +17,24 @@ class QuotesController extends Controller
      */
     public function index()
     {
-        return view('/quotes', [
-            'data' => Quottime::all()
+
+        $data = Quottime::latest();
+
+        if (request('cari')) {
+            // $data = User::firstWhere('nama', request('nama'));
+            $data->where('nama', 'like', '%' . request('cari') . '%');
+                // ->orWhere('isi', 'like', '%' . request('cari') . '%');
+        }
+        
+        // if (request('isi')) {
+            // $data = Quottime::firstWhere('isi', request('isi'));
+            // $data->where('isi', 'like', '%', request('cari'), '%');
+        // }
+
+        return view('quotes', [
+            "data" =>  $data->get()
         ]);
+
     }
 
     /**

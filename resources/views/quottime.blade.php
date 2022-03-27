@@ -75,6 +75,7 @@
         </div>
         
         <!-- carousel -->
+        @if ($data->count())            
         <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
           <div class="carousel-inner">
             <div class="container">
@@ -86,10 +87,10 @@
                         <img src="https://source.unsplash.com/random/201x201" alt="Quottime" />
                       </div>
                       <div class="img-body">
-                        <p>Nama</p>
+                        <p>{{ $data[0]->user->nama }}</p>
                       </div>
                       <div class="quote-text p-2">
-                        <p><i>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis, praesentium architecto. Quo ipsum reiciendis ipsam eius commodi autem expedita non!</i></p>
+                        <p><i>" {{ $data[0]->isi }}</i></p>
                       </div>
                     </div>
                   </div>
@@ -100,10 +101,10 @@
                         <img src="https://source.unsplash.com/random/201x201" alt="Quottime" />
                       </div>
                       <div class="img-body">
-                        <p>Nama</p>
+                        <p>{{ $data[1]->user->nama }}</p>
                       </div>
                       <div class="quote-text p-2">
-                        <p><i>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis, praesentium architecto. Quo ipsum reiciendis ipsam eius commodi autem expedita non!</i></p>
+                        <p><i>" {{ $data[1]->isi }}</i></p>
                       </div>
                     </div>
                   </div>
@@ -114,10 +115,10 @@
                         <img src="https://source.unsplash.com/random/201x201" alt="Quottime" />
                       </div>
                       <div class="img-body">
-                        <p>Nama</p>
+                        <p>{{ $data[2]->user->nama }}</p>
                       </div>
                       <div class="quote-text p-2">
-                        <p><i>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis, praesentium architecto. Quo ipsum reiciendis ipsam eius commodi autem expedita non!</i></p>
+                        <p><i>" {{ $data[2]->isi }}</i></p>
                       </div>
                     </div>
                   </div>
@@ -132,10 +133,10 @@
                         <img src="https://source.unsplash.com/random/201x201" alt="Quottime" />
                       </div>
                       <div class="img-body">
-                        <p>Nama</p>
+                        <p>{{ $data[3]->user->nama }}</p>
                       </div>
                       <div class="quote-text p-2">
-                        <p><i>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis, praesentium architecto. Quo ipsum reiciendis ipsam eius commodi autem expedita non!</i></p>
+                        <p><i>" {{ $data[3]->isi }} "</i></p>
                       </div>
                     </div>
                   </div>
@@ -146,10 +147,10 @@
                         <img src="https://source.unsplash.com/random/201x201" alt="Quottime" />
                       </div>
                       <div class="img-body">
-                        <p>Nama</p>
+                        <p>{{ $data[4]->user->nama }}</p>
                       </div>
                       <div class="quote-text p-2">
-                        <p><i>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis, praesentium architecto. Quo ipsum reiciendis ipsam eius commodi autem expedita non!</i></p>
+                        <p><i>" {{ $data[4]->isi }} "</i></p>
                       </div>
                     </div>
                   </div>
@@ -160,10 +161,10 @@
                         <img src="https://source.unsplash.com/random/201x201" alt="Quottime" />
                       </div>
                       <div class="img-body">
-                        <p>Nama</p>
+                        <p>{{ $data[5]->user->nama }}</p>
                       </div>
                       <div class="quote-text p-2">
-                        <p><i>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis, praesentium architecto. Quo ipsum reiciendis ipsam eius commodi autem expedita non!</i></p>
+                        <p><i>" {{ $data[5]->isi }} "</i></p>
                       </div>
                     </div>
                   </div>
@@ -199,10 +200,10 @@
                         <img src="https://source.unsplash.com/random/201x201" alt="Quottime" />
                       </div>
                       <div class="img-body">
-                        <p>Nama</p>
+                        <p>{{ $data[6]->user->nama }}</p>
                       </div>
                       <div class="quote-text p-2">
-                        <p><i>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis, praesentium architecto. Quo ipsum reiciendis ipsam eius commodi autem expedita non!</i></p>
+                        <p><i>" {{ $data[6]->isi }} "</i></p>
                       </div>
                     </div>
                   </div>
@@ -217,10 +218,10 @@
                         <img src="https://source.unsplash.com/random/201x201" alt="Quottime" />
                       </div>
                       <div class="img-body">
-                        <p>Nama</p>
+                        <p>{{ $data[7]->user->nama }}</p>
                       </div>
                       <div class="quote-text p-2">
-                        <p><i>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis, praesentium architecto. Quo ipsum reiciendis ipsam eius commodi autem expedita non!</i></p>
+                        <p><i>" {{ $data[7]->isi }} "</i></p>
                       </div>
                     </div>
                   </div>
@@ -235,15 +236,16 @@
                         <img src="https://source.unsplash.com/random/201x201" alt="Quottime" />
                       </div>
                       <div class="img-body">
-                        <p>Nama</p>
+                        <p>{{ $data[8]->user->nama }}</p>
                       </div>
                       <div class="quote-text p-2">
-                        <p><i>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis, praesentium architecto. Quo ipsum reiciendis ipsam eius commodi autem expedita non!</i></p>
+                        <p><i>" {{ $data[8]->isi }} "</i></p>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
+          @endif
             </div>
           </div>
         </div>
@@ -268,39 +270,39 @@
               <div class="col-md-4 mt-3">
                 <div class="card-box text-center py-5">
                         <div class="img-card position-relative mx-auto">
-                            <img src="https://source.unsplash.com/random/201x201?{{ $data[3]->gambar }}" alt="Quottime" class="position-absolute top-50 start-50 translate-middle">
+                            <img src="https://source.unsplash.com/random/201x201?{{ $data[9]->gambar }}" alt="Quottime" class="position-absolute top-50 start-50 translate-middle">
                         </div>
                         <div class="img-body">
-                            <p>{{ $data[3]->user->nama }} </p>
+                            <p>{{ $data[9]->user->nama }} </p>
                         </div>
                         <div class="quote-text p-2">
-                          <p><i>" {{ $data[3]->isi }} "</i></p>
+                          <p><i>" {{ $data[9]->isi }} "</i></p>
                         </div>
                 </div>  
               </div>
               <div class="col-md-4 mt-3">
                 <div class="card-box text-center py-5">
                         <div class="img-card position-relative mx-auto">
-                            <img src="https://source.unsplash.com/random/201x201?{{ $data[4]->gambar }}" alt="Quottime" class="position-absolute top-50 start-50 translate-middle">
+                            <img src="https://source.unsplash.com/random/201x201?{{ $data[10]->gambar }}" alt="Quottime" class="position-absolute top-50 start-50 translate-middle">
                         </div>
                         <div class="img-body">
-                            <p>{{ $data[4]->user->nama }} </p>
+                            <p>{{ $data[10]->user->nama }} </p>
                         </div>
                         <div class="quote-text p-2">
-                          <p><i>" {{ $data[4]->isi }} "</i></p>
+                          <p><i>" {{ $data[10]->isi }} "</i></p>
                         </div>
                 </div>  
               </div>
               <div class="col-md-4 mt-3">
                 <div class="card-box text-center py-5">
                         <div class="img-card position-relative mx-auto">
-                            <img src="https://source.unsplash.com/random/201x201?{{ $data[5]->gambar }}" alt="Quottime" class="position-absolute top-50 start-50 translate-middle">
+                            <img src="https://source.unsplash.com/random/201x201?{{ $data[11]->gambar }}" alt="Quottime" class="position-absolute top-50 start-50 translate-middle">
                         </div>
                         <div class="img-body">
-                            <p>{{ $data[5]->user->nama }} </p>
+                            <p>{{ $data[11]->user->nama }} </p>
                         </div>
                         <div class="quote-text p-2">
-                          <p><i>" {{ $data[5]->isi }} "</i></p>
+                          <p><i>" {{ $data[11]->isi }} "</i></p>
                         </div>
                 </div>  
               </div>

@@ -13,4 +13,15 @@ class Quotes extends Model
     // public function user() {
     //     return $this->belongsTo(User::class);
     // }
+
+    // public function quottime() {
+    //     return $this->belongsTo(User::class);
+    // }
+
+    // public function scopeFilter($data) {
+    //     if (request('cari')) {
+    //         return $data->where('nama', 'like', '%' . request('cari') . '%')
+    //         ->orWhere('isi', 'like', '%' . request('cari') . '%');
+    //     }
+    // }
 }

@@ -14,6 +14,20 @@ class QuottimeController extends Controller
             'data' => Quottime::latest()->get(),
             // 'latest' => Quottime::latest()
         ]);
-        
+    }
+
+    public function quotes()
+    {
+        $data = Quottime::latest();
+
+        if (request('cari')) {
+            $data = User::firstWhe
+            re('nama', request('nama'));
+        }
+
+        return view('quotes', [
+            // 'data' =>  Quottime::latest()->filter()->get()
+            'data' =>  Quottime::latest()->get()
+        ]);
     }
 }

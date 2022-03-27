@@ -97,6 +97,22 @@
                     <div class="cpl-md-12">
                         <h4 class="title-judul">Quotes</h4>
                     </div>
+                    <div class="row justify-content-center">
+                        <div class="col-md-6">
+                            <form action="/quotes">
+                                {{-- @if (request('nama'))
+                                    <input type="hidden" name="user" value="{{ request('nama') }}">
+                                @endif
+                                @if (request('isi'))
+                                    <input type="hidden" name="isi" value="{{ request('isi') }}">
+                                @endif --}}
+                                <div class="input-group mb-3 mt-3">
+                                    <input type="text" class="form-control" placeholder="Cari.." name="cari" value="{{ request('cari') }}" autocomplete="none">
+                                    <button class="btn" style="background-color: #6c63ff; color: white;" type="submit">Cari</button>
+                                  </div>
+                            </form>
+                        </div>
+                    </div>
                 </div>
                 <div class="row mt-4">
                     @foreach ($data as $d)
@@ -109,6 +125,7 @@
                                 />
                             </div>
                             <div class="img-body">
+                                {{-- <p>{{ $d->user->nama }}</p> --}}
                                 <p>{{ $d->user->nama }}</p>
                             </div>
                             <div class="quote-text p-2">

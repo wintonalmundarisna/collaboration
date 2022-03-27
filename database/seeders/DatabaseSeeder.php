@@ -17,7 +17,12 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        User::factory(6)->create();
-        Quottime::factory(6)->create();
+        User::create([
+            'nama' => 'Winton Almundarisna',
+            'email' => 'wintonalmuundarisna@gmail.com',
+            'password' => bcrypt('12345')
+        ]);
+        User::factory(100)->create();
+        Quottime::factory(200)->create();
     }
 }

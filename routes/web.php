@@ -25,7 +25,9 @@ Route::post('/logout', [LoginController::class, 'logout']);
 
 Route::get('/quottime', [QuottimeController::class, 'user'])->middleware('auth');
 
-Route::get('quotes', [QuotesController::class, 'index'])->middleware('auth');
+Route::get('/quotes', [QuottimeController::class, 'quotes'])->middleware('auth');
+
+// Route::get('quotes', [QuotesController::class, 'index'])->middleware('auth');
 
 Route::get('buat-quote', [QuotesController::class, 'index'])->middleware('auth');
 
