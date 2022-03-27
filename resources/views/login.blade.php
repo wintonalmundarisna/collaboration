@@ -25,7 +25,7 @@
         <!-- Fav-icon -->
         <link rel="shortcut icon" href="/asset/logo-quottime.png" />
 
-        <title>Quottime | Login</title>
+        <title>Quottime | Masuk</title>
     </head>
     <body>
         <!-- start navbar -->
@@ -68,7 +68,7 @@
                         
                         <form action="/login" method="POST">
                             @csrf
-                            <h4 class="text-header mb-4">Login</h4>
+                            <h4 class="text-header mb-4">Masuk</h4>
                             <div class="mb-3">
                                 <label
                                     for="exampleFormControlInput1"
@@ -108,7 +108,7 @@
                                 @enderror
                             </div>
 
-                            <button class="btn-daftar-login mt-2 text-white" type="submit">Login</button>
+                            <button class="btn-daftar-login mt-2 text-white" type="submit">Masuk</button>
 
                             <p class="mt-2">
                                 <a href="/lupa-password">Lupa Password?</a>

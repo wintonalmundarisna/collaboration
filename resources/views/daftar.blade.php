@@ -144,7 +144,7 @@
 
                             <p class="mt-2">
                                 Sudah Memiliki Akun?
-                                <a href="/login">Login</a>
+                                <a href="/login">Masuk</a>
                             </p>
                         </form>
                     </div>

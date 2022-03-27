@@ -38,7 +38,7 @@
             <li class="nav-item">
               <form action="/logout" method="post">
                 @csrf
-              <button class="nav-link bg-transparent border-0" style="color: #6c63ff" aria-current="page" type="submit">Logout</button>
+              <button class="nav-link bg-transparent border-0" style="color: #6c63ff" aria-current="page" type="submit">Keluar</button>
             </form>
             </li>
           </ul>
@@ -52,10 +52,10 @@
       <div class="container">
         <div class="row mt-2">
           <div class="col-md-6 my-auto">
-            <h3 class="mb-2"><span>Hai</span>, {{ auth()->user()->nama }} :)</h3>
-            <h1 class="mb-3">Ayo Mulai Membuat Quote-mu Sekarang!</h1>
+            <h1 class="mb-3"><span>Hai</span>, {{ auth()->user()->nama }} :)</h1>
+            <h3 class="mb-3">Ayo Mulai Membuat Quote-mu Sekarang!</h3>
             <button class="btn-buat mt-3 mb-3"><a href="/buat-quote" target="_blank">Buat Quote</a></button>
-            <button class="btn-edit mt-3 mb-3"><a href="/edit-quote" target="_blank">Edit Quote</a></button>
+            <button class="btn-edit mt-3 mb-3"><a href="/mypost" target="_blank">Edit Quote</a></button>
           </div>
           <div class="col-md-6">
             <img src="/asset/hero-img-1.png" alt="Quottime" class="w-100" />
