@@ -22,7 +22,7 @@ class QuottimeController extends Controller
 
         if (request('cari')) {
             $data = User::firstWhe
-            re('nama', request('nama'));
+            ('nama', request('nama'));
         }
 
         return view('quotes', [
