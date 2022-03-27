@@ -81,7 +81,7 @@
                                 style="color: #6c63ff"
                                 aria-current="page"
                                 href="/login"
-                                >Logout</a
+                                >Keluar</a
                             >
                         </li>
                     </ul>
