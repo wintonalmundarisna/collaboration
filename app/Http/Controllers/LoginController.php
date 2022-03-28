@@ -23,7 +23,7 @@ class LoginController extends Controller
         if (Auth::attempt($credentials)) {
 
             $request->session()->regenerate();
-            return redirect()->intended('/quottime');
+            return redirect()->intended('/sambutan');
         }
 
         return back()->with('hasError', 'Login Gagal!');

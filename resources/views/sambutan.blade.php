@@ -20,10 +20,10 @@
         />
 
         <!-- CSS -->
-        <link rel="stylesheet" href="../../public/css/quottime.css" />
+        <link rel="stylesheet" href="/css/quottime.css" />
 
         <!-- Fav-icon -->
-        <link rel="shortcut icon" href="../../public/asset/logo-quottime.png" />
+        <link rel="shortcut icon" href="/asset/logo-quottime.png" />
 
         <title>Quottime | Selamat Datang Di Quottime</title>
     </head>
@@ -35,14 +35,14 @@
                     <div class="col-12">
                         <div class="welcome-banner">
                             <img
-                                src="../../public/asset/welcome.png"
+                                src="/asset/welcome.png"
                                 alt="Quottime"
                                 class="w-100"
                             />
                         </div>
                         <div class="title-welcome">
                             <h5>My Dhasboard</h5>
-                            <h1 class="title-welcome">Hi NAMA USER!</h1>
+                            <h1 class="title-welcome">Hi {{ auth()->user()->nama }}</h1>
                             <button class="btn-welcome mt-3 mb-3">
                                 <a href="/buat-quote" target="_blank"
                                     >Aku Mau Buat Quotes!</a

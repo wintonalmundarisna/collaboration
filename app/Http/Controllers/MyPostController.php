@@ -2,11 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\BuatQuote;
-use App\Http\Requests\StoreBuatQuoteRequest;
-use App\Http\Requests\UpdateBuatQuoteRequest;
+use App\Models\MyPost;
+use App\Http\Requests\StoreMyPostRequest;
+use App\Http\Requests\UpdateMyPostRequest;
 
-class BuatQuoteController extends Controller
+class MyPostController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,7 +15,7 @@ class BuatQuoteController extends Controller
      */
     public function index()
     {
-        return view('buat-quote');
+        return view('mypost');
     }
 
     /**
@@ -31,10 +31,10 @@ class BuatQuoteController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \App\Http\Requests\StoreBuatQuoteRequest  $request
+     * @param  \App\Http\Requests\StoreMyPostRequest  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(StoreBuatQuoteRequest $request)
+    public function store(StoreMyPostRequest $request)
     {
         //
     }
@@ -42,10 +42,10 @@ class BuatQuoteController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\BuatQuote  $buatQuote
+     * @param  \App\Models\MyPost  $myPost
      * @return \Illuminate\Http\Response
      */
-    public function show(BuatQuote $buatQuote)
+    public function show(MyPost $myPost)
     {
         //
     }
@@ -53,10 +53,10 @@ class BuatQuoteController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\BuatQuote  $buatQuote
+     * @param  \App\Models\MyPost  $myPost
      * @return \Illuminate\Http\Response
      */
-    public function edit(BuatQuote $buatQuote)
+    public function edit(MyPost $myPost)
     {
         //
     }
@@ -64,11 +64,11 @@ class BuatQuoteController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  \App\Http\Requests\UpdateBuatQuoteRequest  $request
-     * @param  \App\Models\BuatQuote  $buatQuote
+     * @param  \App\Http\Requests\UpdateMyPostRequest  $request
+     * @param  \App\Models\MyPost  $myPost
      * @return \Illuminate\Http\Response
      */
-    public function update(UpdateBuatQuoteRequest $request, BuatQuote $buatQuote)
+    public function update(UpdateMyPostRequest $request, MyPost $myPost)
     {
         //
     }
@@ -76,10 +76,10 @@ class BuatQuoteController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\BuatQuote  $buatQuote
+     * @param  \App\Models\MyPost  $myPost
      * @return \Illuminate\Http\Response
      */
-    public function destroy(BuatQuote $buatQuote)
+    public function destroy(MyPost $myPost)
     {
         //
     }

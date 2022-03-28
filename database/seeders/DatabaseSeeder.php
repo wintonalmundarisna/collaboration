@@ -19,10 +19,10 @@ class DatabaseSeeder extends Seeder
     {
         User::create([
             'nama' => 'Winton Almundarisna',
-            'email' => 'wintonalmuundarisna@gmail.com',
+            'email' => 'wintonalmundarisna@gmail.com',
             'password' => bcrypt('12345')
         ]);
-        User::factory(100)->create();
-        Quottime::factory(200)->create();
+        User::factory(10)->create();
+        Quottime::factory(20)->create();
     }
 }

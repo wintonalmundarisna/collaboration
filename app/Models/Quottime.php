@@ -10,17 +10,16 @@ class Quottime extends Model
     use HasFactory;
 
     protected $guarded = ['id'];
-    // protected $with = ['nama'];
 
     public function user() {
         return $this->belongsTo(User::class);
     }
 
-    // public function scopeFilter($data) {
-    //     if (request('cari')) {
-    //         return $data->where('nama', 'like', '%' . request('cari') . '%')
-    //         ->orWhere('isi', 'like', '%' . request('cari') . '%');
-    //     }
-    // }
+    public function scopeFilter($data) {
+        if (request('cari')) {
+            return $data->where('isi', 'like', '%' . request('cari') . '%')
+            ->orWhere('nama', 'like', '%' . request('cari') . '%');
+        }
+    }
 
 }
