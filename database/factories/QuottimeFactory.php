@@ -19,6 +19,7 @@ class QuottimeFactory extends Factory
         return [
             'user_id' => mt_rand(1,6),
             'gambar' => $this->faker->sentence(mt_rand(1,2)),
+            'tagar' => $this->faker->sentence(mt_rand(1,5)),
             'isi' => $this->faker->paragraph()
         ];
     }

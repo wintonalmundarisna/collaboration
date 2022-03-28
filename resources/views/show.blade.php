@@ -99,7 +99,7 @@
                     </div>
                     <div class="row justify-content-center">
                         <div class="col-md-6">
-                            <form action="/quotes">
+                            <form action="/quotes?nama={{ $data->user->nama }}">
                                 {{-- @if (request('nama'))
                                     <input type="hidden" name="nama" value="{{ request('nama') }}">
                                 @endif
@@ -109,34 +109,29 @@
                                 <div class="input-group mb-3 mt-3">
                                     <input type="text" class="form-control" placeholder="Cari.." name="cari" value="{{ request('cari') }}" autocomplete="none">
                                     <button class="btn" style="background-color: #6c63ff; color: white;" type="submit">Cari</button>
-                                </div>
-                                </form>
-                            </div>
+                                  </div>
+                            </form>
                         </div>
                     </div>
-                    <div class="row mt-4">
+                </div>
+                <div class="row mt-4">
                     @foreach ($data as $d)
                     <div class="col-md-4 mt-3">
                         <div class="card-box text-center py-5">
                             <div class="img-card">
                                 <img
-                                src="https://source.unsplash.com/random/201x201?{{ $d->gambar }}"
+                                src="https://source.unsplash.com/random/201x201?{{ $d->quottimes->gambar }}"
                                 alt="Quottime"
                                 />
                             </div>
                             <div class="img-body">
-                                <p>{{ $d->user->nama }}</p>
+                                <p>{{ $d->nama }}</p>
                                 {{-- <p>{{ $d->user->nama }}</p> --}}
                             </div>
                             <div class="quote-text p-2">
                                 <p>
-                                    <i>" {{ $d->isi }} "</i>
+                                    <i>" {{ $d->quottimes->isi }} "</i>
                                 </p>
-                            </div>
-                            <div class="quote-text p-2 text-white d-flex justify-content-end">
-                                <small>
-                                    <small># {{ $d->tagar }}</small>
-                                </small>
                             </div>
                         </div>
                     </div>

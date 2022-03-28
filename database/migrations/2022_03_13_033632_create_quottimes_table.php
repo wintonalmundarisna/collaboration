@@ -18,6 +18,7 @@ return new class extends Migration
             $table->id();
             $table->foreignId('user_id');
             $table->string('gambar');
+            $table->string('tagar');
             $table->text('isi');
             $table->timestamp('published_at')->nullable();
             $table->timestamps();

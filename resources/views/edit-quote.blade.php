@@ -20,10 +20,10 @@
         />
 
         <!-- CSS -->
-        <link rel="stylesheet" href="../../public/css/style.css" />
+        <link rel="stylesheet" href="/css/style.css" />
 
         <!-- Fav-icon -->
-        <link rel="shortcut icon" href="../../public/asset/logo-quottime.png" />
+        <link rel="shortcut icon" href="/asset/logo-quottime.png" />
 
         <title>Quottime | Edit Quotes</title>
     </head>

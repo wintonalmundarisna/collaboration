@@ -17,8 +17,24 @@ class QuottimeController extends Controller
 
     public function quotes()
     {
+        $data = Quottime::latest();
+
+        if (request('cari')) {
+            $data->where('isi', 'like', '%' . request('cari') . '%')->orWhere('tagar', 'like', '%' . request('cari') . '%');
+            // $data->where('isi', 'like', '%' . request('cari') . '%');
+            // $data = Quottime::where('nama', request('cari'))->first();
+        }
+
         return view('/quotes', [
-            'data' =>  Quottime::latest()->filter()->get()
+            'data' =>  $data->get()
+        ]);
+    }
+
+    public function show(User $quotes)
+    {
+
+        return view('/quotes', [
+            'data' => $quotes
         ]);
     }
 }
