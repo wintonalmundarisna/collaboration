@@ -31,18 +31,19 @@
         <!-- start hero -->
         <section>
             <div class="container">
-                <div class="row text-center">
+                <div class="row text-center mt-4">
                     <div class="col-12">
                         <div class="welcome-banner">
                             <img
                                 src="/asset/welcome.png"
                                 alt="Quottime"
-                                class="w-100"
                             />
                         </div>
                         <div class="title-welcome">
                             <h5>My Dhasboard</h5>
-                            <h1 class="title-welcome">Hi {{ auth()->user()->nama }}</h1>
+                            <h1 class="title-welcome">
+                                Hi <span>{{ auth()->user()->nama }}</span>
+                            </h1>
                             <button class="btn-welcome mt-3 mb-3">
                                 <a href="/buat-quote" target="_blank"
                                     >Aku Mau Buat Quotes!</a
