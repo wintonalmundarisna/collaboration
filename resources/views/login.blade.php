@@ -108,7 +108,7 @@
                                 @enderror
                             </div>
 
-                            <button class="btn-daftar-login mt-2 text-white" type="submit">Masuk</button>
+                            <button class="btn-daftar-login mt-2" type="submit">Masuk</button>
 
                             <p class="mt-2">
                                 <a href="/lupa-password">Lupa Password?</a>

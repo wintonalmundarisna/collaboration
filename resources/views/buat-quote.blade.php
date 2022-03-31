@@ -76,11 +76,11 @@
                             </div>
 
                             <button class="btn-buat-quote mt-2 me-2">
-                                <a href="#">Simpan</a>
+                                <a href="/mypost">Simpan</a>
                             </button>
 
                             <button class="btn-batal">
-                                <a href="#">Batal</a>
+                                <a href="/quottime">Batal</a>
                             </button>
                         </form>
                     </div>

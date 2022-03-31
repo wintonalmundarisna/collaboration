@@ -34,7 +34,7 @@
                 <a
                     class="navbar-brand"
                     href="/quottime"
-                    style="color: #6c63ff"
+                    style="color: #0c1b31"
                     ><img
                         src="/asset/logo-quottime.png"
                         alt=""
@@ -60,7 +60,7 @@
                         <li class="nav-item">
                             <a
                                 class="nav-link"
-                                style="color: #6c63ff"
+                                style="color: #0c1b31"
                                 aria-current="page"
                                 href="/quottime"
                                 >Beranda</a
@@ -69,7 +69,7 @@
                         <li class="nav-item">
                             <a
                                 class="nav-link active"
-                                style="color: #6c63ff"
+                                style="color: #0c1b31"
                                 aria-current="page"
                                 href="/quotes"
                                 >Quotes</a
@@ -78,7 +78,7 @@
                         <li class="nav-item">
                             <a
                                 class="nav-link"
-                                style="color: #6c63ff"
+                                style="color: #0c1b31"
                                 aria-current="page"
                                 href="/login"
                                 >Keluar</a
@@ -133,10 +133,8 @@
                                     <i>" {{ $d->isi }} "</i>
                                 </p>
                             </div>
-                            <div class="quote-text p-2 text-white d-flex justify-content-end">
-                                <small>
-                                    <small># {{ $d->tagar }}</small>
-                                </small>
+                            <div class="tagar text-center">
+                                <p># {{ $d->tagar }}</p>
                             </div>
                         </div>
                     </div>

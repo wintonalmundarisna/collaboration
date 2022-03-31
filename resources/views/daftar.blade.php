@@ -140,7 +140,7 @@
                             @enderror
                             </div>
 
-                            <button class="btn-daftar-login mt-2 text-light" type="submit">Daftar</button>
+                            <button class="btn-daftar-login mt-2 " type="submit">Daftar</button>
 
                             <p class="mt-2">
                                 Sudah Memiliki Akun?

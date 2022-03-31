@@ -12,6 +12,7 @@
 
 body {
     font-family: "Poppins", sans-serif;
+    background: radial-gradient(circle at top left, #22c1c3, #fdbb2d);
 }
 
 /* awal bagian index.html */
@@ -19,8 +20,11 @@ body {
 /* button */
 .btn-daftar-nav {
     padding: 8px 20px;
-    border: 1px solid var(--color-1);
-    background-color: var(--color-1);
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
     border-radius: 5px;
     margin-right: 10px;
     transition: all 0.5s;
@@ -28,21 +32,24 @@ body {
 
 .btn-daftar-nav a {
     text-decoration: none;
-    color: var(--color-3);
+    color: var(--color-2);
 }
 
 .btn-daftar-nav:hover {
-    background-color: var(--color-4);
+    transform: scale(95%);
 }
 
 .btn-daftar-nav:hover a {
-    color: var(--color-3);
+    color: var(--color-2);
 }
 
 .btn-login-nav {
     padding: 8px 20px;
-    border: none;
-    background-color: transparent;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
     border-radius: 5px;
     margin-right: 15px;
     transition: all 0.5s;
@@ -50,40 +57,45 @@ body {
 
 .btn-login-nav a {
     text-decoration: none;
-    color: var(--color-1);
+    color: var(--color-2);
 }
 
-/* .btn-login:hover {
-  background-color: var(--color-1);
-  border: 1px solid var(--color-1);
-} */
+.btn-login-nav:hover {
+    transform: scale(95%);
+}
 
 .btn-login-nav:hover a {
-    color: var(--color-4);
+    color: var(--color-2);
 }
 
 .btn-mulai-hero {
     padding: 8px 20px;
-    border: 1px solid var(--color-1);
-    background-color: var(--color-1);
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
     border-radius: 5px;
     margin-right: 10px;
     transition: all 0.5s;
 }
 
 .btn-mulai-hero a {
-    color: var(--color-3);
+    color: var(--color-2);
     text-decoration: none;
 }
 
 .btn-mulai-hero:hover {
-    background-color: var(--color-4);
+    transform: scale(95%);
 }
 
 .btn-daftar-hero {
     padding: 8px 10px;
-    border: 1px solid var(--color-1);
-    background-color: var(--color-1);
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
     border-radius: 5px;
     margin-right: 10px;
     transition: all 0.5s;
@@ -91,18 +103,21 @@ body {
 }
 
 .btn-daftar-hero a {
-    color: var(--color-3);
+    color: var(--color-2);
     text-decoration: none;
 }
 
 .btn-daftar-hero:hover {
-    background-color: var(--color-4);
+    transform: scale(95%);
 }
 
 .btn-login-hero {
     padding: 8px 10px;
-    border: 1px solid var(--color-1);
-    background-color: transparent;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
     border-radius: 5px;
     margin-right: 10px;
     transition: all 0.5s;
@@ -110,49 +125,58 @@ body {
 }
 
 .btn-login-hero a {
-    color: var(--color-1);
+    color: var(--color-2);
     text-decoration: none;
 }
 
 .btn-login-hero:hover {
-    background-color: var(--color-1);
-    border: 1px solid var(--color-1);
+    transform: scale(95%);
 }
 
 .btn-login-hero:hover a {
-    color: var(--color-3);
+    color: var(--color-2);
 }
 
 .btn-batal {
     padding: 8px 20px;
-    border: none;
-    background-color: #dc3545;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
     border-radius: 5px;
     margin-right: 10px;
 }
 
 .btn-batal a {
     text-decoration: none;
-    color: var(--color-3);
+    color: var(--color-2);
 }
 
 .btn-buat-quote {
     padding: 8px 20px;
-    border: none;
-    background-color: #198754;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
     border-radius: 5px;
     margin-right: 10px;
 }
 
 .btn-buat-quote a {
     text-decoration: none;
-    color: var(--color-3);
+    color: var(--color-2);
 }
 /* button */
 
 /* start navbar */
 .navbar {
-    background-color: var(--color-3);
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
 }
 
 .navbar-brand {
@@ -170,9 +194,10 @@ h3 {
 }
 
 h3 span {
-    color: var(--color-1);
+    color: var(--color-2);
     font-family: "Quicksand", sans-serif;
     font-weight: 700;
+    font-size: 25px;
 }
 
 h1 {
@@ -195,15 +220,16 @@ h1 span {
 }
 
 h2 {
-    font-size: 25px;
-    font-weight: 500;
+    font-size: 20px;
+    font-weight: 300;
     color: var(--color-2);
 }
 
 h2 span {
-    color: var(--color-1);
+    color: var(--color-2);
     font-family: "Quicksand", sans-serif;
     font-weight: 600;
+    font-size: 25px;
 }
 
 /* end tentang */
@@ -223,13 +249,17 @@ h2 span {
 /* awal bagian daftar dan login.html */
 .text-header {
     font-size: 30px;
-    font-weight: 600;
-    color: var(--color-1);
+    font-weight: 500;
+    color: var(--color-2);
 }
 
 .form-control {
-    border: 1px solid var(--color-1);
     padding: 10px 5px;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
 }
 
 .form-control-buat {
@@ -240,7 +270,11 @@ h2 span {
 
 .btn-daftar-login {
     padding: 8px 10px;
-    background-color: var(--color-1);
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
     border-radius: 5px;
     border: none;
     transition: all 0.5s;
@@ -248,12 +282,12 @@ h2 span {
 }
 
 .btn-daftar-login a {
-    color: var(--color-3);
+    color: var(--color-2);
     text-decoration: none;
 }
 
 .btn-daftar-login:hover {
-    background-color: var(--color-4);
+    transform: scale(95%);
 }
 
 p {
@@ -263,7 +297,7 @@ p {
 
 p a {
     text-decoration: none;
-    color: var(--color-1);
+    color: var(--color-3);
 }
 /* akhir bagian daftar dan login.html */
 
@@ -283,8 +317,11 @@ h1 {
 
 .btn-buat {
     padding: 8px 10px;
-    background-color: var(--color-1);
-    border: 1px solid var(--color-1);
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
     border-radius: 5px;
     transition: all 0.5s;
     cursor: pointer;
@@ -292,47 +329,52 @@ h1 {
 }
 
 .btn-buat a {
-    color: var(--color-3);
+    color: var(--color-2);
     text-decoration: none;
 }
 
 .btn-buat:hover {
-    background-color: var(--color-4);
+    transform: scale(95%);
 }
 
 .btn-edit {
     padding: 8px 10px;
-    background-color: transparent;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
     border-radius: 5px;
-    border: 1px solid var(--color-1);
     transition: all 0.5s;
     cursor: pointer;
     margin-right: 10px;
 }
 
 .btn-edit a {
-    color: var(--color-1);
+    color: var(--color-2);
     text-decoration: none;
 }
 
 .btn-edit:hover a {
-    color: var(--color-3);
+    color: var(--color-2);
 }
 
 .btn-edit:hover {
-    background-color: var(--color-1);
-    border: 1px solid var(--color-1);
-    color: var(--color-3);
+    transform: scale(95%);
 }
 
 /* postingan */
 .card-box {
     width: 100%;
     height: 400px;
-    background-color: var(--color-1);
     border-radius: 10px;
     box-sizing: border-box;
     position: relative;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
 }
 
 .img-card {
@@ -354,13 +396,13 @@ h1 {
 .img-body p {
     font-weight: 500;
     font-size: 18px;
-    color: var(--color-3);
+    color: var(--color-2);
     padding-top: 5px;
 }
 
 .quote-text p i {
     font-weight: 500;
-    color: var(--color-3);
+    color: var(--color-2);
 }
 
 .carousel-control-prev-icon {
@@ -380,9 +422,9 @@ h1 {
 }
 
 .title-judul {
-    color: var(--color-1);
+    color: var(--color-2);
     font-size: 28px;
-    font-weight: 600;
+    font-weight: 400;
 }
 /* akhir bagian postingan terbaru */
 
@@ -400,18 +442,22 @@ h1 {
 .btn-read-more {
     margin-top: 20px;
     padding: 8px 10px;
-    background-color: var(--color-1);
-    border: none;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
     border-radius: 5px;
+    transition: all 0.5s;
 }
 
 .btn-read-more a {
-    color: var(--color-3);
+    color: var(--color-2);
     text-decoration: none;
 }
 
 .btn-read-more:hover {
-    background-color: var(--color-4);
+    transform: scale(95%);
 }
 /* akhir bagian quotes */
 
