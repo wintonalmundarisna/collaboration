@@ -14,7 +14,7 @@ body {
 
 /* start navbar */
 .navbar {
-    background: rgba(255, 255, 255, 0.05);
+    background: rgba(255, 255, 255, 0.3);
     backdrop-filter: blur(4px);
     -webkit-backdrop-filter: blur(4px);
     border-radius: 10px;
@@ -70,7 +70,7 @@ h1 {
 
 .btn-buat {
     padding: 8px 10px;
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.3);
     backdrop-filter: blur(4px);
     -webkit-backdrop-filter: blur(4px);
     border-radius: 10px;
@@ -97,7 +97,7 @@ h1 {
 
 .btn-edit {
     padding: 8px 10px;
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.3);
     backdrop-filter: blur(4px);
     -webkit-backdrop-filter: blur(4px);
     border-radius: 10px;
@@ -129,7 +129,7 @@ h1 {
     border-radius: 10px;
     box-sizing: border-box;
     position: relative;
-    background: rgba(255, 255, 255, 0.05);
+    background: rgba(255, 255, 255, 0.15);
     backdrop-filter: blur(4px);
     -webkit-backdrop-filter: blur(4px);
     border-radius: 10px;
@@ -213,7 +213,7 @@ h1 {
 .btn-read-more {
     margin-top: 20px;
     padding: 8px 10px;
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.3);
     backdrop-filter: blur(4px);
     -webkit-backdrop-filter: blur(4px);
     border-radius: 10px;
@@ -272,7 +272,7 @@ a:hover {
 
 .btn-welcome {
     padding: 8px 10px;
-    background: rgba(255, 255, 255, 0.05);
+    background: rgba(255, 255, 255, 0.3);
     backdrop-filter: blur(4px);
     -webkit-backdrop-filter: blur(4px);
     border-radius: 10px;
@@ -304,7 +304,7 @@ a:hover {
 
 .btn-edit-table {
     padding: 5px 8px;
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.3);
     backdrop-filter: blur(4px);
     -webkit-backdrop-filter: blur(4px);
     border-radius: 10px;
@@ -318,7 +318,7 @@ a:hover {
 
 .btn-hapus-table {
     padding: 5px 8px;
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.3);
     backdrop-filter: blur(4px);
     -webkit-backdrop-filter: blur(4px);
     border-radius: 10px;
