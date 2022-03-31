@@ -95,12 +95,22 @@
                                 @enderror
                             </div>
 
-                            <button class="btn-buat-quote mt-2 me-2 text-white" type="submit">
-                            Buat
+                            <div class="mb-3">
+                                <label
+                                    for="exampleFormControlInput1"
+                                    class="form-label"
+                                    >Isi Quote</label
+                                >
+                                
+                                <textarea class="form-control" id="exampleFormControlTextarea1" rows="5"></textarea>
+                            </div>
+
+                            <button class="btn-buat-quote mt-2 me-2">
+                                <a href="/mypost">Simpan</a>
                             </button>
 
                             <button class="btn-batal">
-                                <a href="#">Batal</a>
+                                <a href="/quottime">Batal</a>
                             </button>
                         </form>
                     </div>

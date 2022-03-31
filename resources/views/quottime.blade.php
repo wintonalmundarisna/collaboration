@@ -23,22 +23,22 @@
     <!-- start navbar -->
     <nav class="navbar sticky-top navbar-expand-lg navbar-light">
       <div class="container">
-        <a class="navbar-brand" href="/quottime" style="color: #6c63ff"><img src="/asset/logo-quottime.png" alt="" width="30" height="30" class="d-inline-block align-text-center" /> Quottime</a>
+        <a class="navbar-brand" href="/quottime" style="color: #0c1b31"><img src="/asset/logo-quottime.png" alt="" width="30" height="30" class="d-inline-block align-text-center" /> Quottime</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav ms-auto">
             <li class="nav-item">
-              <a class="nav-link active" style="color: #6c63ff" aria-current="page" href="/quottime">Beranda</a>
+              <a class="nav-link active" style="color: #0c1b31" aria-current="page" href="/quottime">Beranda</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" style="color: #6c63ff" aria-current="page" href="/quotes">Quotes</a>
+              <a class="nav-link" style="color: #0c1b31" aria-current="page" href="/quotes">Quotes</a>
             </li>
             <li class="nav-item">
               <form action="/logout" method="post">
                 @csrf
-              <button class="nav-link bg-transparent border-0" style="color: #6c63ff" aria-current="page" type="submit">Keluar</button>
+              <button class="nav-link bg-transparent border-0" style="color: #0c1b31" aria-current="page" type="submit">Keluar</button>
             </form>
             </li>
           </ul>
@@ -52,10 +52,10 @@
       <div class="container">
         <div class="row mt-2">
           <div class="col-md-6 my-auto">
-            <h1 class="mb-3">Hai, <span>{!! auth()->user()->nama !!} :)</span></h1>
+            <h1 class="mb-3" >Hai, <span>{!! auth()->user()->nama !!} :)</span></h1>
             <h3 class="mb-3">Ayo Mulai Membuat Quote-mu Sekarang!</h3>
-            <button class="btn-buat mt-3 mb-3"><a href="/buat-quote" target="_blank">Buat Quote</a></button>
-            <button class="btn-edit mt-3 mb-3"><a href="/mypost" target="_blank">Edit Quote</a></button>
+            <button class="btn-buat mt-3 mb-3"><a href="/buat-quote" >Buat Quote</a></button>
+            <button class="btn-edit mt-3 mb-3"><a href="/mypost">Edit Quote</a></button>
           </div>
           <div class="col-md-6">
             <img src="/asset/hero-img-1.png" alt="Quottime" class="w-100" />
@@ -70,7 +70,7 @@
       <div class="container">
         <div class="row text-center mb-5">
           <div class="col">
-            <h4 class="title-judul">Postingan Terbaru</h4>
+            <h4 class="title-judul ">Postingan Terbaru</h4>
           </div>
         </div>
         
@@ -215,7 +215,7 @@
 
         <!-- mobile -->
         <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
-          <div class="carousel-indicators">
+          <div class="carousel-indicators d-block d-sm-none text-center">
             <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
             <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
             <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
@@ -390,6 +390,10 @@
 
     <!-- Option 1: Bootstrap Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
 
   </body>
 </html>

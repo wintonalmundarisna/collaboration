@@ -20,10 +20,10 @@
         />
 
         <!-- CSS -->
-        <link rel="stylesheet" href="../../public/css/quottime.css" />
+        <link rel="stylesheet" href="css/quottime.css" />
 
         <!-- Fav-icon -->
-        <link rel="shortcut icon" href="../../public/asset/logo-quottime.png" />
+        <link rel="shortcut icon" href="asset/logo-quottime.png" />
 
         <title>Quottime | Selamat Datang Di Quottime</title>
     </head>
@@ -57,7 +57,7 @@
                     <td>
                         <img
                             class="img-table"
-                            src="../../public/asset/postingan/profile.png"
+                            src="asset/postingan/profile.png"
                             alt="Quottime"
                         />
                     </td>
@@ -67,7 +67,7 @@
                     </td>
                     <td>
                         <button class="btn-edit-table me-2">
-                            <a href="#">Edit</a>
+                            <a href="/edit-quote">Edit</a>
                         </button>
 
                         <button class="btn-hapus-table mt-2">
@@ -81,7 +81,7 @@
                     <td>
                         <img
                             class="img-table"
-                            src="../../public/asset/postingan/profile.png"
+                            src="asset/postingan/profile.png"
                             alt="Quottime"
                         />
                     </td>
@@ -91,7 +91,7 @@
                     </td>
                     <td>
                         <button class="btn-edit-table me-2">
-                            <a href="#">Edit</a>
+                            <a href="/edit-quote">Edit</a>
                         </button>
 
                         <button class="btn-hapus-table mt-2">
@@ -105,7 +105,7 @@
                     <td>
                         <img
                             class="img-table"
-                            src="../../public/asset/postingan/profile.png"
+                            src="asset/postingan/profile.png"
                             alt="Quottime"
                         />
                     </td>
@@ -115,7 +115,7 @@
                     </td>
                     <td>
                         <button class="btn-edit-table me-2">
-                            <a href="#">Edit</a>
+                            <a href="/edit-quote">Edit</a>
                         </button>
 
                         <button class="btn-hapus-table mt-2">
@@ -129,7 +129,7 @@
                     <td>
                         <img
                             class="img-table"
-                            src="../../public/asset/postingan/profile.png"
+                            src="asset/postingan/profile.png"
                             alt="Quottime"
                         />
                     </td>
@@ -139,7 +139,7 @@
                     </td>
                     <td>
                         <button class="btn-edit-table me-2">
-                            <a href="#">Edit</a>
+                            <a href="/edit-quote">Edit</a>
                         </button>
 
                         <button class="btn-hapus-table mt-2">
@@ -153,7 +153,7 @@
                     <td>
                         <img
                             class="img-table"
-                            src="../../public/asset/postingan/profile.png"
+                            src="asset/postingan/profile.png"
                             alt="Quottime"
                         />
                     </td>
@@ -163,7 +163,7 @@
                     </td>
                     <td>
                         <button class="btn-edit-table me-2">
-                            <a href="#">Edit</a>
+                            <a href="/edit-quote">Edit</a>
                         </button>
 
                         <button class="btn-hapus-table mt-2">
@@ -174,6 +174,12 @@
             </tbody>
         </table>
         <!-- end table -->
+
+        <div class="row text-center">
+              <div class="col-md-12">
+                    <button class="btn-read-more"><a href="/quottime">Kembali</a></button>
+              </div>
+            </div>
 
         <!-- start footer -->
         <section id="footer">
