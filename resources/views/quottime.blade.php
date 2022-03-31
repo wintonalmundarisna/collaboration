@@ -21,7 +21,7 @@
   </head>
   <body>
     <!-- start navbar -->
-    <nav class="navbar sticky-top navbar-expand-lg navbar-dark">
+    <nav class="navbar sticky-top navbar-expand-lg navbar-light">
       <div class="container">
         <a class="navbar-brand" href="/quottime" style="color: #0c1b31"><img src="/asset/logo-quottime.png" alt="" width="30" height="30" class="d-inline-block align-text-center" /> Quottime</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
