@@ -15,9 +15,4 @@ class Quottime extends Model
         return $this->belongsTo(User::class);
     }
 
-    // public function scopeFilter($data) {
-    //     if (request('cari')) {
-    //         return $data->where('isi', 'like', '%' . request('cari') . '%');
-    //     }
-    // }
 }

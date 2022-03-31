@@ -2,9 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\BuatQuote;
-use App\Http\Requests\StoreBuatQuoteRequest;
-use App\Http\Requests\UpdateBuatQuoteRequest;
+use Illuminate\Http\Request;
+use Illuminate\Support\Str;
+use App\Models\Quottime;
+
 
 class BuatQuoteController extends Controller
 {
@@ -31,21 +32,36 @@ class BuatQuoteController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \App\Http\Requests\StoreBuatQuoteRequest  $request
+     * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(StoreBuatQuoteRequest $request)
+    public function store(Request $request)
     {
-        //
+        $validatedData = $request->validate([
+            'tagar' => 'required|max:20',
+            'gambar' => 'image|file|max:1024',
+            'isi' => 'required'
+        ]);
+
+        if ($request->file('gambar')) {
+            $validatedData['gambar'] = $request->file('gambar')->store('gambar');
+        }
+
+        $validatedData['user_id'] = auth()->user()->id;
+        // strip_tags biar semua element htmlnya hilang
+        // $validatedData['isi'] = Str::limit(strip_tags($request->isi), 100);
+        $validatedData['isi'] = preg_replace('#</?div.*?>#is', '', $request->isi);
+        Quottime::create($validatedData);
+        return redirect('/quottime')->with('berhasil', 'Quotes berhasil dibuat');
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\BuatQuote  $buatQuote
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show(BuatQuote $buatQuote)
+    public function show($id)
     {
         //
     }
@@ -53,10 +69,10 @@ class BuatQuoteController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\BuatQuote  $buatQuote
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit(BuatQuote $buatQuote)
+    public function edit($id)
     {
         //
     }
@@ -64,11 +80,11 @@ class BuatQuoteController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  \App\Http\Requests\UpdateBuatQuoteRequest  $request
-     * @param  \App\Models\BuatQuote  $buatQuote
+     * @param  \Illuminate\Http\Request  $request
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(UpdateBuatQuoteRequest $request, BuatQuote $buatQuote)
+    public function update(Request $request, $id)
     {
         //
     }
@@ -76,10 +92,10 @@ class BuatQuoteController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\BuatQuote  $buatQuote
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy(BuatQuote $buatQuote)
+    public function destroy($id)
     {
         //
     }

@@ -30,11 +30,4 @@ class QuottimeController extends Controller
         ]);
     }
 
-    public function show(User $quotes)
-    {
-
-        return view('/quotes', [
-            'data' => $quotes
-        ]);
-    }
 }

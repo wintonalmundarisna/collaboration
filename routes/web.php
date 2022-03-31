@@ -27,16 +27,11 @@ Route::get('/sambutan', function () {
 
 Route::post('/logout', [LoginController::class, 'logout']);
 
-
 Route::get('/quottime', [QuottimeController::class, 'user'])->middleware('auth');
 
 Route::get('/quotes', [QuottimeController::class, 'quotes'])->middleware('auth');
 
-Route::get('/show/{quotes:nama}', [QuottimeController::class, 'show'])->middleware('auth');
-
-// Route::get('quotes', [QuotesController::class, 'index'])->middleware('auth');
-
-Route::get('buat-quote', [BuatQuoteController::class, 'index'])->middleware('auth');
+Route::resource('/buat-quote', BuatQuoteController::class)->middleware('auth');
 
 Route::get('/mypost', [MyPostController::class, 'index'])->middleware('auth');
 

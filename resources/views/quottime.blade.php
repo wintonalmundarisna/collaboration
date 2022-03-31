@@ -52,7 +52,7 @@
       <div class="container">
         <div class="row mt-2">
           <div class="col-md-6 my-auto">
-            <h1 class="mb-3">Hai, <span>{{ auth()->user()->nama }} :)</span></h1>
+            <h1 class="mb-3">Hai, <span>{!! auth()->user()->nama !!} :)</span></h1>
             <h3 class="mb-3">Ayo Mulai Membuat Quote-mu Sekarang!</h3>
             <button class="btn-buat mt-3 mb-3"><a href="/buat-quote" target="_blank">Buat Quote</a></button>
             <button class="btn-edit mt-3 mb-3"><a href="/mypost" target="_blank">Edit Quote</a></button>
@@ -87,11 +87,16 @@
                         <img src="https://source.unsplash.com/random/201x201" alt="Quottime" />
                       </div>
                       <div class="img-body">
-                        <p>{{ $data[0]->user->nama }}</p>
+                        <p>{!! $data[0]->user->nama !!}</p>
                       </div>
                       <div class="quote-text p-2">
-                        <p><i>" {{ $data[0]->isi }}</i></p>
+                        <p><i>" {!! $data[0]->isi !!} "</i></p>
                       </div>
+                      <div class="quote-text p-2 text-white d-flex justify-content-end">
+                        <small>
+                            <small># {!! $data[0]->tagar !!}</small>
+                        </small>
+                    </div>
                     </div>
                   </div>
 
@@ -101,11 +106,16 @@
                         <img src="https://source.unsplash.com/random/201x201" alt="Quottime" />
                       </div>
                       <div class="img-body">
-                        <p>{{ $data[1]->user->nama }}</p>
+                        <p>{!! $data[1]->user->nama !!}</p>
                       </div>
                       <div class="quote-text p-2">
-                        <p><i>" {{ $data[1]->isi }}</i></p>
+                        <p><i>" {!! $data[1]->isi !!} "</i></p>
                       </div>
+                       <div class="quote-text p-2 text-white d-flex justify-content-end">
+                        <small>
+                            <small># {!! $data[1]->tagar !!}</small>
+                        </small>
+                    </div>
                     </div>
                   </div>
 
@@ -115,11 +125,16 @@
                         <img src="https://source.unsplash.com/random/201x201" alt="Quottime" />
                       </div>
                       <div class="img-body">
-                        <p>{{ $data[2]->user->nama }}</p>
+                        <p>{!! $data[2]->user->nama !!}</p>
                       </div>
                       <div class="quote-text p-2">
-                        <p><i>" {{ $data[2]->isi }}</i></p>
+                        <p><i>" {!! $data[2]->isi !!} "</i></p>
                       </div>
+                       <div class="quote-text p-2 text-white d-flex justify-content-end">
+                        <small>
+                            <small># {!! $data[2]->tagar !!}</small>
+                        </small>
+                    </div>
                     </div>
                   </div>
                 </div>
@@ -133,11 +148,16 @@
                         <img src="https://source.unsplash.com/random/201x201" alt="Quottime" />
                       </div>
                       <div class="img-body">
-                        <p>{{ $data[3]->user->nama }}</p>
+                        <p>{!! $data[3]->user->nama !!}</p>
                       </div>
                       <div class="quote-text p-2">
-                        <p><i>" {{ $data[3]->isi }} "</i></p>
+                        <p><i>" {!! $data[3]->isi !!} "</i></p>
                       </div>
+                       <div class="quote-text p-2 text-white d-flex justify-content-end">
+                        <small>
+                            <small># {!! $data[3]->tagar !!}</small>
+                        </small>
+                    </div>
                     </div>
                   </div>
 
@@ -147,11 +167,16 @@
                         <img src="https://source.unsplash.com/random/201x201" alt="Quottime" />
                       </div>
                       <div class="img-body">
-                        <p>{{ $data[4]->user->nama }}</p>
+                        <p>{!! $data[4]->user->nama !!}</p>
                       </div>
                       <div class="quote-text p-2">
-                        <p><i>" {{ $data[4]->isi }} "</i></p>
+                        <p><i>" {!! $data[4]->isi !!} "</i></p>
                       </div>
+                       <div class="quote-text p-2 text-white d-flex justify-content-end">
+                        <small>
+                            <small># {!! $data[4]->tagar !!}</small>
+                        </small>
+                    </div>
                     </div>
                   </div>
 
@@ -161,11 +186,16 @@
                         <img src="https://source.unsplash.com/random/201x201" alt="Quottime" />
                       </div>
                       <div class="img-body">
-                        <p>{{ $data[5]->user->nama }}</p>
+                        <p>{!! $data[5]->user->nama !!}</p>
                       </div>
                       <div class="quote-text p-2">
-                        <p><i>" {{ $data[5]->isi }} "</i></p>
+                        <p><i>" {!! $data[5]->isi !!} "</i></p>
                       </div>
+                       <div class="quote-text p-2 text-white d-flex justify-content-end">
+                        <small>
+                            <small># {!! $data[5]->tagar !!}</small>
+                        </small>
+                    </div>
                     </div>
                   </div>
                 </div>
@@ -200,11 +230,16 @@
                         <img src="https://source.unsplash.com/random/201x201" alt="Quottime" />
                       </div>
                       <div class="img-body">
-                        <p>{{ $data[6]->user->nama }}</p>
+                        <p>{!! $data[6]->user->nama !!}</p>
                       </div>
                       <div class="quote-text p-2">
-                        <p><i>" {{ $data[6]->isi }} "</i></p>
+                        <p><i>" {!! $data[6]->isi !!} "</i></p>
                       </div>
+                      <div class="quote-text p-2 text-white d-flex justify-content-end">
+                        <small>
+                            <small># {!! $data[6]->tagar !!}</small>
+                        </small>
+                    </div>
                     </div>
                   </div>
                 </div>
@@ -218,11 +253,16 @@
                         <img src="https://source.unsplash.com/random/201x201" alt="Quottime" />
                       </div>
                       <div class="img-body">
-                        <p>{{ $data[7]->user->nama }}</p>
+                        <p>{!! $data[7]->user->nama !!}</p>
                       </div>
                       <div class="quote-text p-2">
-                        <p><i>" {{ $data[7]->isi }} "</i></p>
+                        <p><i>" {!! $data[7]->isi !!} "</i></p>
                       </div>
+                       <div class="quote-text p-2 text-white d-flex justify-content-end">
+                        <small>
+                            <small># {!! $data[7]->tagar !!}</small>
+                        </small>
+                    </div>
                     </div>
                   </div>
                 </div>
@@ -236,11 +276,16 @@
                         <img src="https://source.unsplash.com/random/201x201" alt="Quottime" />
                       </div>
                       <div class="img-body">
-                        <p>{{ $data[8]->user->nama }}</p>
+                        <p>{!! $data[8]->user->nama !!}</p>
                       </div>
                       <div class="quote-text p-2">
-                        <p><i>" {{ $data[8]->isi }} "</i></p>
+                        <p><i>" {!! $data[8]->isi !!} "</i></p>
                       </div>
+                       <div class="quote-text p-2 text-white d-flex justify-content-end">
+                        <small>
+                            <small># {!! $data[8]->tagar !!}</small>
+                        </small>
+                    </div>
                     </div>
                   </div>
                 </div>
@@ -273,11 +318,16 @@
                             <img src="https://source.unsplash.com/random/201x201?{{ $data[9]->gambar }}" alt="Quottime" class="position-absolute top-50 start-50 translate-middle">
                         </div>
                         <div class="img-body">
-                            <p>{{ $data[9]->user->nama }} </p>
+                            <p>{!! $data[9]->user->nama !!} </p>
                         </div>
                         <div class="quote-text p-2">
-                          <p><i>" {{ $data[9]->isi }} "</i></p>
+                          <p><i>" {!! $data[9]->isi !!} "</i></p>
                         </div>
+                         <div class="quote-text p-2 text-white d-flex justify-content-end">
+                        <small>
+                            <small># {!! $data[9]->tagar !!}</small>
+                        </small>
+                    </div>
                 </div>  
               </div>
               <div class="col-md-4 mt-3">
@@ -286,11 +336,16 @@
                             <img src="https://source.unsplash.com/random/201x201?{{ $data[10]->gambar }}" alt="Quottime" class="position-absolute top-50 start-50 translate-middle">
                         </div>
                         <div class="img-body">
-                            <p>{{ $data[10]->user->nama }} </p>
+                            <p>{!! $data[10]->user->nama !!} </p>
                         </div>
                         <div class="quote-text p-2">
-                          <p><i>" {{ $data[10]->isi }} "</i></p>
+                          <p><i>" {!! $data[10]->isi !!} "</i></p>
                         </div>
+                         <div class="quote-text p-2 text-white d-flex justify-content-end">
+                        <small>
+                            <small># {!! $data[10]->tagar !!}</small>
+                        </small>
+                    </div>
                 </div>  
               </div>
               <div class="col-md-4 mt-3">
@@ -299,11 +354,16 @@
                             <img src="https://source.unsplash.com/random/201x201?{{ $data[11]->gambar }}" alt="Quottime" class="position-absolute top-50 start-50 translate-middle">
                         </div>
                         <div class="img-body">
-                            <p>{{ $data[11]->user->nama }} </p>
+                            <p>{!! $data[11]->user->nama !!} </p>
                         </div>
                         <div class="quote-text p-2">
-                          <p><i>" {{ $data[11]->isi }} "</i></p>
+                          <p><i>" {!! $data[11]->isi !!} "</i></p>
                         </div>
+                        <div class="quote-text p-2 text-white d-flex justify-content-end">
+                          <small>
+                              <small># {!! $data[11]->tagar !!}</small>
+                          </small>
+                      </div>
                 </div>  
               </div>
             <div class="row text-center">

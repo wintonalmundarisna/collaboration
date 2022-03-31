@@ -1,6 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
+
+        {{-- Trix --}}
+        <link rel="stylesheet" type="text/css" href="trix.css">
+        <script type="text/javascript" src="trix.js"></script>
+
+        {{-- Button trix --}}
+        <style>
+            trix-toolbar [data-trix-button-group="file-tools"] {
+            display: none;
+            }
+        </style>
+
         <!-- Required meta tags -->
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -34,22 +46,37 @@
         <section>
             <div class="container">
                     <div class="col-md-8 my-auto mt-5 m-auto">
-                        <form>
-                            <h4 class="text-header mb-4">Buat Quote</h4>
+                        <form action="/buat-quote" method="POST" enctype="multipart/form-data">
+                            @csrf
                             <div class="mb-3">
                                 <label
                                     for="exampleFormControlInput1"
                                     class="form-label"
-                                    >Nama Lengkap</label
-                                >
+                                    >Tagar</label>
                                 <input
                                     type="text"
-                                    class="form-control"
-                                    id="exampleFormControlInput1"
-                                    placeholder="Nama Lengkap"
-                                    name="nama"
-                                />
+                                    placeholder="Buat Tagar..."
+                                    name="tagar"
+                                    class="form-control @error('tagar') is-invalid @enderror"
+                                    autofocus
+                                    required
+                                    value="{{ old('tagar') }}"/>
+                                    @error('tagar')
+                                        <p class="text-danger">{{ $message }}</p>
+                                    @enderror
                             </div>
+                            <div class="mb-3">
+                                <label
+                                    for="exampleFormControlInput1"
+                                    class="form-label"
+                                    >Isi Quote</label>
+                                    @error('isi')
+                                        <p class="text-danger">{{ $message }}</p>
+                                    @enderror
+                                <input id="isi" type="hidden" name="isi" value="{{ old('isi') }}" required>
+                                <trix-editor input="isi"></trix-editor>
+                            </div>
+
                             <div class="mb-3">
                                 <label
                                     for="exampleFormControlInput1"
@@ -58,25 +85,18 @@
                                 >
                                 <input
                                     type="file"
-                                    class="form-control-buat"
+                                    class="form-control-buat @error('gambar') is-invalid @enderror"
                                     id="exampleFormControlInput1"
-                                    placeholder="name@example.com"
-                                    name="file-upload"
-                                />
+                                    name="gambar"
+                                    required
+                                    value="{{ old('gambar') }}"/>
+                                @error('gambar')
+                                    <p class="text-danger">{{ $message }}</p>
+                                @enderror
                             </div>
 
-                            <div class="mb-3">
-                                <label
-                                    for="exampleFormControlInput1"
-                                    class="form-label"
-                                    >Isi Quote</label
-                                >
-                                
-                                <textarea class="form-control" id="exampleFormControlTextarea1" rows="5"></textarea>
-                            </div>
-
-                            <button class="btn-buat-quote mt-2 me-2">
-                                <a href="#">Simpan</a>
+                            <button class="btn-buat-quote mt-2 me-2 text-white" type="submit">
+                            Buat
                             </button>
 
                             <button class="btn-batal">
@@ -111,6 +131,10 @@
             src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
             integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
             crossorigin="anonymous"
+
+            document.addEventListener('trix-file-accept', function(e) {
+                e.preventDefault();
+              })
         ></script>
 
         <!-- Option 2: Separate Popper and Bootstrap JS -->
