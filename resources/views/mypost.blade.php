@@ -41,13 +41,13 @@
         <!-- header -->
         <!-- start table -->
         <table class="table table-striped text-center mt-3">
-            <thead style="background-color: var(--color-1)">
+            <thead style="background: rgba(255, 255, 255, 0.20)">
                 <tr>
-                    <td style="color: var(--color-3); width: 5%">No</td>
-                    <td style="color: var(--color-3); width: 15%">Nama</td>
-                    <td style="color: var(--color-3); width: 15%">Foto</td>
-                    <td style="color: var(--color-3); width: 50%">Quotes</td>
-                    <td style="color: var(--color-3)">Edit / Hapus</td>
+                    <td style="color: var(--color-2); width: 5%">No</td>
+                    <td style="color: var(--color-2); width: 15%">Nama</td>
+                    <td style="color: var(--color-2); width: 15%">Foto</td>
+                    <td style="color: var(--color-2); width: 50%">Quotes</td>
+                    <td style="color: var(--color-2)">Edit / Hapus</td>
                 </tr>
             </thead>
             <tbody>
@@ -147,39 +147,19 @@
                         </button>
                     </td>
                 </tr>
-                <tr>
-                    <td>5</td>
-                    <td>Ryan fakhroji</td>
-                    <td>
-                        <img
-                            class="img-table"
-                            src="asset/postingan/profile.png"
-                            alt="Quottime"
-                        />
-                    </td>
-                    <td>
-                        Berbuat baik adalah sebuah kewajiban, tetapi merasa
-                        lebih baik sebuah kesalahan
-                    </td>
-                    <td>
-                        <button class="btn-edit-table me-2">
-                            <a href="/edit-quote">Edit</a>
-                        </button>
-
-                        <button class="btn-hapus-table mt-2">
-                            <a href="#">Hapus</a>
-                        </button>
-                    </td>
-                </tr>
             </tbody>
         </table>
         <!-- end table -->
 
-        <div class="row text-center">
+        <section>
+            <div class="container">
+            <div class="row text-center">
               <div class="col-md-12">
                     <button class="btn-read-more"><a href="/quottime">Kembali</a></button>
               </div>
             </div>
+            </div>
+            </section>
 
         <!-- start footer -->
         <section id="footer">
