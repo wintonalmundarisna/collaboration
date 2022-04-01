@@ -20,10 +20,10 @@
         />
 
         <!-- CSS -->
-        <link rel="stylesheet" href="css/quottime.css" />
+        <link rel="stylesheet" href="/css/quottime.css" />
 
         <!-- Fav-icon -->
-        <link rel="shortcut icon" href="asset/logo-quottime.png" />
+        <link rel="shortcut icon" href="/asset/logo-quottime.png" />
 
         <title>Quottime | Selamat Datang Di Quottime</title>
     </head>
@@ -33,7 +33,7 @@
             <div class="container">
                 <div class="row mt-3">
                     <div class="col-md-12">
-                        <h4 class="table-header text-center">My Post</h4>
+                        <h4 class="table-header text-center">My Quotes</h4>
                     </div>
                 </div>
             </div>
@@ -51,126 +51,33 @@
                 </tr>
             </thead>
             <tbody>
+                @foreach ($data as $d)
                 <tr>
-                    <td>1</td>
-                    <td>Ryan fakhroji</td>
+                    <td>{{ $loop->iteration }}</td>
+                    <td>{{ $d->user->nama }}</td>
                     <td>
                         <img
                             class="img-table"
-                            src="asset/postingan/profile.png"
+                            src="{{ asset('storage/' . $d->gambar) }}"
                             alt="Quottime"
                         />
                     </td>
                     <td>
-                        Berbuat baik adalah sebuah kewajiban, tetapi merasa
-                        lebih baik sebuah kesalahan
+                        {!! $d->isi !!}
                     </td>
                     <td>
                         <button class="btn-edit-table me-2">
                             <a href="/edit-quote">Edit</a>
                         </button>
-
-                        <button class="btn-hapus-table mt-2">
-                            <a href="#">Hapus</a>
-                        </button>
+                        <form action="/mypost/quottime/{{ $d->tagar }}" method="POST">
+                        {{-- <form action="/buat-quote/{{ $d->tagar }}" method="POST"> --}}
+                            @method('delete')
+                            @csrf
+                            <button>Hapus</button>
+                        </form>
                     </td>
                 </tr>
-                <tr>
-                    <td>2</td>
-                    <td>Winton</td>
-                    <td>
-                        <img
-                            class="img-table"
-                            src="asset/postingan/profile.png"
-                            alt="Quottime"
-                        />
-                    </td>
-                    <td>
-                        Berbuat baik adalah sebuah kewajiban, tetapi merasa
-                        lebih baik sebuah kesalahan
-                    </td>
-                    <td>
-                        <button class="btn-edit-table me-2">
-                            <a href="/edit-quote">Edit</a>
-                        </button>
-
-                        <button class="btn-hapus-table mt-2">
-                            <a href="#">Hapus</a>
-                        </button>
-                    </td>
-                </tr>
-                <tr>
-                    <td>3</td>
-                    <td>Ryan fakhroji</td>
-                    <td>
-                        <img
-                            class="img-table"
-                            src="asset/postingan/profile.png"
-                            alt="Quottime"
-                        />
-                    </td>
-                    <td>
-                        Berbuat baik adalah sebuah kewajiban, tetapi merasa
-                        lebih baik sebuah kesalahan
-                    </td>
-                    <td>
-                        <button class="btn-edit-table me-2">
-                            <a href="/edit-quote">Edit</a>
-                        </button>
-
-                        <button class="btn-hapus-table mt-2">
-                            <a href="#">Hapus</a>
-                        </button>
-                    </td>
-                </tr>
-                <tr>
-                    <td>4</td>
-                    <td>Ryan fakhroji</td>
-                    <td>
-                        <img
-                            class="img-table"
-                            src="asset/postingan/profile.png"
-                            alt="Quottime"
-                        />
-                    </td>
-                    <td>
-                        Berbuat baik adalah sebuah kewajiban, tetapi merasa
-                        lebih baik sebuah kesalahan
-                    </td>
-                    <td>
-                        <button class="btn-edit-table me-2">
-                            <a href="/edit-quote">Edit</a>
-                        </button>
-
-                        <button class="btn-hapus-table mt-2">
-                            <a href="#">Hapus</a>
-                        </button>
-                    </td>
-                </tr>
-                <tr>
-                    <td>5</td>
-                    <td>Ryan fakhroji</td>
-                    <td>
-                        <img
-                            class="img-table"
-                            src="asset/postingan/profile.png"
-                            alt="Quottime"
-                        />
-                    </td>
-                    <td>
-                        Berbuat baik adalah sebuah kewajiban, tetapi merasa
-                        lebih baik sebuah kesalahan
-                    </td>
-                    <td>
-                        <button class="btn-edit-table me-2">
-                            <a href="/edit-quote">Edit</a>
-                        </button>
-
-                        <button class="btn-hapus-table mt-2">
-                            <a href="#">Hapus</a>
-                        </button>
-                    </td>
-                </tr>
+                @endforeach
             </tbody>
         </table>
         <!-- end table -->

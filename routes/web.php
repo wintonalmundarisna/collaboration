@@ -31,9 +31,9 @@ Route::get('/quottime', [QuottimeController::class, 'user'])->middleware('auth')
 
 Route::get('/quotes', [QuottimeController::class, 'quotes'])->middleware('auth');
 
-Route::resource('/buat-quote', BuatQuoteController::class)->middleware('auth');
+Route::resource('/buat-quote/quottime', BuatQuoteController::class)->middleware('auth');
 
-Route::get('/mypost', [MyPostController::class, 'index'])->middleware('auth');
+Route::resource('/mypost/quottime', MyPostController::class)->middleware('auth');
 
 Route::get('/edit-quote', [QuotesController::class, 'index'])->middleware('auth');
 

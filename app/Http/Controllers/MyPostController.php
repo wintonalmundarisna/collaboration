@@ -3,8 +3,11 @@
 namespace App\Http\Controllers;
 
 use App\Models\MyPost;
+use App\Models\Quottime;
 use App\Http\Requests\StoreMyPostRequest;
 use App\Http\Requests\UpdateMyPostRequest;
+use Illuminate\Http\Request;
+use Illuminate\Support\Str;
 
 class MyPostController extends Controller
 {
@@ -15,7 +18,9 @@ class MyPostController extends Controller
      */
     public function index()
     {
-        return view('mypost');
+        return view('mypost', [
+            'data' => Quottime::where('user_id', auth()->user()->id)->get()
+        ]);
     }
 
     /**
@@ -76,11 +81,12 @@ class MyPostController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\MyPost  $myPost
+     * @param  \App\Models\MyPost $myPost
      * @return \Illuminate\Http\Response
      */
-    public function destroy(MyPost $myPost)
+    public function destroy(Request $request)
     {
-        //
+        Quottime::destroy($request->id);
+        return redirect('/mypost/quottime')->with('berhasil', 'Data berhasil dihapus');
     }
 }

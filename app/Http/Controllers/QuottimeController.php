@@ -30,4 +30,6 @@ class QuottimeController extends Controller
         ]);
     }
 
+    
+
 }

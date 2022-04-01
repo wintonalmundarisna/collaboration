@@ -89,24 +89,13 @@
                                     id="exampleFormControlInput1"
                                     name="gambar"
                                     required
-                                    value="{{ old('gambar') }}"/>
+                                    />
                                 @error('gambar')
                                     <p class="text-danger">{{ $message }}</p>
                                 @enderror
                             </div>
-
-                            <div class="mb-3">
-                                <label
-                                    for="exampleFormControlInput1"
-                                    class="form-label"
-                                    >Isi Quote</label
-                                >
-                                
-                                <textarea class="form-control" id="exampleFormControlTextarea1" rows="5"></textarea>
-                            </div>
-
-                            <button class="btn-buat-quote mt-2 me-2">
-                                <a href="/mypost">Simpan</a>
+                            <button class="btn-buat-quote mt-2 me-2" type="submit">
+                                Simpan
                             </button>
 
                             <button class="btn-batal">

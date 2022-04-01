@@ -3,12 +3,35 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use Illuminate\Support\Str;
 use App\Models\Quottime;
 
-
-class BuatQuoteController extends Controller
+class QuottimeController extends Controller
 {
+
+
+    public function user()
+    {
+        return view('/quottime', [
+            'data' => Quottime::latest()->get(),
+        ]);
+    }
+
+    public function quotes()
+    {
+        $data = Quottime::latest();
+
+        if (request('cari')) {
+            $data->where('isi', 'like', '%' . request('cari') . '%')->orWhere('tagar', 'like', '%' . request('cari') . '%');
+            // $data->where('isi', 'like', '%' . request('cari') . '%');
+            // $data = Quottime::where('nama', request('cari'))->first();
+        }
+
+        return view('/quotes', [
+            'data' =>  $data->get()
+        ]);
+    }
+
+
     /**
      * Display a listing of the resource.
      *
@@ -16,7 +39,7 @@ class BuatQuoteController extends Controller
      */
     public function index()
     {
-        return view('buat-quote');
+        //
     }
 
     /**
@@ -37,22 +60,7 @@ class BuatQuoteController extends Controller
      */
     public function store(Request $request)
     {
-        $validatedData = $request->validate([
-            'tagar' => 'required|max:20',
-            'gambar' => 'image|file|max:1024',
-            'isi' => 'required'
-        ]);
-
-        if ($request->file('gambar')) {
-            $validatedData['gambar'] = $request->file('gambar')->store('gambar');
-        }
-
-        $validatedData['user_id'] = auth()->user()->id;
-        // strip_tags biar semua element htmlnya hilang
-        $validatedData['tagar'] = Str::limit(strip_tags($request->tagar), 30);
-        $validatedData['isi'] = preg_replace('#</?div.*?>#is', '', $request->isi);
-        Quottime::create($validatedData);
-        return redirect('/mypost/quottime')->with('berhasil', 'Quotes berhasil dibuat');
+        //
     }
 
     /**
@@ -63,7 +71,7 @@ class BuatQuoteController extends Controller
      */
     public function show($id)
     {
-        
+        //
     }
 
     /**
@@ -95,9 +103,8 @@ class BuatQuoteController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    // public function destroy(Request $request)
-    // {
-    //      Quottime::destroy($request->id);
-    //     return redirect('/buat-quote/quottime')->with('berhasil', 'Data berhasil dihapus');
-    // }
+    public function destroy($id)
+    {
+        //
+    }
 }
