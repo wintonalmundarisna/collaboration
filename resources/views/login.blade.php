@@ -62,6 +62,11 @@
                                     placeholder="name@example.com"
                                     name="email"
                                     class="form-control @error('email') is-invalid @enderror"
+                                    style="background: rgba(255, 255, 255, 0.20);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18);"
                                     autofocus
                                     required
                                     value="{{ old('email') }}"/>
@@ -78,7 +83,11 @@
                                     >Password</label>
                                 <input
                                     type="password"
-                                    class="form-control @error('password') is-invalid @enderror"
+                                    class="form-control @error('password') is-invalid @enderror" style="background: rgba(255, 255, 255, 0.20);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18);"
                                     id="exampleFormControlInput1"
                                     placeholder="Password"
                                     name="password"

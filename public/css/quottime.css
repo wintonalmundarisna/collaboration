@@ -157,13 +157,13 @@ h1 {
 .img-body p {
     font-weight: 500;
     font-size: 18px;
-    color: var(--color-3);
+    color: var(--color-2);
     padding-top: 5px;
 }
 
 .quote-text p i {
     font-weight: 500;
-    color: var(--color-3);
+    color: var(--color-2);
 }
 
 .carousel-control-prev-icon {
