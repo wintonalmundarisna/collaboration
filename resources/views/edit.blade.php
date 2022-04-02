@@ -4,6 +4,12 @@
 
         <link rel="stylesheet" type="text/css" href="trix.css">
         <script type="text/javascript" src="trix.js"></script>
+        
+        <style>
+            trix-toolbar [data-trix-button-group="file-tools"] {
+            display: none;
+            }
+        </style>
 
         <!-- Required meta tags -->
         <meta charset="utf-8" />
@@ -29,28 +35,24 @@
         <!-- Fav-icon -->
         <link rel="shortcut icon" href="/asset/logo-quottime.png" />
 
-        <style>
-            trix-toolbar [data-trix-button-group="file-tools"] {
-            display: none;
-            }
-        </style>
-
         <title>Quottime | Edit Quotes</title>
     </head>
     <body>
-        
-
         <!-- start buat quote -->
         <section>
             <div class="container">
                     <div class="col-md-8 my-auto mt-5 m-auto">
                         <form action="mypost/quottime/{{ $data->id }}" method="POST" enctype="multipart/form-data">
+                            @method('put')
+                            @csrf
                             <h4 class="text-header mb-4">Edit Quote</h4>
                             <div class="mb-3">
                                 <label
                                     for="exampleFormControlInput1"
                                     class="form-label"
-                                    >Tagar</label
+<<<<<<< HEAD:resources/views/edit-quote.blade.php
+=======
+                                    >Nama Lengkap</label
                                 >
                                 <input
                                     type="text"
@@ -58,10 +60,26 @@
                                     id="exampleFormControlInput1"
                                     placeholder="Nama Lengkap"
                                     name="nama"
+                                    value="{{ $data->user->nama }}"
+                                    />
+                            </div>
+                            <div class="mb-3">
+                                <label
+                                    for="exampleFormControlInput1"
+                                    class="form-label"
+>>>>>>> deb2471e0ce596206dd354a8194a83983de474d3:resources/views/edit.blade.php
+                                    >Tagar</label
+                                >
+                                <input
+                                    type="text"
+                                    class="form-control"
+                                    id="exampleFormControlInput1"
+                                    placeholder="Nama Lengkap"
+                                    name="tagar"
                                     value="{{ $data->tagar }}"
                                     />
-                                </div>
-                                <div class="mb-3">
+                            </div>
+                            {{-- <div class="mb-3">
                                     <label
                                     for="exampleFormControlInput1"
                                     class="form-label"
@@ -75,17 +93,17 @@
                                     name="file-upload"
                                     value="{{ $data->gambar }}"
                                 />
-                            </div>
+                            </div> --}}
                             <div class="mb-3">
                                 <label
-                                    for="exampleFormControlInput1"
+                                    for="isi"
                                     class="form-label"
                                     >Isi Quote</label>
                                     @error('isi')
                                         <p class="text-danger">{{ $message }}</p>
                                     @enderror
-                                <input id="isi" type="hidden" name="isi" value="{{ old('isi', $data->isi) }}" required>
-                                <trix-editor input="isi" name="isi" value="{{ old('isi', $data->isi) }}"></trix-editor>
+                                <input id="isi" type="hidden" name="isi" value="{{ $data->tagar }}" required>
+                                <trix-editor input="isi"></trix-editor>
                             </div>
 
                             <button class="btn-buat-quote mt-2 me-2">
@@ -98,7 +116,6 @@
                         </form>
                     </div>
                 </div>
-            </div>
         </section>
         <!-- end buat quote -->
 
@@ -117,10 +134,8 @@
         </section>
         <!-- end footer -->
 
-        <!-- Optional JavaScript; choose one of the two! -->
-
         <!-- Option 1: Bootstrap Bundle with Popper -->
-        <script
+        <script>
             src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
             integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
             crossorigin="anonymous"
@@ -128,11 +143,7 @@
             document.addEventListener('trix-file-accept', function(e) {
                 e.preventDefault();
               })
-        ></script>
+        </script>
 
-        <!-- Option 2: Separate Popper and Bootstrap JS -->
-        <!--
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
-    --></body>
+       </body>
 </html>

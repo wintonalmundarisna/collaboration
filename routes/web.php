@@ -36,7 +36,7 @@ Route::get('/buat-quote', [QuotesController::class, 'create'])->middleware('auth
 
 Route::resource('/mypost/quottime', QuotesController::class)->middleware('auth');
 
-// Route::resource('/edit-quote', [QuotesController::class, 'halEdit'])->middleware('auth');
+Route::get('/edit/{quottime:isi}', [QuottimeController::class, 'edit'])->middleware('auth');
 
 Route::get('/lupa-password', function () {
     return view('lupa-password');
