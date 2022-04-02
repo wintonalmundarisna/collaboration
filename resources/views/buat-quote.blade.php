@@ -2,11 +2,9 @@
 <html lang="en">
     <head>
 
-        {{-- Trix --}}
         <link rel="stylesheet" type="text/css" href="trix.css">
         <script type="text/javascript" src="trix.js"></script>
-
-        {{-- Button trix --}}
+        
         <style>
             trix-toolbar [data-trix-button-group="file-tools"] {
             display: none;
@@ -46,7 +44,7 @@
         <section>
             <div class="container">
                     <div class="col-md-8 my-auto mt-5 m-auto">
-                        <form action="/buat-quote" method="POST" enctype="multipart/form-data">
+                        <form action="/mypost/quottime" method="POST" enctype="multipart/form-data">
                             @csrf
                             <div class="mb-3">
                                 <label

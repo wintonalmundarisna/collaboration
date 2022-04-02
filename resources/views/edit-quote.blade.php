@@ -1,6 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
+
+        <link rel="stylesheet" type="text/css" href="trix.css">
+        <script type="text/javascript" src="trix.js"></script>
+
         <!-- Required meta tags -->
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -25,6 +29,12 @@
         <!-- Fav-icon -->
         <link rel="shortcut icon" href="/asset/logo-quottime.png" />
 
+        <style>
+            trix-toolbar [data-trix-button-group="file-tools"] {
+            display: none;
+            }
+        </style>
+
         <title>Quottime | Edit Quotes</title>
     </head>
     <body>
@@ -34,7 +44,7 @@
         <section>
             <div class="container">
                     <div class="col-md-8 my-auto mt-5 m-auto">
-                        <form>
+                        <form action="mypost/quottime/{{ $data->id }}" method="POST" enctype="multipart/form-data">
                             <h4 class="text-header mb-4">Edit Quote</h4>
                             <div class="mb-3">
                                 <label
@@ -48,31 +58,49 @@
                                     id="exampleFormControlInput1"
                                     placeholder="Nama Lengkap"
                                     name="nama"
-                                />
-                            </div>
+                                    value="{{ $data->user->nama }}"
+                                    />
+                                </div>
                             <div class="mb-3">
                                 <label
                                     for="exampleFormControlInput1"
                                     class="form-label"
-                                    >Upload Foto</label
+                                    >Tagar</label
                                 >
                                 <input
+                                    type="text"
+                                    class="form-control"
+                                    id="exampleFormControlInput1"
+                                    placeholder="Nama Lengkap"
+                                    name="nama"
+                                    value="{{ $data->tagar }}"
+                                    />
+                                </div>
+                                <div class="mb-3">
+                                    <label
+                                    for="exampleFormControlInput1"
+                                    class="form-label"
+                                    >Upload Foto</label
+                                    >
+                                    <input
                                     type="file"
                                     class="form-control-buat"
                                     id="exampleFormControlInput1"
                                     placeholder="name@example.com"
                                     name="file-upload"
+                                    value="{{ $data->gambar }}"
                                 />
                             </div>
-
                             <div class="mb-3">
                                 <label
                                     for="exampleFormControlInput1"
                                     class="form-label"
-                                    >Isi Quote</label
-                                >
-                                
-                                <textarea class="form-control" id="exampleFormControlTextarea1" rows="5"></textarea>
+                                    >Isi Quote</label>
+                                    @error('isi')
+                                        <p class="text-danger">{{ $message }}</p>
+                                    @enderror
+                                <input id="isi" type="hidden" name="isi" value="{{ old('isi', $data->isi) }}" required>
+                                <trix-editor input="isi" name="isi" value="{{ old('isi', $data->isi) }}"></trix-editor>
                             </div>
 
                             <button class="btn-buat-quote mt-2 me-2">
@@ -111,6 +139,10 @@
             src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
             integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
             crossorigin="anonymous"
+
+            document.addEventListener('trix-file-accept', function(e) {
+                e.preventDefault();
+              })
         ></script>
 
         <!-- Option 2: Separate Popper and Bootstrap JS -->

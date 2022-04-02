@@ -2,12 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Quottime;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
-use App\Models\Quottime;
 
-
-class BuatQuoteController extends Controller
+class QuotesController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -16,7 +15,9 @@ class BuatQuoteController extends Controller
      */
     public function index()
     {
-        return view('buat-quote');
+        return view('mypost', [
+            'data' => Quottime::where('user_id', auth()->user()->id)->get()
+        ]);
     }
 
     /**
@@ -26,7 +27,7 @@ class BuatQuoteController extends Controller
      */
     public function create()
     {
-        //
+        return view('buat-quote');
     }
 
     /**
@@ -58,33 +59,35 @@ class BuatQuoteController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
+     * @param  \App\Models\Quottime  $quottime
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Quottime $quottime)
     {
-        
+        //
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  int  $id
+     * @param  \App\Models\Quottime  $quottime
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Quottime $quottime)
     {
-        //
+        return view('edit-quote', [
+            'data' => $quottime
+        ]);
     }
 
     /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
+     * @param  \App\Models\Quottime  $quottime
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Quottime $quottime)
     {
         //
     }
@@ -92,12 +95,12 @@ class BuatQuoteController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int  $id
+     * @param  \App\Models\Quottime  $quottime
      * @return \Illuminate\Http\Response
      */
-    // public function destroy(Request $request)
-    // {
-    //      Quottime::destroy($request->id);
-    //     return redirect('/buat-quote/quottime')->with('berhasil', 'Data berhasil dihapus');
-    // }
+    public function destroy(Quottime $quottime)
+    {
+        Quottime::destroy($quottime->id);
+        return redirect('/mypost/quottime');
+    }
 }

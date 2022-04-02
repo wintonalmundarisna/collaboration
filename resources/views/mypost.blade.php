@@ -66,14 +66,14 @@
                         {!! $d->isi !!}
                     </td>
                     <td>
-                        <button class="btn-edit-table me-2">
-                            <a href="/edit-quote">Edit</a>
-                        </button>
-                        <form action="/mypost/quottime/{{ $d->tagar }}" method="POST">
-                        {{-- <form action="/buat-quote/{{ $d->tagar }}" method="POST"> --}}
+                        <form action="/mypost/quottime/{{ $d->id }}/edit" method="GET">
+                            @csrf
+                            <button type="submit">Edit</button>
+                        </form>
+                        <form action="/mypost/quottime/{{ $d->id }}" method="POST">
                             @method('delete')
                             @csrf
-                            <button>Hapus</button>
+                            <button type="submit">Hapus</button>
                         </form>
                     </td>
                 </tr>

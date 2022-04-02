@@ -31,11 +31,12 @@ Route::get('/quottime', [QuottimeController::class, 'user'])->middleware('auth')
 
 Route::get('/quotes', [QuottimeController::class, 'quotes'])->middleware('auth');
 
-Route::resource('/buat-quote/quottime', BuatQuoteController::class)->middleware('auth');
+Route::get('/buat-quote', [QuotesController::class, 'create'])->middleware('auth');
 
-Route::resource('/mypost/quottime', MyPostController::class)->middleware('auth');
 
-Route::get('/edit-quote', [QuotesController::class, 'index'])->middleware('auth');
+Route::resource('/mypost/quottime', QuotesController::class)->middleware('auth');
+
+// Route::resource('/edit-quote', [QuotesController::class, 'halEdit'])->middleware('auth');
 
 Route::get('/lupa-password', function () {
     return view('lupa-password');
