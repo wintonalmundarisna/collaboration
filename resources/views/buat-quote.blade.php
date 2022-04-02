@@ -77,7 +77,11 @@
                                         <p class="text-danger">{{ $message }}</p>
                                     @enderror
                                 <input id="isi" type="hidden" name="isi" value="{{ old('isi') }}" required>
-                                <trix-editor input="isi"></trix-editor>
+                                <trix-editor input="isi" style="background: rgba(255, 255, 255, 0.20);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18);"></trix-editor>
                             </div>
 
                             <div class="mb-3">
