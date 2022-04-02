@@ -50,21 +50,6 @@
                                 <label
                                     for="exampleFormControlInput1"
                                     class="form-label"
-                                    >Nama Lengkap</label
-                                >
-                                <input
-                                    type="text"
-                                    class="form-control"
-                                    id="exampleFormControlInput1"
-                                    placeholder="Nama Lengkap"
-                                    name="nama"
-                                    value="{{ $data->user->nama }}"
-                                    />
-                                </div>
-                            <div class="mb-3">
-                                <label
-                                    for="exampleFormControlInput1"
-                                    class="form-label"
                                     >Tagar</label
                                 >
                                 <input
@@ -104,11 +89,11 @@
                             </div>
 
                             <button class="btn-buat-quote mt-2 me-2">
-                                <a href="#">Simpan</a>
+                                <a href="/mypost">Simpan</a>
                             </button>
 
                             <button class="btn-batal">
-                                <a href="#">Batal</a>
+                                <a href="/mypost">Batal</a>
                             </button>
                         </form>
                     </div>

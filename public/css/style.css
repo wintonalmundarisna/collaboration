@@ -13,6 +13,8 @@
 body {
     font-family: "Poppins", sans-serif;
     background: radial-gradient(circle at top left, #22c1c3, #fdbb2d);
+    background-repeat: no-repeat;
+    min-height: 100vh;
 }
 
 /* awal bagian index.html */
@@ -175,7 +177,6 @@ body {
     background: rgba(255, 255, 255, 0.3);
     backdrop-filter: blur(4px);
     -webkit-backdrop-filter: blur(4px);
-    border-radius: 10px;
     border: 1px solid rgba(255, 255, 255, 0.18);
 }
 
@@ -233,6 +234,17 @@ h2 span {
 }
 
 /* end tentang */
+
+/* tagar */
+.tagar p {
+    font-size: 12px;
+    padding-bottom: 5px;
+    right: 0;
+    left: 0;
+    color: var(--color-2);
+    position: absolute;
+}
+/* tagar */
 
 /* start footer */
 #footer {

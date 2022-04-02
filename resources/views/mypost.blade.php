@@ -13,6 +13,9 @@
             crossorigin="anonymous"
         />
 
+        <!-- icon bootstrap -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+
         <!-- font google -->
         <link
             href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Quicksand:wght@300;600;700&display=swap"
@@ -40,13 +43,13 @@
         </section>
         <!-- header -->
         <!-- start table -->
-        <table class="table table-striped text-center mt-3">
+        <table class="table-md table-striped text-center mt-3">
             <thead style="background: rgba(255, 255, 255, 0.20)">
                 <tr>
                     <td style="color: var(--color-2); width: 5%">No</td>
                     <td style="color: var(--color-2); width: 15%">Nama</td>
                     <td style="color: var(--color-2); width: 15%">Foto</td>
-                    <td style="color: var(--color-2); width: 50%">Quotes</td>
+                    <td style="color: var(--color-2); width: 40%">Quotes</td>
                     <td style="color: var(--color-2)">Edit / Hapus</td>
                 </tr>
             </thead>
@@ -66,15 +69,17 @@
                         {!! $d->isi !!}
                     </td>
                     <td>
-                        <form action="/mypost/quottime/{{ $d->id }}/edit" method="GET">
-                            @csrf
-                            <button class="btn-edit-table me-2" type="submit">Edit</button>
-                        </form>
-                        <form action="/mypost/quottime/{{ $d->id }}" method="POST">
-                            @method('delete')
-                            @csrf
-                            <button class="btn-hapus-table mt-2" type="submit">Hapus</button>
-                        </form>
+                        <div class="btn-mypost ">
+                            <form action="/mypost/quottime/{{ $d->id }}/edit" method="GET">
+                                @csrf
+                                <button class="btn-edit-table m-1" type="submit"><i class="bi bi-pencil-square"></i></button>
+                            </form>
+                            <form action="/mypost/quottime/{{ $d->id }}" method="POST">
+                                @method('delete')
+                                @csrf
+                                <button class="btn-hapus-table " type="submit"><i class="bi bi-trash3-fill"></i></button>
+                            </form>
+                        </div>
                     </td>
                 </tr>
                 @endforeach
