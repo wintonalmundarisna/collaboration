@@ -75,9 +75,10 @@ class QuotesController extends Controller
      */
     public function edit(Quottime $quottime)
     {
-        return view('edit-quote', [
+        return view('edit', [
             'data' => $quottime
         ]);
+
     }
 
     /**

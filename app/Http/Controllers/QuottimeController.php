@@ -30,6 +30,14 @@ class QuottimeController extends Controller
         ]);
     }
 
+    public function edit(Quottime $quottime)
+    {
+        return view('edit', [
+            'data' => $quottime
+        ]);
+
+    }
+
     
 
 }
