@@ -41,13 +41,13 @@
         <!-- header -->
         <!-- start table -->
         <table class="table table-striped text-center mt-3">
-            <thead style="background-color: var(--color-1)">
+            <thead style="background: rgba(255, 255, 255, 0.20)">
                 <tr>
-                    <td style="color: var(--color-3); width: 5%">No</td>
-                    <td style="color: var(--color-3); width: 15%">Nama</td>
-                    <td style="color: var(--color-3); width: 15%">Foto</td>
-                    <td style="color: var(--color-3); width: 50%">Quotes</td>
-                    <td style="color: var(--color-3)">Edit / Hapus</td>
+                    <td style="color: var(--color-2); width: 5%">No</td>
+                    <td style="color: var(--color-2); width: 15%">Nama</td>
+                    <td style="color: var(--color-2); width: 15%">Foto</td>
+                    <td style="color: var(--color-2); width: 50%">Quotes</td>
+                    <td style="color: var(--color-2)">Edit / Hapus</td>
                 </tr>
             </thead>
             <tbody>
@@ -68,12 +68,12 @@
                     <td>
                         <form action="/mypost/quottime/{{ $d->id }}/edit" method="GET">
                             @csrf
-                            <button type="submit">Edit</button>
+                            <button class="btn-edit-table me-2" type="submit">Edit</button>
                         </form>
                         <form action="/mypost/quottime/{{ $d->id }}" method="POST">
                             @method('delete')
                             @csrf
-                            <button type="submit">Hapus</button>
+                            <button class="btn-hapus-table mt-2" type="submit">Hapus</button>
                         </form>
                     </td>
                 </tr>
@@ -82,11 +82,15 @@
         </table>
         <!-- end table -->
 
-        <div class="row text-center">
+        <section>
+            <div class="container">
+            <div class="row text-center">
               <div class="col-md-12">
                     <button class="btn-read-more"><a href="/quottime">Kembali</a></button>
               </div>
             </div>
+            </div>
+            </section>
 
         <!-- start footer -->
         <section id="footer">

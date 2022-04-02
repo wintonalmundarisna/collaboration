@@ -28,24 +28,6 @@
         <title>Quottime | Masuk</title>
     </head>
     <body>
-        <!-- start navbar -->
-        <!-- <nav class="navbar sticky-top navbar-expand-lg navbar-light">
-      <div class="container">
-        <a class="navbar-brand" href="#" style="color: #6c63ff"><img src="asset/logo-quottime.png" alt="" width="30" height="30" class="d-inline-block align-text-center" /> Quottime</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav ms-auto">
-            <button class="btn-login-nav"><a href="#">Login</a></button>
-
-            <button class="btn-daftar-nav"><a href="#">Daftar</a></button>
-          </ul>
-        </div>
-      </div>
-    </nav> -->
-        <!-- end navbar -->
-
         <!-- start daftar -->
         <section>
             <div class="container">
@@ -80,6 +62,11 @@
                                     placeholder="name@example.com"
                                     name="email"
                                     class="form-control @error('email') is-invalid @enderror"
+                                    style="background: rgba(255, 255, 255, 0.20);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18);"
                                     autofocus
                                     required
                                     value="{{ old('email') }}"/>
@@ -96,7 +83,11 @@
                                     >Password</label>
                                 <input
                                     type="password"
-                                    class="form-control @error('password') is-invalid @enderror"
+                                    class="form-control @error('password') is-invalid @enderror" style="background: rgba(255, 255, 255, 0.20);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18);"
                                     id="exampleFormControlInput1"
                                     placeholder="Password"
                                     name="password"

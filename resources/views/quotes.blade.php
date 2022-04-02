@@ -101,8 +101,12 @@
                         <div class="col-md-6">
                             <form action="/quotes">
                                 <div class="input-group mb-3 mt-3">
-                                    <input type="text" class="form-control" placeholder="Cari.." name="cari" value="{{ request('cari') }}" autocomplete="none">
-                                    <button class="btn" style="background-color: #6c63ff; color: white;" type="submit">Cari</button>
+                                    <input type="text" class="form-control" style="background: rgba(255, 255, 255, 0.20);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border-radius: 5px 0 0 5px;
+    border: 1px solid rgba(255, 255, 255, 0.18);" placeholder="Cari Berdasarkan #..." name="cari" value="{{ request('cari') }}" autocomplete="none">
+                                    <button class="btn" style="background: linear-gradient(290deg, #22c1c3, #fdbb2d); border :1px solid var(--color-2); color: var(--color-2);" type="submit">Cari</button>
                                 </div>
                                 </form>
                             </div>

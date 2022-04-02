@@ -20,11 +20,11 @@ body {
 /* button */
 .btn-daftar-nav {
     padding: 8px 20px;
-    background: rgba(255, 255, 255, 0.3);
+    background: linear-gradient(290deg, #22c1c3, #fdbb2d);
     backdrop-filter: blur(4px);
     -webkit-backdrop-filter: blur(4px);
     border-radius: 10px;
-    border: 1px solid rgba(255, 255, 255, 0.18);
+    border: 1px solid #0c1b31;
     border-radius: 5px;
     margin-right: 10px;
     transition: all 0.5s;
@@ -45,11 +45,11 @@ body {
 
 .btn-login-nav {
     padding: 8px 20px;
-    background: rgba(255, 255, 255, 0.3);
+    background: linear-gradient(290deg, #22c1c3, #fdbb2d);
     backdrop-filter: blur(4px);
     -webkit-backdrop-filter: blur(4px);
     border-radius: 10px;
-    border: 1px solid rgba(255, 255, 255, 0.18);
+    border: 1px solid #0c1b31;
     border-radius: 5px;
     margin-right: 15px;
     transition: all 0.5s;
@@ -70,11 +70,11 @@ body {
 
 .btn-mulai-hero {
     padding: 8px 20px;
-    background: rgba(255, 255, 255, 0.3);
+    background: linear-gradient(290deg, #22c1c3, #fdbb2d);
     backdrop-filter: blur(4px);
     -webkit-backdrop-filter: blur(4px);
     border-radius: 10px;
-    border: 1px solid rgba(255, 255, 255, 0.18);
+    border: 1px solid #0c1b31;
     border-radius: 5px;
     margin-right: 10px;
     transition: all 0.5s;
@@ -91,11 +91,11 @@ body {
 
 .btn-daftar-hero {
     padding: 8px 10px;
-    background: rgba(255, 255, 255, 0.3);
+    background: linear-gradient(290deg, #22c1c3, #fdbb2d);
     backdrop-filter: blur(4px);
     -webkit-backdrop-filter: blur(4px);
     border-radius: 10px;
-    border: 1px solid rgba(255, 255, 255, 0.18);
+    border: 1px solid #0c1b31;
     border-radius: 5px;
     margin-right: 10px;
     transition: all 0.5s;
@@ -113,11 +113,11 @@ body {
 
 .btn-login-hero {
     padding: 8px 10px;
-    background: rgba(255, 255, 255, 0.3);
+    background: linear-gradient(290deg, #22c1c3, #fdbb2d);
     backdrop-filter: blur(4px);
     -webkit-backdrop-filter: blur(4px);
     border-radius: 10px;
-    border: 1px solid rgba(255, 255, 255, 0.18);
+    border: 1px solid #0c1b31;
     border-radius: 5px;
     margin-right: 10px;
     transition: all 0.5s;
@@ -139,11 +139,11 @@ body {
 
 .btn-batal {
     padding: 8px 20px;
-    background: rgba(255, 255, 255, 0.3);
+    background: linear-gradient(290deg, #22c1c3, #fdbb2d);
     backdrop-filter: blur(4px);
     -webkit-backdrop-filter: blur(4px);
     border-radius: 10px;
-    border: 1px solid rgba(255, 255, 255, 0.18);
+    border: 1px solid #0c1b31;
     border-radius: 5px;
     margin-right: 10px;
 }
@@ -155,11 +155,11 @@ body {
 
 .btn-buat-quote {
     padding: 8px 20px;
-    background: rgba(255, 255, 255, 0.3);
+    background: linear-gradient(290deg, #22c1c3, #fdbb2d);
     backdrop-filter: blur(4px);
     -webkit-backdrop-filter: blur(4px);
     border-radius: 10px;
-    border: 1px solid rgba(255, 255, 255, 0.18);
+    border: 1px solid #0c1b31;
     border-radius: 5px;
     margin-right: 10px;
 }
@@ -270,13 +270,12 @@ h2 span {
 
 .btn-daftar-login {
     padding: 8px 10px;
-    background: rgba(255, 255, 255, 0.3);
+    background: linear-gradient(290deg, #22c1c3, #fdbb2d);
     backdrop-filter: blur(4px);
     -webkit-backdrop-filter: blur(4px);
     border-radius: 10px;
-    border: 1px solid rgba(255, 255, 255, 0.18);
+    border: 1px solid var(--color-2);
     border-radius: 5px;
-    border: none;
     transition: all 0.5s;
     cursor: pointer;
 }
@@ -297,7 +296,7 @@ p {
 
 p a {
     text-decoration: none;
-    color: var(--color-3);
+    color: var(--color-2);
 }
 /* akhir bagian daftar dan login.html */
 
@@ -317,11 +316,11 @@ h1 {
 
 .btn-buat {
     padding: 8px 10px;
-    background: rgba(255, 255, 255, 0.3);
+    background: linear-gradient(290deg, #22c1c3, #fdbb2d);
     backdrop-filter: blur(4px);
     -webkit-backdrop-filter: blur(4px);
     border-radius: 10px;
-    border: 1px solid rgba(255, 255, 255, 0.18);
+    border: 1px solid var(--color-2);
     border-radius: 5px;
     transition: all 0.5s;
     cursor: pointer;
@@ -339,11 +338,11 @@ h1 {
 
 .btn-edit {
     padding: 8px 10px;
-    background: rgba(255, 255, 255, 0.3);
+    background: linear-gradient(290deg, #22c1c3, #fdbb2d);
     backdrop-filter: blur(4px);
     -webkit-backdrop-filter: blur(4px);
     border-radius: 10px;
-    border: 1px solid rgba(255, 255, 255, 0.18);
+    border: 1px solid var(--color-2);
     border-radius: 5px;
     transition: all 0.5s;
     cursor: pointer;
@@ -442,11 +441,11 @@ h1 {
 .btn-read-more {
     margin-top: 20px;
     padding: 8px 10px;
-    background: rgba(255, 255, 255, 0.3);
+    background: linear-gradient(290deg, #22c1c3, #fdbb2d);
     backdrop-filter: blur(4px);
     -webkit-backdrop-filter: blur(4px);
     border-radius: 10px;
-    border: 1px solid rgba(255, 255, 255, 0.18);
+    border: 1px solid var(--color-2);
     border-radius: 5px;
     transition: all 0.5s;
 }
