@@ -82,7 +82,7 @@
                             @if ($data->gambar)
                               <img src="{{ asset('storage/' . $data->gambar) }}" alt="" class="img-preview img-fluid mb-3 col-sm-5 d-block">
                             @else
-                              <img alt="" class="img-preview img-fluid mb-3 col-sm-5">
+                              <img alt="{{ $data->gambar }}" class="img-preview img-fluid mb-3 col-sm-5">
                             @endif
                             <input
                                 type="file"

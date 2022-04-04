@@ -8,11 +8,7 @@ use App\Http\Controllers\MyPostController;
 use App\Http\Controllers\QuotesController;
 use App\Http\Controllers\QuottimeController;
 
-
-Route::get('/', function () {
-    return view('index');
-})->middleware('guest');
-
+Route::get('/', [QuottimeController::class, 'index'])->middleware('guest');
 
 Route::get('/daftar', [DaftarController::class, 'index'])->middleware('guest');
 Route::post('/daftar', [DaftarController::class, 'daftar']);

@@ -30,4 +30,10 @@ class QuottimeController extends Controller
         ]);
     }
 
+    public function index() {
+        return view('/index', [
+            'data' => Quottime::latest()->get(),
+        ]);
+    }
+
 }

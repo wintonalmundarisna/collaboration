@@ -128,7 +128,7 @@
         <section id="quotes">
             <div class="container">
                 <div class="row text-center">
-                    <div class="cpl-md-12">
+                    <div class="col-md-12">
                         <h4
                             class="title-judul"
                             style="font-weight: 500; color: #0c1b31"
@@ -142,150 +142,140 @@
                     <div class="col-md-4 mt-3">
                         <div class="card-box text-center py-5">
                             <div class="img-card position-relative mx-auto">
-                                <img
-                                    src="https://source.unsplash.com/random/201x201"
+                                <div style="max-height: 201; overflow:hidden;">
+                                    <img
+                                    src="{{ asset('storage/' . $data[0]->gambar) }}"
                                     alt="Quottime"
-                                />
+                                    />
+                                </div>
                             </div>
                             <div class="img-body">
-                                <p>nama</p>
+                                <p>{!! $data[0]->user->nama !!}</p>
                             </div>
                             <div class="quote-text p-2">
                                 <p>
                                     <i
-                                        >"Berbuat baik adalah kewajiban, tetapi
-                                        merasa lebih baik adalah sebuah
-                                        kesalahan."</i
-                                    >
-                                </p>
-                            </div>
-                            <div class="tagar text-tagar">
-                                <p># {!! $data[8]->tagar !!}</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 mt-3">
-                        <div class="card-box text-center py-5">
-                            <div class="img-card position-relative mx-auto">
-                                <img
-                                    src="https://source.unsplash.com/random/201x201"
-                                    alt="Quottime"
-                                />
-                            </div>
-                            <div class="img-body">
-                                <p>nama</p>
-                            </div>
-                            <div class="quote-text p-2">
-                                <p>
-                                    <i
-                                        >"Berbuat baik adalah kewajiban, tetapi
-                                        merasa lebih baik adalah sebuah
-                                        kesalahan."</i
-                                    >
-                                </p>
-                            </div>
-                            <div class="tagar text-tagar">
-                                <p># {!! $data[8]->tagar !!}</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 mt-3">
-                        <div class="card-box text-center py-5">
-                            <div class="img-card position-relative mx-auto">
-                                <img
-                                    src="https://source.unsplash.com/random/201x201"
-                                    alt="Quottime"
-                                />
-                            </div>
-                            <div class="img-body">
-                                <p>nama</p>
-                            </div>
-                            <div class="quote-text p-2">
-                                <p>
-                                    <i
-                                        >"Berbuat baik adalah kewajiban, tetapi
-                                        merasa lebih baik adalah sebuah
-                                        kesalahan."</i
-                                    >
-                                </p>
-                            </div>
-                            <div class="tagar text-tagar">
-                                <p># {!! $data[8]->tagar !!}</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 mt-3">
-                        <div class="card-box text-center py-5">
-                            <div class="img-card position-relative mx-auto">
-                                <img
-                                    src="https://source.unsplash.com/random/201x201"
-                                    alt="Quottime"
-                                />
-                            </div>
-                            <div class="img-body">
-                                <p>nama</p>
-                            </div>
-                            <div class="quote-text p-2">
-                                <p>
-                                    <i
-                                        >"Berbuat baik adalah kewajiban, tetapi
-                                        merasa lebih baik adalah sebuah
-                                        kesalahan."</i
-                                    >
-                                </p>
-                            </div>
-                            <div class="tagar text-tagar">
-                                <p># {!! $data[8]->tagar !!}</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 mt-3">
-                        <div class="card-box text-center py-5">
-                            <div class="img-card position-relative mx-auto">
-                                <img
-                                    src="https://source.unsplash.com/random/201x201"
-                                    alt="Quottime"
-                                />
-                            </div>
-                            <div class="img-body">
-                                <p>nama</p>
-                            </div>
-                            <div class="quote-text p-2">
-                                <p>
-                                    <i
-                                        >"Berbuat baik adalah kewajiban, tetapi
-                                        merasa lebih baik adalah sebuah
-                                        kesalahan."</i
-                                    >
-                                </p>
-                            </div>
-                            <div class="tagar text-tagar">
-                                <p># {!! $data[8]->tagar !!}</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 mt-3">
-                        <div class="card-box text-center py-5">
-                            <div class="img-card position-relative mx-auto">
-                                <img
-                                    src="https://source.unsplash.com/random/201x201"
-                                    alt="Quottime"
-                                />
-                            </div>
-                            <div class="img-body">
-                                <p>nama</p>
-                            </div>
-                            <div class="quote-text p-2">
-                                <p>
-                                    <i
-                                        >"Berbuat baik adalah kewajiban, tetapi
-                                        merasa lebih baik adalah sebuah
-                                        kesalahan."</i
+                                        >" {!! $data[0]->isi !!} "</i
                                     >
                                 </p>
                             </div>
                             <div class="tagar text-tagar">
                                 <p># {!! $data[0]->tagar !!}</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mt-3">
+                        <div class="card-box text-center py-5">
+                            <div class="img-card position-relative mx-auto">
+                                <img
+                                    src="{{ asset('storage/' . $data[1]->gambar) }}"
+                                    alt="Quottime"
+                                    />
+                            </div>
+                            <div class="img-body">
+                                <p>{!! $data[1]->user->nama !!}</p>
+                            </div>
+                            <div class="quote-text p-2">
+                                <p>
+                                    <i
+                                        >" {!! $data[1]->isi !!} "</i
+                                    >
+                                </p>
+                            </div>
+                            <div class="tagar text-tagar">
+                                <p># {!! $data[1]->tagar !!}</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mt-3">
+                        <div class="card-box text-center py-5">
+                            <div class="img-card position-relative mx-auto">
+                                <img
+                                src="{{ asset('storage/' . $data[2]->gambar) }}"
+                                alt="Quottime"
+                                />
+                            </div>
+                            <div class="img-body">
+                                <p>{!! $data[2]->user->nama !!}</p>
+                            </div>
+                            <div class="quote-text p-2">
+                                <p>
+                                    <i
+                                        >" {!! $data[2]->isi !!} "</i
+                                    >
+                                </p>
+                            </div>
+                            <div class="tagar text-tagar">
+                                <p># {!! $data[2]->tagar !!}</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mt-3">
+                        <div class="card-box text-center py-5">
+                            <div class="img-card position-relative mx-auto">
+                                <img
+                                src="{!! asset('storage/' . $data[3]->gambar) !!}"
+                                alt="Quottime"
+                                />
+                            </div>
+                            <div class="img-body">
+                                <p>{!! $data[3]->user->nama !!}</p>
+                            </div>
+                            <div class="quote-text p-2">
+                                <p>
+                                    <i
+                                        >" {!! $data[3]->isi !!} "</i
+                                    >
+                                </p>
+                            </div>
+                            <div class="tagar text-tagar">
+                                <p># {!! $data[3]->tagar !!}</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mt-3">
+                        <div class="card-box text-center py-5">
+                            <div class="img-card position-relative mx-auto">
+                                <img
+                                src="{!! asset('storage/' . $data[4]->gambar) !!}"
+                                alt="Quottime"
+                                />
+                            </div>
+                            <div class="img-body">
+                                <p>{!! $data[4]->user->nama !!}</p>
+                            </div>
+                            <div class="quote-text p-2">
+                                <p>
+                                    <i
+                                        >" {!! $data[4]->isi !!} "</i
+                                    >
+                                </p>
+                            </div>
+                            <div class="tagar text-tagar">
+                                <p># {!! $data[4]->tagar !!}</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mt-3">
+                        <div class="card-box text-center py-5">
+                            <div class="img-card position-relative mx-auto">
+                                <img
+                                src="{{ asset('storage/' . $data[5]->gambar) }}"
+                                alt="Quottime"
+                                />
+                            </div>
+                            <div class="img-body">
+                                <p>{!! $data[5]->user->nama !!}</p>
+                            </div>
+                            <div class="quote-text p-2">
+                                <p>
+                                    <i
+                                        >" {!! $data[5]->isi !!} "</i
+                                    >
+                                </p>
+                            </div>
+                            <div class="tagar text-tagar">
+                                <p># {!! $data[5]->tagar !!}</p>
                             </div>
                         </div>
                     </div>

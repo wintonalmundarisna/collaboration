@@ -40,9 +40,9 @@ class QuotesController extends Controller
     public function store(Request $request)
     {
         $validatedData = $request->validate([
-            'tagar' => 'required|max:20',
+            'tagar' => 'required|max:80',
             'gambar' => 'image|file|max:1024',
-            'isi' => 'required'
+            'isi' => 'required|max:200'
         ]);
 
         if ($request->file('gambar')) {
@@ -51,7 +51,7 @@ class QuotesController extends Controller
 
         $validatedData['user_id'] = auth()->user()->id;
         // strip_tags biar semua element htmlnya hilang
-        $validatedData['tagar'] = Str::limit(strip_tags($request->tagar), 30);
+        $validatedData['tagar'] = Str::limit(strip_tags($request->tagar), 80);
         $validatedData['isi'] = preg_replace('#</?div.*?>#is', '', $request->isi);
         Quottime::create($validatedData);
         return redirect('/mypost/quottime')->with('berhasil', 'Quotes berhasil dibuat');
@@ -76,9 +76,9 @@ class QuotesController extends Controller
      */
     public function edit(Quottime $quottime)
     {
-        // if ($quottime->user->id !== auth()->user()->id) {
-        //     abort(403);
-        // }
+        if ($quottime->user->id !== auth()->user()->id) {
+            abort(403);
+        }
 
         return view('edit', [
             'data' => $quottime
@@ -116,9 +116,9 @@ class QuotesController extends Controller
 
         Quottime::where('id', $quottime->id)->update($validatedData);
 
-        // if ($quottime->user->id !== auth()->user()->id) {
-        //     abort(403);
-        // }
+        if ($quottime->user->id !== auth()->user()->id) {
+            abort(403);
+        }
 
         return redirect('/mypost/quottime');
 

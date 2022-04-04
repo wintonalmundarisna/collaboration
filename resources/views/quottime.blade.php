@@ -75,7 +75,6 @@
         </div>
         
         <!-- carousel -->
-        @if ($data->count())            
         <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
           <div class="carousel-inner">
             <div class="container">
@@ -84,7 +83,19 @@
                   <div class="col-md-4 d-none d-sm-block">
                     <div class="card-box text-center py-5">
                       <div class="img-card">
-                        <img src="https://source.unsplash.com/random/201x201" alt="Quottime" />
+                        @if($data[0]->gambar)
+                          <div style="max-height: 201; overflow:hidden;">
+                            <img
+                            src="{{ asset('storage/' . $data[0]->gambar) }}"
+                            alt="Quottime"
+                            />
+                          </div>
+                        @else
+                          <img
+                            src="https://source.unsplash.com/random/201x201?{{ $data[0]->gambar }}"
+                            alt="Quottime"
+                          />
+                        @endif
                       </div>
                       <div class="img-body">
                         <p>{!! $data[0]->user->nama !!}</p>
@@ -101,7 +112,19 @@
                   <div class="col-md-4 d-none d-sm-block">
                     <div class="card-box text-center py-5">
                       <div class="img-card">
-                        <img src="https://source.unsplash.com/random/201x201" alt="Quottime" />
+                        @if($data[1]->gambar)
+                          <div style="max-height: 201; overflow:hidden;">
+                            <img
+                            src="{{ asset('storage/' . $data[1]->gambar) }}"
+                            alt="Quottime"
+                            />
+                          </div>
+                        @else
+                          <img
+                            src="https://source.unsplash.com/random/201x201?{{ $data[1]->gambar }}"
+                            alt="Quottime"
+                          />
+                        @endif
                       </div>
                       <div class="img-body">
                         <p>{!! $data[1]->user->nama !!}</p>
@@ -118,7 +141,19 @@
                   <div class="col-md-4 d-none d-sm-block">
                     <div class="card-box text-center py-5">
                       <div class="img-card">
-                        <img src="https://source.unsplash.com/random/201x201" alt="Quottime" />
+                        @if($data[2]->gambar)
+                          <div style="max-height: 201; overflow:hidden;">
+                            <img
+                            src="{{ asset('storage/' . $data[2]->gambar) }}"
+                            alt="Quottime"
+                            />
+                          </div>
+                        @else
+                          <img
+                            src="https://source.unsplash.com/random/201x201?{{ $data[2]->gambar }}"
+                            alt="Quottime"
+                          />
+                        @endif
                       </div>
                       <div class="img-body">
                         <p>{!! $data[2]->user->nama !!}</p>
@@ -139,7 +174,19 @@
                   <div class="col-md-4 d-none d-sm-block">
                     <div class="card-box text-center py-5">
                       <div class="img-card">
-                        <img src="https://source.unsplash.com/random/201x201" alt="Quottime" />
+                        @if($data[3]->gambar)
+                          <div style="max-height: 201; overflow:hidden;">
+                            <img
+                            src="{{ asset('storage/' . $data[3]->gambar) }}"
+                            alt="Quottime"
+                            />
+                          </div>
+                        @else
+                          <img
+                            src="https://source.unsplash.com/random/201x201?{{ $data[3]->gambar }}"
+                            alt="Quottime"
+                          />
+                        @endif
                       </div>
                       <div class="img-body">
                         <p>{!! $data[3]->user->nama !!}</p>
@@ -156,7 +203,19 @@
                   <div class="col-md-4 d-none d-sm-block">
                     <div class="card-box text-center py-5">
                       <div class="img-card">
-                        <img src="https://source.unsplash.com/random/201x201" alt="Quottime" />
+                        @if($data[4]->gambar)
+                          <div style="max-height: 201; overflow:hidden;">
+                            <img
+                            src="{{ asset('storage/' . $data[4]->gambar) }}"
+                            alt="Quottime"
+                            />
+                          </div>
+                        @else
+                          <img
+                            src="https://source.unsplash.com/random/201x201?{{ $data[4]->gambar }}"
+                            alt="Quottime"
+                          />
+                        @endif
                       </div>
                       <div class="img-body">
                         <p>{!! $data[4]->user->nama !!}</p>
@@ -173,7 +232,19 @@
                   <div class="col-md-4 d-none d-sm-block">
                     <div class="card-box text-center py-5">
                       <div class="img-card">
-                        <img src="https://source.unsplash.com/random/201x201" alt="Quottime" />
+                        @if($data[5]->gambar)
+                          <div style="max-height: 201; overflow:hidden;">
+                            <img
+                            src="{{ asset('storage/' . $data[5]->gambar) }}"
+                            alt="Quottime"
+                            />
+                          </div>
+                        @else
+                          <img
+                            src="https://source.unsplash.com/random/201x201?{{ $data[5]->gambar }}"
+                            alt="Quottime"
+                          />
+                        @endif
                       </div>
                       <div class="img-body">
                         <p>{!! $data[5]->user->nama !!}</p>
@@ -215,7 +286,19 @@
                   <div class="col-md-12 d-block d-sm-none">
                     <div class="card-box text-center py-5">
                       <div class="img-card">
-                        <img src="https://source.unsplash.com/random/201x201" alt="Quottime" />
+                        @if($data[6]->gambar)
+                          <div style="max-height: 201; overflow:hidden;">
+                            <img
+                            src="{{ asset('storage/' . $data[6]->gambar) }}"
+                            alt="Quottime"
+                            />
+                          </div>
+                        @else
+                          <img
+                            src="https://source.unsplash.com/random/201x201?{{ $data[6]->gambar }}"
+                            alt="Quottime"
+                          />
+                        @endif
                       </div>
                       <div class="img-body">
                         <p>{!! $data[6]->user->nama !!}</p>
@@ -236,7 +319,19 @@
                   <div class="col-md-12 d-block d-sm-none">
                     <div class="card-box text-center py-5">
                       <div class="img-card">
-                        <img src="https://source.unsplash.com/random/201x201" alt="Quottime" />
+                        @if($data[7]->gambar)
+                        <div style="max-height: 201; overflow:hidden;">
+                          <img
+                          src="{{ asset('storage/' . $data[7]->gambar) }}"
+                          alt="Quottime"
+                          />
+                        </div>
+                      @else
+                        <img
+                          src="https://source.unsplash.com/random/201x201?{{ $data[7]->gambar }}"
+                          alt="Quottime"
+                        />
+                      @endif
                       </div>
                       <div class="img-body">
                         <p>{!! $data[7]->user->nama !!}</p>
@@ -257,7 +352,19 @@
                   <div class="col-md-12 d-block d-sm-none">
                     <div class="card-box text-center py-5">
                       <div class="img-card">
-                        <img src="https://source.unsplash.com/random/201x201" alt="Quottime" />
+                        @if($data[8]->gambar)
+                          <div style="max-height: 201; overflow:hidden;">
+                            <img
+                            src="{{ asset('storage/' . $data[8]->gambar) }}"
+                            alt="Quottime"
+                            />
+                          </div>
+                        @else
+                          <img
+                            src="https://source.unsplash.com/random/201x201?{{ $data[8]->gambar }}"
+                            alt="Quottime"
+                          />
+                        @endif
                       </div>
                       <div class="img-body">
                         <p>{!! $data[8]->user->nama !!}</p>
@@ -272,7 +379,6 @@
                   </div>
                 </div>
               </div>
-          @endif
             </div>
           </div>
         </div>
@@ -297,7 +403,16 @@
               <div class="col-md-4 mt-3">
                 <div class="card-box text-center py-5">
                         <div class="img-card position-relative mx-auto">
-                            <img src="https://source.unsplash.com/random/201x201?{{ $data[9]->gambar }}" alt="Quottime" class="position-absolute top-50 start-50 translate-middle">
+                        @if($data[9]->gambar)
+                          <div style="max-height: 201; overflow:hidden;">
+                            <img
+                            src="{{ asset('storage/' . $data[9]->gambar) }}"
+                            alt="Quottime"
+                            />
+                          </div>
+                        @else
+                             <img src="https://source.unsplash.com/random/201x201?{{ $data[9]->gambar }}" alt="Quottime" class="position-absolute top-50 start-50 translate-middle">
+                        @endif
                         </div>
                         <div class="img-body">
                             <p>{!! $data[9]->user->nama !!} </p>
@@ -313,7 +428,16 @@
               <div class="col-md-4 mt-3">
                 <div class="card-box text-center py-5">
                         <div class="img-card position-relative mx-auto">
-                            <img src="https://source.unsplash.com/random/201x201?{{ $data[10]->gambar }}" alt="Quottime" class="position-absolute top-50 start-50 translate-middle">
+                        @if($data[10]->gambar)
+                          <div style="max-height: 201; overflow:hidden;">
+                            <img
+                            src="{{ asset('storage/' . $data[10]->gambar) }}"
+                            alt="Quottime"
+                            />
+                          </div>
+                        @else
+                             <img src="https://source.unsplash.com/random/201x201?{{ $data[10]->gambar }}" alt="Quottime" class="position-absolute top-50 start-50 translate-middle">
+                        @endif
                         </div>
                         <div class="img-body">
                             <p>{!! $data[10]->user->nama !!} </p>
@@ -329,7 +453,16 @@
               <div class="col-md-4 mt-3">
                 <div class="card-box text-center py-5">
                         <div class="img-card position-relative mx-auto">
-                            <img src="https://source.unsplash.com/random/201x201?{{ $data[11]->gambar }}" alt="Quottime" class="position-absolute top-50 start-50 translate-middle">
+                        @if($data[11]->gambar)
+                          <div style="max-height: 201; overflow:hidden;">
+                            <img
+                            src="{{ asset('storage/' . $data[11]->gambar) }}"
+                            alt="Quottime"
+                            />
+                          </div>
+                        @else
+                             <img src="https://source.unsplash.com/random/201x201?{{ $data[11]->gambar }}" alt="Quottime" class="position-absolute top-50 start-50 translate-middle">
+                        @endif
                         </div>
                         <div class="img-body">
                             <p>{!! $data[11]->user->nama !!} </p>
