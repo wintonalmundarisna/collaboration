@@ -70,11 +70,12 @@
                     </td>
                     <td>
                         <div class="btn-mypost d-flex">
+                        <form action="/edit/{{ $d->tagar }}">
+                            @csrf
                             <button class="btn-edit-table m-1" type="submit">
-                                <i class="bi bi-pencil-square">
-                                    <a href="/edit/{{ $d->tagar }}"></a>
-                                </i>
+                                <i class="bi bi-pencil-square"></i>
                             </button>
+                        </form>
                             <form action="/mypost/quottime/{{ $d->id }}" method="POST">
                                 @method('delete')
                                 @csrf
