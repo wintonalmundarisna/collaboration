@@ -43,7 +43,7 @@
         </section>
         <!-- header -->
         <!-- start table -->
-        <table class="table-md table-striped text-center mt-3">
+        <table class="table-md table-striped text-center mt-3 w-100">
             <thead style="background: rgba(255, 255, 255, 0.20)">
                 <tr>
                     <td style="color: var(--color-2); width: 5%">No</td>
@@ -69,18 +69,20 @@
                         {!! $d->isi !!}
                     </td>
                     <td>
-                        <button class="btn-edit-table m-1" type="submit">
-                            <i class="bi bi-pencil-square">
-                                <a href="/edit/{{ $d->tagar }}">Edit</a>
-                            </i>
-                        </button>
-                        <form action="/mypost/quottime/{{ $d->id }}" method="POST">
-                            @method('delete')
-                            @csrf
-                            <button class="btn-hapus-table mt-2" type="submit" onclick="return confirm('Yakin ingin menghapus ?')">
-                                <i class="bi bi-trash3-fill">Hapus</i>
+                        <div class="btn-mypost d-flex">
+                            <button class="btn-edit-table m-1" type="submit">
+                                <i class="bi bi-pencil-square">
+                                    <a href="/edit/{{ $d->tagar }}"></a>
+                                </i>
                             </button>
-                        </form>
+                            <form action="/mypost/quottime/{{ $d->id }}" method="POST">
+                                @method('delete')
+                                @csrf
+                                <button class="btn-hapus-table" type="submit" onclick="return confirm('Yakin ingin menghapus ?')">
+                                    <i class="bi bi-trash3-fill"></i>
+                                </button>
+                            </form>
+                        </div>
                     </td>
                 </tr>
                 @endforeach
