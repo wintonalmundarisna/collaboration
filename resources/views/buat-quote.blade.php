@@ -46,6 +46,7 @@
                     <div class="col-md-8 my-auto mt-5 m-auto">
                         <form action="/mypost/quottime" method="POST" enctype="multipart/form-data">
                             @csrf
+                            <h4 class="text-header mb-4">Buat Quotes</h4>
                             <div class="mb-3">
                                 <label
                                     for="exampleFormControlInput1"
@@ -55,7 +56,11 @@
                                     type="text"
                                     placeholder="Buat Tagar..."
                                     name="tagar"
-                                    class="form-control @error('tagar') is-invalid @enderror"
+                                    class="form-control @error('tagar') is-invalid @enderror" style="background: rgba(255, 255, 255, 0.20);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18);"
                                     autofocus
                                     required
                                     value="{{ old('tagar') }}"/>
@@ -72,7 +77,11 @@
                                         <p class="text-danger">{{ $message }}</p>
                                     @enderror
                                 <input id="isi" type="hidden" name="isi" value="{{ old('isi') }}" required>
-                                <trix-editor input="isi"></trix-editor>
+                                <trix-editor input="isi" style="background: rgba(255, 255, 255, 0.20);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18);"></trix-editor>
                             </div>
 
                             <div class="mb-3">

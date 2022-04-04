@@ -92,11 +92,9 @@
                       <div class="quote-text p-2">
                         <p><i>" {!! $data[0]->isi !!} "</i></p>
                       </div>
-                      <div class="quote-text p-2 text-white d-flex justify-content-end">
-                        <small>
-                            <small># {!! $data[0]->tagar !!}</small>
-                        </small>
-                    </div>
+                      <div class="tagar text-tagar">
+                        <p># {!! $data[0]->tagar !!}</p>
+                      </div>
                     </div>
                   </div>
 
@@ -111,11 +109,9 @@
                       <div class="quote-text p-2">
                         <p><i>" {!! $data[1]->isi !!} "</i></p>
                       </div>
-                       <div class="quote-text p-2 text-white d-flex justify-content-end">
-                        <small>
-                            <small># {!! $data[1]->tagar !!}</small>
-                        </small>
-                    </div>
+                      <div class="tagar text-tagar">
+                        <p># {!! $data[1]->tagar !!}</p>
+                      </div>
                     </div>
                   </div>
 
@@ -130,11 +126,9 @@
                       <div class="quote-text p-2">
                         <p><i>" {!! $data[2]->isi !!} "</i></p>
                       </div>
-                       <div class="quote-text p-2 text-white d-flex justify-content-end">
-                        <small>
-                            <small># {!! $data[2]->tagar !!}</small>
-                        </small>
-                    </div>
+                      <div class="tagar text-tagar">
+                        <p># {!! $data[2]->tagar !!}</p>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -153,11 +147,9 @@
                       <div class="quote-text p-2">
                         <p><i>" {!! $data[3]->isi !!} "</i></p>
                       </div>
-                       <div class="quote-text p-2 text-white d-flex justify-content-end">
-                        <small>
-                            <small># {!! $data[3]->tagar !!}</small>
-                        </small>
-                    </div>
+                      <div class="tagar text-tagar">
+                        <p># {!! $data[3]->tagar !!}</p>
+                      </div>
                     </div>
                   </div>
 
@@ -172,11 +164,9 @@
                       <div class="quote-text p-2">
                         <p><i>" {!! $data[4]->isi !!} "</i></p>
                       </div>
-                       <div class="quote-text p-2 text-white d-flex justify-content-end">
-                        <small>
-                            <small># {!! $data[4]->tagar !!}</small>
-                        </small>
-                    </div>
+                      <div class="tagar text-tagar">
+                        <p># {!! $data[4]->tagar !!}</p>
+                      </div>
                     </div>
                   </div>
 
@@ -191,11 +181,9 @@
                       <div class="quote-text p-2">
                         <p><i>" {!! $data[5]->isi !!} "</i></p>
                       </div>
-                       <div class="quote-text p-2 text-white d-flex justify-content-end">
-                        <small>
-                            <small># {!! $data[5]->tagar !!}</small>
-                        </small>
-                    </div>
+                      <div class="tagar text-tagar">
+                        <p># {!! $data[5]->tagar !!}</p>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -235,11 +223,9 @@
                       <div class="quote-text p-2">
                         <p><i>" {!! $data[6]->isi !!} "</i></p>
                       </div>
-                      <div class="quote-text p-2 text-white d-flex justify-content-end">
-                        <small>
-                            <small># {!! $data[6]->tagar !!}</small>
-                        </small>
-                    </div>
+                      <div class="tagar text-tagar">
+                        <p># {!! $data[6]->tagar !!}</p>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -258,11 +244,9 @@
                       <div class="quote-text p-2">
                         <p><i>" {!! $data[7]->isi !!} "</i></p>
                       </div>
-                       <div class="quote-text p-2 text-white d-flex justify-content-end">
-                        <small>
-                            <small># {!! $data[7]->tagar !!}</small>
-                        </small>
-                    </div>
+                      <div class="tagar text-tagar">
+                        <p># {!! $data[7]->tagar !!}</p>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -281,11 +265,9 @@
                       <div class="quote-text p-2">
                         <p><i>" {!! $data[8]->isi !!} "</i></p>
                       </div>
-                       <div class="quote-text p-2 text-white d-flex justify-content-end">
-                        <small>
-                            <small># {!! $data[8]->tagar !!}</small>
-                        </small>
-                    </div>
+                      <div class="tagar text-tagar">
+                        <p># {!! $data[8]->tagar !!}</p>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -323,11 +305,9 @@
                         <div class="quote-text p-2">
                           <p><i>" {!! $data[9]->isi !!} "</i></p>
                         </div>
-                         <div class="quote-text p-2 text-white d-flex justify-content-end">
-                        <small>
-                            <small># {!! $data[9]->tagar !!}</small>
-                        </small>
-                    </div>
+                        <div class="tagar text-tagar">
+                          <p># {!! $data[9]->tagar !!}</p>
+                        </div>
                 </div>  
               </div>
               <div class="col-md-4 mt-3">
@@ -341,11 +321,9 @@
                         <div class="quote-text p-2">
                           <p><i>" {!! $data[10]->isi !!} "</i></p>
                         </div>
-                         <div class="quote-text p-2 text-white d-flex justify-content-end">
-                        <small>
-                            <small># {!! $data[10]->tagar !!}</small>
-                        </small>
-                    </div>
+                        <div class="tagar text-tagar">
+                          <p># {!! $data[10]->tagar !!}</p>
+                        </div>
                 </div>  
               </div>
               <div class="col-md-4 mt-3">
@@ -359,11 +337,9 @@
                         <div class="quote-text p-2">
                           <p><i>" {!! $data[11]->isi !!} "</i></p>
                         </div>
-                        <div class="quote-text p-2 text-white d-flex justify-content-end">
-                          <small>
-                              <small># {!! $data[11]->tagar !!}</small>
-                          </small>
-                      </div>
+                        <div class="tagar text-tagar">
+                          <p># {!! $data[11]->tagar !!}</p>
+                        </div>
                 </div>  
               </div>
             <div class="row text-center">

@@ -76,13 +76,10 @@
                             >
                         </li>
                         <li class="nav-item">
-                            <a
-                                class="nav-link"
-                                style="color: #0c1b31"
-                                aria-current="page"
-                                href="/login"
-                                >Keluar</a
-                            >
+                            <form action="/logout" method="post">
+                            @csrf
+                            <button class="nav-link bg-transparent border-0" style="color: #0c1b31" aria-current="page" type="submit">Keluar</button>
+                            </form>
                         </li>
                     </ul>
                 </div>

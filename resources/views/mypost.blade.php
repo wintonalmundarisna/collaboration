@@ -13,6 +13,9 @@
             crossorigin="anonymous"
         />
 
+        <!-- icon bootstrap -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+
         <!-- font google -->
         <link
             href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Quicksand:wght@300;600;700&display=swap"
@@ -40,13 +43,13 @@
         </section>
         <!-- header -->
         <!-- start table -->
-        <table class="table table-striped text-center mt-3">
+        <table class="table-md table-striped text-center mt-3">
             <thead style="background: rgba(255, 255, 255, 0.20)">
                 <tr>
                     <td style="color: var(--color-2); width: 5%">No</td>
                     <td style="color: var(--color-2); width: 15%">Nama</td>
                     <td style="color: var(--color-2); width: 15%">Foto</td>
-                    <td style="color: var(--color-2); width: 50%">Quotes</td>
+                    <td style="color: var(--color-2); width: 40%">Quotes</td>
                     <td style="color: var(--color-2)">Edit / Hapus</td>
                 </tr>
             </thead>
@@ -66,13 +69,17 @@
                         {!! $d->isi !!}
                     </td>
                     <td>
-                        <button class="btn-edit-table me-2" type="submit">
-                            <a href="/edit/{{ $d->tagar }}">Edit</a>
+                        <button class="btn-edit-table m-1" type="submit">
+                            <i class="bi bi-pencil-square">
+                                <a href="/edit/{{ $d->tagar }}">Edit</a>
+                            </i>
                         </button>
                         <form action="/mypost/quottime/{{ $d->id }}" method="POST">
                             @method('delete')
                             @csrf
-                            <button class="btn-hapus-table mt-2" type="submit" onclick="return confirm('Yakin ingin menghapus ?')">Hapus</button>
+                            <button class="btn-hapus-table mt-2" type="submit" onclick="return confirm('Yakin ingin menghapus ?')">
+                                <i class="bi bi-trash3-fill">Hapus</i>
+                            </button>
                         </form>
                     </td>
                 </tr>

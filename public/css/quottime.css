@@ -12,6 +12,8 @@
 body {
     font-family: "Poppins", sans-serif;
     background: radial-gradient(circle at top left, #22c1c3, #fdbb2d);
+    background-repeat: no-repeat;
+    min-height: 100vh;
 }
 
 /* start navbar */
@@ -19,7 +21,6 @@ body {
     background: rgba(255, 255, 255, 0.3);
     backdrop-filter: blur(4px);
     -webkit-backdrop-filter: blur(4px);
-    border-radius: 10px;
     border: 1px solid rgba(255, 255, 255, 0.18);
 }
 
@@ -304,6 +305,12 @@ a:hover {
     width: 25%;
 }
 
+.btn-mypost {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .btn-edit-table {
     padding: 5px 8px;
     background: linear-gradient(290deg, #22c1c3, #fdbb2d);
@@ -346,6 +353,7 @@ a:hover {
 /* tagar */
 
 /* responsive */
+
 @media (max-width: 576px) {
     /* awal bagian index.html */
     .hero-img-2 {
@@ -388,6 +396,12 @@ a:hover {
         width: 80%;
     }
 
+    .btn-mypost {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
     /* table */
 }
 
@@ -421,6 +435,7 @@ a:hover {
     .img-table {
         width: 80%;
     }
+
     /* table */
 }
 
