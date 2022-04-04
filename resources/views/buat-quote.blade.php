@@ -2,8 +2,8 @@
 <html lang="en">
     <head>
 
-        <link rel="stylesheet" type="text/css" href="trix.css">
-        <script type="text/javascript" src="trix.js"></script>
+        <link rel="stylesheet" type="text/css" href="/css/trix.css">
+        <script type="text/javascript" src="/js/trix.js"></script>
         
         <style>
             trix-toolbar [data-trix-button-group="file-tools"] {
@@ -77,16 +77,18 @@
 
                             <div class="mb-3">
                                 <label
-                                    for="exampleFormControlInput1"
+                                    for="image"
                                     class="form-label"
                                     >Upload Foto</label
                                 >
+                                <img alt="" class="img-preview img-fluid mb-3 col-sm-5">
                                 <input
                                     type="file"
                                     class="form-control-buat @error('gambar') is-invalid @enderror"
-                                    id="exampleFormControlInput1"
+                                    id="image"
                                     name="gambar"
                                     required
+                                    onchange="previewImage()"
                                     />
                                 @error('gambar')
                                     <p class="text-danger">{{ $message }}</p>
@@ -132,6 +134,18 @@
             document.addEventListener('trix-file-accept', function(e) {
                 e.preventDefault();
               })
+
+            function previewImage() {
+                const image = document.querySelector('#image');
+                const imgPreview = document.querySelector('.img-preview');
+                imgPreview.style.display = 'block';
+                const oFReader = new FileReader();
+                oFReader.readAsDataURL(image.files[0]);
+                oFReader.onload = function(oFREvent) {
+                imgPreview.src = oFREvent.target.result;
+                }
+             }
+
         </script>
 
         </body>

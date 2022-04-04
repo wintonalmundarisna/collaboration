@@ -3,10 +3,8 @@
 namespace Database\Seeders;
 
 use App\Models\User;
-use App\Models\Quotes;
 use App\Models\Quottime;
 use Illuminate\Database\Seeder;
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 
 class DatabaseSeeder extends Seeder
 {
@@ -20,6 +18,11 @@ class DatabaseSeeder extends Seeder
         User::create([
             'nama' => 'Winton Almundarisna',
             'email' => 'wintonalmundarisna@gmail.com',
+            'password' => bcrypt('12345')
+        ]);
+        User::create([
+            'nama' => 'Ryan Fakhroji',
+            'email' => 'ryan@gmail.com',
             'password' => bcrypt('12345')
         ]);
         User::factory(10)->create();
