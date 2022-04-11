@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AdminController;
 use App\Http\Controllers\BuatQuoteController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LoginController;
@@ -37,3 +38,8 @@ Route::get('/edit/{quottime:tagar}', [QuotesController::class, 'edit'])->middlew
 Route::get('/lupa-password', function () {
     return view('lupa-password');
 })->middleware('guest');
+
+Route::resource('/users/quottime', AdminController::class)->except('show')->middleware('admin');
+Route::get('/cari', [AdminController::class, 'quotes'])->middleware('auth');
+
+Route::get('/user/{quottime:id}', [AdminController::class, 'edit'])->middleware('admin');

@@ -56,6 +56,9 @@
             <h3 class="mb-3">Ayo Mulai Membuat Quote-mu Sekarang!</h3>
             <button class="btn-buat mt-3 mb-3"><a href="/buat-quote" >Buat Quote</a></button>
             <button class="btn-edit mt-3 mb-3"><a href="/mypost/quottime">Edit Quote</a></button>
+            @can('admin')
+            <button class="btn-edit mt-3 mb-3"><a href="/users/quottime">Edit Users</a></button>
+            @endcan
           </div>
           <div class="col-md-6">
             <img src="/asset/hero-img-1.png" alt="Quottime" class="w-100" />
