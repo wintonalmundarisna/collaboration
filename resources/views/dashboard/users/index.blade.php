@@ -60,7 +60,7 @@
                     <td style="color: var(--color-2); width: 15%">Nama</td>
                     <td style="color: var(--color-2); width: 15%">Gambar</td>
                     <td style="color: var(--color-2); width: 40%">Quotes</td>
-                    <td style="color: var(--color-2); width: 10%">tagar</td>
+                    <td style="color: var(--color-2); width: 15%">tagar</td>
                     <td style="color: var(--color-2)">Edit / Hapus</td>
                 </tr>
             </thead>

@@ -102,7 +102,7 @@
                             </button>
 
                             <button class="btn-batal">
-                                <a href="#">Batal</a>
+                                <a href="/mypost/quottime">Batal</a>
                             </button>
                         </form>
                     </div>
