@@ -102,10 +102,6 @@
                             <button class="btn-daftar-login mt-2" type="submit">Masuk</button>
 
                             <p class="mt-2">
-                                <a href="/lupa-password">Lupa Password?</a>
-                            </p>
-
-                            <p class="mt-2">
                                 Tidak Memiliki Akun?
                                 <a href="/daftar">Daftar</a>
                             </p>
