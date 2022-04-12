@@ -299,7 +299,7 @@
                     <div class="col-md-12">
                         <p class="footer">
                             Copyright &copy; 2022 - Quottime All rights
-                            reserved.
+.
                         </p>
                     </div>
                 </div>
