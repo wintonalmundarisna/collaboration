@@ -413,9 +413,12 @@
                             alt="Quottime"
                             />
                           </div>
-                        @else
-                             <img src="https://source.unsplash.com/random/201x201?{{ $data[9]->gambar }}" alt="Quottime" class="position-absolute top-50 start-50 translate-middle">
-                        @endif
+                          @else
+                            <img
+                            src="https://source.unsplash.com/random/201x201?{{ $data[9]->gambar }}"
+                            alt="Quottime"
+                          />
+                            @endif
                         </div>
                         <div class="img-body">
                             <p>{!! $data[9]->user->nama !!} </p>

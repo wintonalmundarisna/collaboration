@@ -70,11 +70,15 @@
                     <td>{{ $loop->iteration }}</td>
                     <td>{{ $d->user->nama }}</td>
                     <td>
+                        @if ($d->gambar)
                         <img
-                            class="img-table"
-                            src="{{ asset('storage/' . $d->gambar) }}"
-                            alt="Quottime"
+                        class="img-table"
+                        src="{{ asset('storage/' . $d->gambar) }}"
+                        alt="Quottime"
                         />
+                        @else
+                        <p>Kosong</p>                            
+                        @endif
                     </td>
                     <td>
                         {!! $d->isi !!}
