@@ -405,7 +405,7 @@
             <div class="row mt-4">
               <div class="col-md-4 mt-3">
                 <div class="card-box text-center py-5">
-                        <div class="img-card position-relative mx-auto">
+                        <div class="img-card">
                         @if($data[9]->gambar)
                           <div style="max-height: 201; overflow:hidden;">
                             <img
@@ -455,7 +455,7 @@
               </div>
               <div class="col-md-4 mt-3">
                 <div class="card-box text-center py-5">
-                        <div class="img-card position-relative mx-auto">
+                        <div class="img-card">
                         @if($data[11]->gambar)
                           <div style="max-height: 201; overflow:hidden;">
                             <img

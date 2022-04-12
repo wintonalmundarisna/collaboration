@@ -124,7 +124,7 @@
                                 @else
                                 <img
                                 src="https://source.unsplash.com/random/201x201?{{ $d->gambar }}"
-                                alt="Quottime"
+                                alt="Quottime" class="position-absolute top-50 start-50 translate-middle">
                                 />
                                 @endif
                             </div>

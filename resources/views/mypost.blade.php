@@ -28,7 +28,7 @@
         <!-- Fav-icon -->
         <link rel="shortcut icon" href="/asset/logo-quottime.png" />
 
-        <title>Quottime | Selamat Datang Di Quottime</title>
+        <title>Quottime | MyPost</title>
     </head>
     <body>
         <!-- header -->

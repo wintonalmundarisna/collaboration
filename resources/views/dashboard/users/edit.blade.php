@@ -35,7 +35,7 @@
         <!-- Fav-icon -->
         <link rel="shortcut icon" href="/asset/logo-quottime.png" />
 
-        <title>Quottime | Edit Quotes</title>
+        <title>Quottime | Edit Quotes Users</title>
     </head>
     <body>
         <!-- start buat quote -->
@@ -102,7 +102,7 @@
                             </button>
 
                             <button class="btn-batal">
-                                <a href="/mypost/quottime">Batal</a>
+                                <a href="/users/quottime">Batal</a>
                             </button>
                         </form>
                     </div>
