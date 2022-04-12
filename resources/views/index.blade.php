@@ -298,8 +298,7 @@
                 <div class="row text-center">
                     <div class="col-md-12">
                         <p class="footer">
-                            Copyright &copy; 2022 - Quottime All rights
-.
+                            Copyright &copy; 2022 - Quottime ~ by ryan and winton.
                         </p>
                     </div>
                 </div>
