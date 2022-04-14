@@ -124,7 +124,7 @@
                                 @else
                                 <img
                                 src="https://source.unsplash.com/random/201x201?{{ $d->gambar }}"
-                                alt="Quottime"
+                                alt="Quottime" class="position-absolute top-50 start-50 translate-middle">
                                 />
                                 @endif
                             </div>
@@ -155,8 +155,7 @@
                 <div class="row text-center">
                     <div class="col-md-12">
                         <p class="footer">
-                            Copyright &copy; 2022 - Quottime All rights
-                            reserved.
+                            Copyright &copy; 2022 - Quottime ~ by ryan and winton.
                         </p>
                     </div>
                 </div>

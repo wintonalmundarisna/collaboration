@@ -141,12 +141,12 @@
                 <div class="row mt-4">
                     <div class="col-md-4 mt-3">
                         <div class="card-box text-center py-5">
-                            <div class="img-card position-relative mx-auto">
+                            <div class="img-card">
                                 <div style="max-height: 201; overflow:hidden;">
                                     <img
                                     src="{{ asset('storage/' . $data[0]->gambar) }}"
                                     alt="Quottime"
-                                    />
+                                     />
                                 </div>
                             </div>
                             <div class="img-body">
@@ -166,7 +166,7 @@
                     </div>
                     <div class="col-md-4 mt-3">
                         <div class="card-box text-center py-5">
-                            <div class="img-card position-relative mx-auto">
+                            <div class="img-card">
                                 <img
                                     src="{{ asset('storage/' . $data[1]->gambar) }}"
                                     alt="Quottime"
@@ -189,7 +189,7 @@
                     </div>
                     <div class="col-md-4 mt-3">
                         <div class="card-box text-center py-5">
-                            <div class="img-card position-relative mx-auto">
+                            <div class="img-card">
                                 <img
                                 src="{{ asset('storage/' . $data[2]->gambar) }}"
                                 alt="Quottime"
@@ -212,7 +212,7 @@
                     </div>
                     <div class="col-md-4 mt-3">
                         <div class="card-box text-center py-5">
-                            <div class="img-card position-relative mx-auto">
+                            <div class="img-card">
                                 <img
                                 src="{!! asset('storage/' . $data[3]->gambar) !!}"
                                 alt="Quottime"
@@ -235,7 +235,7 @@
                     </div>
                     <div class="col-md-4 mt-3">
                         <div class="card-box text-center py-5">
-                            <div class="img-card position-relative mx-auto">
+                            <div class="img-card">
                                 <img
                                 src="{!! asset('storage/' . $data[4]->gambar) !!}"
                                 alt="Quottime"
@@ -258,7 +258,7 @@
                     </div>
                     <div class="col-md-4 mt-3">
                         <div class="card-box text-center py-5">
-                            <div class="img-card position-relative mx-auto">
+                            <div class="img-card">
                                 <img
                                 src="{{ asset('storage/' . $data[5]->gambar) }}"
                                 alt="Quottime"
@@ -298,8 +298,7 @@
                 <div class="row text-center">
                     <div class="col-md-12">
                         <p class="footer">
-                            Copyright &copy; 2022 - Quottime All rights
-                            reserved.
+                            Copyright &copy; 2022 - Quottime ~ by ryan and winton.
                         </p>
                     </div>
                 </div>

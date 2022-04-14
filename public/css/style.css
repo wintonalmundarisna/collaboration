@@ -394,9 +394,11 @@ h1 {
     border-radius: 50%;
     background-color: transparent;
     position: relative;
-    margin-right: auto;
-    margin-left: auto;
     overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
 }
 
 .img-card img {
