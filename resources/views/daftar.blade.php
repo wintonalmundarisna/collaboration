@@ -78,6 +78,7 @@
     border: 1px solid rgba(255, 255, 255, 0.18);"
                                     required
                                     autofocus
+                                    autocomplete="none"
                                     value="{{ old('nama') }}"
                                 />
                                 @error('nama')
@@ -104,6 +105,7 @@
                                     placeholder="name@example.com"
                                     name="email"
                                     required
+                                    autocomplete="none"
                                     value="{{ old('email') }}"
                                 />
                             @error('email')

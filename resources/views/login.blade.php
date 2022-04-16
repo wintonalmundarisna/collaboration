@@ -61,12 +61,13 @@
                                     id="exampleFormControlInput1"
                                     placeholder="name@example.com"
                                     name="email"
+                                    autocomplete="none"
                                     class="form-control @error('email') is-invalid @enderror"
                                     style="background: rgba(255, 255, 255, 0.20);
-    backdrop-filter: blur(4px);
-    -webkit-backdrop-filter: blur(4px);
-    border-radius: 10px;
-    border: 1px solid rgba(255, 255, 255, 0.18);"
+                                            backdrop-filter: blur(4px);
+                                            -webkit-backdrop-filter: blur(4px);
+                                            border-radius: 10px;
+                                            border: 1px solid rgba(255, 255, 255, 0.18);"
                                     autofocus
                                     required
                                     value="{{ old('email') }}"/>
