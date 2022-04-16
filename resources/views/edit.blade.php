@@ -78,11 +78,11 @@
                                 class="form-label"
                                 >Upload Foto</label
                             >
-                            <input type="hidden" name="oldImage" value="{{ old('gambar', $data->gambar) }}">
+                            <input type="hidden" name="oldImage" value="{{ $data->gambar }}">
                             @if ($data->gambar)
-                              <img src="{{ asset('storage/' . $data->gambar) }}" value="{{ old('gambar', $data->gambar) }}" alt="" class="img-preview img-fluid mb-3 col-sm-5 d-block">
+                              <img src="{{ asset('storage/' . $data->gambar) }}" alt="" class="img-preview img-fluid mb-3 col-sm-5 d-block">
                             @else
-                              <img alt="{{ $data->gambar }}"  value="{{ old('gambar', $data->gambar) }}" class="img-preview img-fluid mb-3 col-sm-5">
+                              <img alt="{{ $data->gambar }}" class="img-preview img-fluid mb-3 col-sm-5">
                             @endif
                             <input
                                 type="file"
@@ -116,7 +116,8 @@
                 <div class="row text-center">
                     <div class="col-md-12">
                         <p class="footer">
-                            Copyright &copy; 2022 - Quottime ~ by ryan and winton.
+                            Copyright &copy; 2022 - Quottime All rights
+                            reserved.
                         </p>
                     </div>
                 </div>
