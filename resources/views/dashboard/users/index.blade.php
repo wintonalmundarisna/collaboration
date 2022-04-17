@@ -79,7 +79,7 @@
                         @if ($d->gambar)
                         <img
                         class="img-table"
-                        src="{{ asset('storage/' . $d->gambar) }}"
+                        src="{{ asset('img/' . $d->gambar) }}"
                         alt="Quottime"
                         />
                         @else

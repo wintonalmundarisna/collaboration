@@ -82,31 +82,37 @@ class AdminController extends Controller
      */
     public function update(Request $request, Quottime $quottime)
     {
-        $rules = [
+        $request->validate([
             'tagar' => 'required|max:20',
             'gambar' => 'image|file|max:1024',
             'isi' => 'required'
-        ];
+        ]);
 
-        $validatedData = $request->validate($rules);
+        $request['user_id'] = auth()->user()->id;
+        $request['tagar'] = Str::limit(strip_tags($request->tagar), 30);
+        $request['isi'] = preg_replace('#</?(div|h1).*?>#is', '', $request->isi);
+        
+        $input = $request->all();
 
-        if ($request->file('gambar')) {
+        if ($image = $request->file('gambar')) {
+
             if ($request->oldImage) {
-                Storage::delete($request->oldImage);
+                unlink('img/' . $quottime->gambar);
             }
-            $validatedData['gambar'] = $request->file('gambar')->store('gambar');
+
+            $destinationPath = 'img/';
+            // $profileImage = date('YmdHis') . "." . $image->getClientOriginalExtension();
+            $profileImage = $image->getClientOriginalName();
+            $image->move($destinationPath, $profileImage);
+            $input['gambar'] = "$profileImage";
         }
-        // Kalo ada request gambar, kalo ada request gambar hidden yang lama, hapus, lalu masukkan gambar baru
 
-        $validatedData['user_id'] = auth()->user()->id;
-        $validatedData['tagar'] = Str::limit(strip_tags($request->tagar), 30);
-        $validatedData['isi'] = preg_replace('#</?div.*?>#is', '', $request->isi);
+        
+        $quottime->update($input);
 
-        Quottime::where('id', $quottime->id)->update($validatedData);
-
-        // if ($quottime->user->id !== auth()->user()->id) {
-        //     abort(403);
-        // }
+        if ($quottime->user->id !== auth()->user()->id) {
+            abort(403);
+        }
 
         return redirect('/users/quottime');
     }
@@ -120,7 +126,7 @@ class AdminController extends Controller
     public function destroy(Quottime $quottime)
     {
         if ($quottime->gambar) {
-            Storage::delete($quottime->gambar);
+            unlink('img/' . $quottime->gambar);
         }
 
         Quottime::destroy($quottime->id);

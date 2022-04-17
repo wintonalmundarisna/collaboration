@@ -42,14 +42,14 @@ class QuotesController extends Controller
     {
 
         $validatedData = $request->validate([
-            'tagar' => 'required|max:80',
+            'tagar' => 'required|max:200',
             'gambar' => 'image|file|max:1024',
-            'isi' => 'required|max:200'
+            'isi' => 'required|max:500'
         ]);
 
         $validatedData['user_id'] = auth()->user()->id;
-        $validatedData['tagar'] = Str::limit(strip_tags($request->tagar), 80);
-        $validatedData['isi'] = preg_replace('#</?div.*?>#is', '', $request->isi);
+        $validatedData['tagar'] = Str::limit(strip_tags($request->tagar), 200);
+        $validatedData['isi'] = preg_replace('#</?(div|br).*?>#is', '', $request->isi);
         $data = Quottime::create($validatedData);
 
         if ($request->hasFile('gambar')) {
