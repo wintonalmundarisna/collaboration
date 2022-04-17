@@ -47,7 +47,7 @@
             <thead style="background: rgba(255, 255, 255, 0.20)">
                 <tr>
                     <td style="color: var(--color-2); width: 5%">No</td>
-                    <td style="color: var(--color-2); width: 15%">Nama</td>
+                    <td style="color: var(--color-2); width: 15%">Tagar</td>
                     <td style="color: var(--color-2); width: 15%">Foto</td>
                     <td style="color: var(--color-2); width: 40%">Quotes</td>
                     <td style="color: var(--color-2)">Edit / Hapus</td>
@@ -57,11 +57,11 @@
                 @foreach ($data as $d)
                 <tr>
                     <td>{{ $loop->iteration }}</td>
-                    <td>{{ $d->user->nama }}</td>
+                    <td>{{ $d->tagar }}</td>
                     <td>
                         <img
                             class="img-table"
-                            src="{{ asset('storage/' . $d->gambar) }}"
+                            src="{{ asset('img/'. $d->gambar) }}"
                             alt="Quottime"
                         />
                     </td>

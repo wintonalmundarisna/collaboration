@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Quottime;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Facades\File;
 use Illuminate\Support\Str;
 
 class QuotesController extends Controller
@@ -39,22 +40,25 @@ class QuotesController extends Controller
      */
     public function store(Request $request)
     {
+
         $validatedData = $request->validate([
             'tagar' => 'required|max:80',
             'gambar' => 'image|file|max:1024',
             'isi' => 'required|max:200'
         ]);
 
-        if ($request->file('gambar')) {
-            $validatedData['gambar'] = $request->file('gambar')->store('gambar');
-        }
-
         $validatedData['user_id'] = auth()->user()->id;
-        // strip_tags biar semua element htmlnya hilang
         $validatedData['tagar'] = Str::limit(strip_tags($request->tagar), 80);
         $validatedData['isi'] = preg_replace('#</?div.*?>#is', '', $request->isi);
-        Quottime::create($validatedData);
-        return redirect('/mypost/quottime')->with('berhasil', 'Quotes berhasil dibuat');
+        $data = Quottime::create($validatedData);
+
+        if ($request->hasFile('gambar')) {
+            $request->file('gambar')->move('img/', $request->file('gambar')->getClientOriginalName());
+            $data->gambar = $request->file('gambar')->getClientOriginalName();
+            $data->save();
+        }
+
+        return redirect('/mypost/quottime');
     }
 
     /**
@@ -94,34 +98,39 @@ class QuotesController extends Controller
      */
     public function update(Request $request, Quottime $quottime)
     {
-        $rules = [
+        $request->validate([
             'tagar' => 'required|max:20',
             'gambar' => 'image|file|max:1024',
             'isi' => 'required'
-        ];
+        ]);
 
-        $validatedData = $request->validate($rules);
+        $request['user_id'] = auth()->user()->id;
+        $request['tagar'] = Str::limit(strip_tags($request->tagar), 30);
+        $request['isi'] = preg_replace('#</?div.*?>#is', '', $request->isi);
+        
+        $input = $request->all();
 
-        if ($request->file('gambar')) {
+        if ($image = $request->file('gambar')) {
+
             if ($request->oldImage) {
-                Storage::delete($request->oldImage);
+                unlink('img/' . $quottime->gambar);
             }
-            $validatedData['gambar'] = $request->file('gambar')->store('gambar');
+
+            $destinationPath = 'img/';
+            // $profileImage = date('YmdHis') . "." . $image->getClientOriginalExtension();
+            $profileImage = $image->getClientOriginalName();
+            $image->move($destinationPath, $profileImage);
+            $input['gambar'] = "$profileImage";
         }
-        // Kalo ada request gambar, kalo ada request gambar hidden yang lama, hapus, lalu masukkan gambar baru
 
-        $validatedData['user_id'] = auth()->user()->id;
-        $validatedData['tagar'] = Str::limit(strip_tags($request->tagar), 30);
-        $validatedData['isi'] = preg_replace('#</?div.*?>#is', '', $request->isi);
-
-        Quottime::where('id', $quottime->id)->update($validatedData);
+        
+        $quottime->update($input);
 
         if ($quottime->user->id !== auth()->user()->id) {
             abort(403);
         }
 
         return redirect('/mypost/quottime');
-
     }
 
     /**
@@ -133,9 +142,8 @@ class QuotesController extends Controller
     public function destroy(Quottime $quottime)
     {
         if ($quottime->gambar) {
-            Storage::delete($quottime->gambar);
+            unlink('img/' . $quottime->gambar);
         }
-        // Kalo ada file gambar, maka hapus
 
         Quottime::destroy($quottime->id);
         return redirect('/mypost/quottime');

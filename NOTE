@@ -1,0 +1,54 @@
+// $validatedData = $request->validate([
+        //     'tagar' => 'required|max:80',
+        //     'gambar' => 'image|file|max:1024',
+        //     'isi' => 'required|max:200'
+        // ]);
+
+        // if ($request->file('gambar')) {
+        //     $validatedData['gambar'] = $request->file('gambar')->store('gambar');
+        // }
+
+        // $validatedData['user_id'] = auth()->user()->id;
+        // strip_tags biar semua element htmlnya hilang
+        // $validatedData['tagar'] = Str::limit(strip_tags($request->tagar), 80);
+        // $validatedData['isi'] = preg_replace('#</?div.*?>#is', '', $request->isi);
+        // Quottime::create($validatedData);
+        // return redirect('/mypost/quottime')->with('berhasil', 'Quotes berhasil dibuat');
+
+
+        if ($quottime->gambar) {
+            Storage::delete($quottime->gambar);
+        }
+
+        Quottime::destroy($quottime->id);
+        return redirect('/mypost/quottime');
+
+
+
+
+        $validatedData = $request->validate([
+            'tagar' => 'required|max:20',
+            'gambar' => 'image|file|max:1024',
+            'isi' => 'required'
+        ]);
+
+        $validatedData['user_id'] = auth()->user()->id;
+        $validatedData['tagar'] = Str::limit(strip_tags($request->tagar), 80);
+        $validatedData['isi'] = preg_replace('#</?div.*?>#is', '', $request->isi);
+        $data = Quottime::create($validatedData);;
+
+        if ($request->file('gambar')) {
+            if ($request->oldImage) {
+                unlink('img/' . $quottime->gambar);
+            }
+
+            $request->file('gambar')->move('img/', $request->file('gambar')->getClientOriginalName());
+            $data->gambar = $request->file('gambar')->getClientOriginalName();
+            $data->save();
+        }
+
+        if ($quottime->user->id !== auth()->user()->id) {
+            abort(403);
+        }
+        
+        return redirect('/mypost/quottime');

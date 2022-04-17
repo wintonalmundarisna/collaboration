@@ -78,9 +78,9 @@
                                 class="form-label"
                                 >Upload Foto</label
                             >
-                            <input type="hidden" name="oldImage" value="{{ $data->gambar }}">
+                            <input type="hidden" name="oldImage" value="{{ asset('img/' . $data->gambar) }}">
                             @if ($data->gambar)
-                              <img src="{{ asset('storage/' . $data->gambar) }}" alt="" class="img-preview img-fluid mb-3 col-sm-5 d-block">
+                              <img src="{{ asset('img/' . $data->gambar) }}" alt="" class="img-preview img-fluid mb-3 col-sm-5 d-block">
                             @else
                               <img alt="{{ $data->gambar }}" class="img-preview img-fluid mb-3 col-sm-5">
                             @endif

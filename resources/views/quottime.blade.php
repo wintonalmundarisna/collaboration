@@ -89,7 +89,8 @@
                         @if($data[0]->gambar)
                           <div style="max-height: 201; overflow:hidden;">
                             <img
-                            src="{{ asset('storage/' . $data[0]->gambar) }}"
+                            src="{{ asset('img/' . $data[0]->gambar) }}"
+                            {{-- src="{{ $data[0]->gambar }}" --}}
                             alt="Quottime"
                             />
                           </div>
@@ -118,7 +119,7 @@
                         @if($data[1]->gambar)
                           <div style="max-height: 201; overflow:hidden;">
                             <img
-                            src="{{ asset('storage/' . $data[1]->gambar) }}"
+                            src="{{ asset('img/' . $data[1]->gambar) }}"
                             alt="Quottime"
                             />
                           </div>
@@ -147,7 +148,7 @@
                         @if($data[2]->gambar)
                           <div style="max-height: 201; overflow:hidden;">
                             <img
-                            src="{{ asset('storage/' . $data[2]->gambar) }}"
+                            src="{{ asset('img/' . $data[2]->gambar) }}"
                             alt="Quottime"
                             />
                           </div>
@@ -180,7 +181,7 @@
                         @if($data[3]->gambar)
                           <div style="max-height: 201; overflow:hidden;">
                             <img
-                            src="{{ asset('storage/' . $data[3]->gambar) }}"
+                            src="{{ asset('img/' . $data[3]->gambar) }}"
                             alt="Quottime"
                             />
                           </div>
@@ -209,7 +210,7 @@
                         @if($data[4]->gambar)
                           <div style="max-height: 201; overflow:hidden;">
                             <img
-                            src="{{ asset('storage/' . $data[4]->gambar) }}"
+                            src="{{ asset('img/' . $data[4]->gambar) }}"
                             alt="Quottime"
                             />
                           </div>
@@ -238,7 +239,7 @@
                         @if($data[5]->gambar)
                           <div style="max-height: 201; overflow:hidden;">
                             <img
-                            src="{{ asset('storage/' . $data[5]->gambar) }}"
+                            src="{{ asset('img/' . $data[5]->gambar) }}"
                             alt="Quottime"
                             />
                           </div>
@@ -292,7 +293,7 @@
                         @if($data[6]->gambar)
                           <div style="max-height: 201; overflow:hidden;">
                             <img
-                            src="{{ asset('storage/' . $data[6]->gambar) }}"
+                            src="{{ asset('img/' . $data[6]->gambar) }}"
                             alt="Quottime"
                             />
                           </div>
@@ -325,7 +326,7 @@
                         @if($data[7]->gambar)
                         <div style="max-height: 201; overflow:hidden;">
                           <img
-                          src="{{ asset('storage/' . $data[7]->gambar) }}"
+                          src="{{ asset('img/' . $data[7]->gambar) }}"
                           alt="Quottime"
                           />
                         </div>
@@ -358,7 +359,7 @@
                         @if($data[8]->gambar)
                           <div style="max-height: 201; overflow:hidden;">
                             <img
-                            src="{{ asset('storage/' . $data[8]->gambar) }}"
+                            src="{{ asset('img/' . $data[8]->gambar) }}"
                             alt="Quottime"
                             />
                           </div>
@@ -409,7 +410,7 @@
                         @if($data[9]->gambar)
                           <div style="max-height: 201; overflow:hidden;">
                             <img
-                            src="{{ asset('storage/' . $data[9]->gambar) }}"
+                            src="{{ asset('img/' . $data[9]->gambar) }}"
                             alt="Quottime"
                             />
                           </div>
@@ -437,7 +438,7 @@
                         @if($data[10]->gambar)
                           <div style="max-height: 201; overflow:hidden;">
                             <img
-                            src="{{ asset('storage/' . $data[10]->gambar) }}"
+                            src="{{ asset('img/' . $data[10]->gambar) }}"
                             alt="Quottime"
                             />
                           </div>
@@ -462,7 +463,7 @@
                         @if($data[11]->gambar)
                           <div style="max-height: 201; overflow:hidden;">
                             <img
-                            src="{{ asset('storage/' . $data[11]->gambar) }}"
+                            src="{{ asset('img/' . $data[11]->gambar) }}"
                             alt="Quottime"
                             />
                           </div>
