@@ -144,7 +144,7 @@
                             <div class="img-card">
                                 <div style="max-height: 201; overflow:hidden;">
                                     <img
-                                    src="{{ asset('storage/' . $data[0]->gambar) }}"
+                                    src="{{ asset('img/' . $data[0]->gambar) }}"
                                     alt="Quottime"
                                      />
                                 </div>
@@ -168,7 +168,7 @@
                         <div class="card-box text-center py-5">
                             <div class="img-card">
                                 <img
-                                    src="{{ asset('storage/' . $data[1]->gambar) }}"
+                                    src="{{ asset('img/' . $data[1]->gambar) }}"
                                     alt="Quottime"
                                     />
                             </div>
@@ -191,7 +191,7 @@
                         <div class="card-box text-center py-5">
                             <div class="img-card">
                                 <img
-                                src="{{ asset('storage/' . $data[2]->gambar) }}"
+                                src="{{ asset('img/' . $data[2]->gambar) }}"
                                 alt="Quottime"
                                 />
                             </div>
@@ -214,7 +214,7 @@
                         <div class="card-box text-center py-5">
                             <div class="img-card">
                                 <img
-                                src="{!! asset('storage/' . $data[3]->gambar) !!}"
+                                src="{!! asset('img/' . $data[3]->gambar) !!}"
                                 alt="Quottime"
                                 />
                             </div>
@@ -237,7 +237,7 @@
                         <div class="card-box text-center py-5">
                             <div class="img-card">
                                 <img
-                                src="{!! asset('storage/' . $data[4]->gambar) !!}"
+                                src="{!! asset('img/' . $data[4]->gambar) !!}"
                                 alt="Quottime"
                                 />
                             </div>
@@ -260,7 +260,7 @@
                         <div class="card-box text-center py-5">
                             <div class="img-card">
                                 <img
-                                src="{{ asset('storage/' . $data[5]->gambar) }}"
+                                src="{{ asset('img/' . $data[5]->gambar) }}"
                                 alt="Quottime"
                                 />
                             </div>

@@ -90,7 +90,7 @@ class AdminController extends Controller
 
         $request['user_id'] = auth()->user()->id;
         $request['tagar'] = Str::limit(strip_tags($request->tagar), 30);
-        $request['isi'] = preg_replace('#</?(div|h1).*?>#is', '', $request->isi);
+        $request['isi'] = preg_replace('#</?div.*?>#is', '', $request->isi);
         
         $input = $request->all();
 

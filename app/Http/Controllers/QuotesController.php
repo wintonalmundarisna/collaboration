@@ -42,14 +42,15 @@ class QuotesController extends Controller
     {
 
         $validatedData = $request->validate([
-            'tagar' => 'required|max:200',
-            'gambar' => 'image|file|max:1024',
+            'tagar' => 'required|max:200|unique:quottimes',
+            'gambar' => 'image|file|max:1024|unique:quottimes',
             'isi' => 'required|max:500'
         ]);
 
         $validatedData['user_id'] = auth()->user()->id;
         $validatedData['tagar'] = Str::limit(strip_tags($request->tagar), 200);
-        $validatedData['isi'] = preg_replace('#</?(div|br).*?>#is', '', $request->isi);
+        $validatedData['tagar'] = preg_replace('#</?(div|/).*?>#is', '', $request->tagar);
+        $validatedData['isi'] = preg_replace('#</?div.*?>#is', '', $request->isi);
         $data = Quottime::create($validatedData);
 
         if ($request->hasFile('gambar')) {
@@ -99,13 +100,14 @@ class QuotesController extends Controller
     public function update(Request $request, Quottime $quottime)
     {
         $request->validate([
-            'tagar' => 'required|max:20',
-            'gambar' => 'image|file|max:1024',
+            'tagar' => 'required|max:20|unique:quottimes',
+            'gambar' => 'image|file|max:1024|unique:quottimes',
             'isi' => 'required'
         ]);
 
         $request['user_id'] = auth()->user()->id;
         $request['tagar'] = Str::limit(strip_tags($request->tagar), 30);
+        $request['tagar'] = preg_replace('#</?(div|/).*?>#is', '', $request->tagar);
         $request['isi'] = preg_replace('#</?div.*?>#is', '', $request->isi);
         
         $input = $request->all();
