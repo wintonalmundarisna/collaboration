@@ -100,10 +100,13 @@ class QuotesController extends Controller
     public function update(Request $request, Quottime $quottime)
     {
         $request->validate([
-            'tagar' => 'required|max:20|unique:quottimes',
-            'gambar' => 'image|file|max:1024|unique:quottimes',
             'isi' => 'required'
         ]);
+
+        if ($request->tagar != $quottime->tagar && $request->gambar != $quottime->gambar ) {
+            $request['tagar'] = 'required|max:20|unique:quottimes';
+            $request['gambar'] = 'image|file|max:1024|unique:quottimes';
+        }
 
         $request['user_id'] = auth()->user()->id;
         $request['tagar'] = Str::limit(strip_tags($request->tagar), 30);

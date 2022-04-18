@@ -117,7 +117,7 @@
                                 @if($d->gambar)
                                 <div style="max-height: 201; overflow:hidden;">
                                     <img
-                                    src="{{ asset('storage/' . $d->gambar) }}"
+                                    src="{{ asset('img/' . $d->gambar) }}"
                                     alt="Quottime"
                                     />
                                 </div>
