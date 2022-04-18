@@ -17,7 +17,7 @@ return new class extends Migration
         Schema::create('quottimes', function (Blueprint $table) {
             $table->id();
             $table->foreignId('user_id');
-            $table->string('gambar')->nullable();
+            $table->string('gambar')->unique();
             $table->string('tagar');
             $table->text('isi');
             $table->timestamp('published_at')->nullable();

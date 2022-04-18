@@ -38,14 +38,20 @@ class QuotesController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(Request $request, Quottime $quottime)
     {
-
-        $validatedData = $request->validate([
+        $rules = [
             'tagar' => 'required|max:200|unique:quottimes',
             'gambar' => 'image|file|max:1024|unique:quottimes',
             'isi' => 'required|max:500'
-        ]);
+        ];
+        
+        if (isset($_Post['gambar']) == $quottime['gambar']) {
+            $rules['gambar'] = 'image|file|max:1024|unique:quottimes';
+            return redirect('buat-quote')->with('error', 'Gambar sudah terpakai');
+        }
+
+        $validatedData = $request->validate($rules);
 
         $validatedData['user_id'] = auth()->user()->id;
         $validatedData['tagar'] = Str::limit(strip_tags($request->tagar), 200);
@@ -54,7 +60,7 @@ class QuotesController extends Controller
         $data = Quottime::create($validatedData);
 
         if ($request->hasFile('gambar')) {
-            $request->file('gambar')->move('img/', $request->file('gambar')->getClientOriginalName());
+            $request->file('gambar')->move('img/', $request->file('gambar')->getClientOriginalExtension());
             $data->gambar = $request->file('gambar')->getClientOriginalName();
             $data->save();
         }

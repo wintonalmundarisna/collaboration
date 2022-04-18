@@ -103,7 +103,13 @@
                                     <p class="text-danger">{{ $message }}</p>
                                 @enderror
                             </div>
-                            <button class="btn-buat-quote mt-2 me-2" type="submit">
+                            @if(session()->has('error'))
+                            <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                                <strong>{{ session('error') }}</strong>
+                                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                            </div>
+                            @endif
+                            <button class="btn-buat-quote mt-2 me-2">
                                 Simpan
                             </button>
 
