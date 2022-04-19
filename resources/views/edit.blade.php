@@ -54,12 +54,15 @@
                                 >
                                 <input
                                     type="text"
-                                    class="form-control"
+                                    class="form-control @error('tagar') is-invalid @enderror"
                                     id="exampleFormControlInput1"
                                     placeholder="Nama Lengkap"
                                     name="tagar"
                                     value="{{ old('tagar', $data->tagar) }}"
                                     />
+                                    @error('tagar')
+                                        <p class="text-danger">{{ $message }}</p>
+                                    @enderror
                             </div>
                             <div class="mb-3">
                               <label
@@ -69,7 +72,7 @@
                                   @error('isi')
                                       <p class="text-danger">{{ $message }}</p>
                                   @enderror
-                                      <input id="isi" type="hidden" value="{{ old('isi', $data->isi) }}" name="isi" required>
+                                      <input id="isi" type="hidden" class="@error('isi') is-invalid @enderror" value="{{ old('isi', $data->isi) }}" name="isi" required>
                                       <trix-editor input="isi"></trix-editor>
                           </div>
                           <div class="mb-3">
@@ -95,6 +98,12 @@
                             @error('gambar')
                                 <p class="text-danger">{{ $message }}</p>
                             @enderror
+                            @if(session()->has('gagal'))
+                                <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                                    <strong>{{ session('gagal') }}</strong>
+                                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                                </div>
+                                @endif
                         </div>
                             
                             <button class="btn-buat-quote mt-2 me-2" type="submit">

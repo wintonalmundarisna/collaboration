@@ -82,35 +82,34 @@ class AdminController extends Controller
      */
     public function update(Request $request, Quottime $quottime)
     {
-        $request->validate([
+        $rules = [
+            'gambar' => 'image|file|max:1024',
             'isi' => 'required'
-        ]);
+        ];
 
-        if ($request->tagar != $quottime->tagar && $request->gambar != $quottime->gambar ) {
-            $request['tagar'] = 'required|max:20|unique:quottimes';
-            $request['gambar'] = 'image|file|max:1024|unique:quottimes';
+        if ($request->tagar != $quottime->tagar) {
+            $rules['tagar'] = 'required|max:200|unique:quottimes';
         }
-
-        $request['user_id'] = auth()->user()->id;
-        $request['tagar'] = Str::limit(strip_tags($request->tagar), 30);
-        $request['isi'] = preg_replace('#</?div.*?>#is', '', $request->isi);
         
-        $input = $request->all();
+        $input = $request->validate($rules);
 
+        $input['user_id'] = auth()->user()->id;
+        $input['tagar'] = Str::limit(strip_tags($request->tagar), 200);
+        $input['tagar'] = preg_replace('#</?(div|/).*?>#is', '', $request->tagar);
+        $input['isi'] = preg_replace('#</?div.*?>#is', '', $request->isi);
+        
         if ($image = $request->file('gambar')) {
-
             if ($request->oldImage) {
                 unlink('img/' . $quottime->gambar);
             }
 
-            $destinationPath = 'img/';
-            // $profileImage = date('YmdHis') . "." . $image->getClientOriginalExtension();
-            $profileImage = $image->getClientOriginalName();
-            $image->move($destinationPath, $profileImage);
-            $input['gambar'] = "$profileImage";
+            $fileName = pathinfo($image->getClientOriginalName(), PATHINFO_FILENAME);
+            $imageName = $fileName . "-" . time() . "." . $image->getClientOriginalExtension();
+            $uploadPath = 'img/';
+            $image->move($uploadPath, $imageName);
+            $input['gambar'] = $imageName;
         }
 
-        
         $quottime->update($input);
 
         if ($quottime->user->id !== auth()->user()->id) {

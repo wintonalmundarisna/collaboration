@@ -95,7 +95,8 @@
             <div class="container">
             <div class="row text-center">
               <div class="col-md-12">
-                    <button class="btn-read-more"><a href="/quottime">Kembali</a></button>
+                  <button class="btn-read-more"><a href="/quottime">Kembali</a></button>
+                    {{-- <button class="btn-read-more"><a href="/buat-quote">Kembali</a></button> --}}
               </div>
             </div>
             </div>
