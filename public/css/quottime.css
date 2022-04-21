@@ -198,6 +198,12 @@ h1 {
     font-size: 28px;
     font-weight: 500;
 }
+
+.carousel-indicators .btn-radius {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+}
 /* akhir bagian postingan terbaru */
 
 /* awal bagian quotes */

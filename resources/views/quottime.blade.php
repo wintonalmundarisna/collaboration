@@ -279,9 +279,17 @@
         <!-- mobile -->
         <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
           <div class="carousel-indicators d-block d-sm-none text-center">
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active btn-radius" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+            class="btn-radius" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+            class="btn-radius" aria-label="Slide 3"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3"
+            class="btn-radius" aria-label="Slide 4"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4"
+            class="btn-radius" aria-label="Slide 5"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="5"
+            class="btn-radius" aria-label="Slide 6"></button>
           </div>
           <div class="carousel-inner">
             <div class="container">
@@ -383,6 +391,106 @@
                   </div>
                 </div>
               </div>
+
+              <div class="carousel-item p-3">
+                <div class="row justify-content-center">
+                  <div class="col-md-12 d-block d-sm-none">
+                    <div class="card-box text-center py-5">
+                      <div class="img-card">
+                        @if($data[8]->gambar)
+                          <div style="max-height: 201; overflow:hidden;">
+                            <img
+                            src="{{ asset('img/' . $data[8]->gambar) }}"
+                            alt="Quottime"
+                            />
+                          </div>
+                        @else
+                          <img
+                            src="https://source.unsplash.com/random/201x201?{{ $data[8]->gambar }}"
+                            alt="Quottime"
+                          />
+                        @endif
+                      </div>
+                      <div class="img-body">
+                        <p>{!! $data[8]->user->nama !!}</p>
+                      </div>
+                      <div class="quote-text p-2">
+                        <p><i>" {!! $data[8]->isi !!} "</i></p>
+                      </div>
+                      <div class="tagar text-tagar">
+                        <p># {!! $data[8]->tagar !!}</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="carousel-item p-3">
+                <div class="row justify-content-center">
+                  <div class="col-md-12 d-block d-sm-none">
+                    <div class="card-box text-center py-5">
+                      <div class="img-card">
+                        @if($data[8]->gambar)
+                          <div style="max-height: 201; overflow:hidden;">
+                            <img
+                            src="{{ asset('img/' . $data[8]->gambar) }}"
+                            alt="Quottime"
+                            />
+                          </div>
+                        @else
+                          <img
+                            src="https://source.unsplash.com/random/201x201?{{ $data[8]->gambar }}"
+                            alt="Quottime"
+                          />
+                        @endif
+                      </div>
+                      <div class="img-body">
+                        <p>{!! $data[8]->user->nama !!}</p>
+                      </div>
+                      <div class="quote-text p-2">
+                        <p><i>" {!! $data[8]->isi !!} "</i></p>
+                      </div>
+                      <div class="tagar text-tagar">
+                        <p># {!! $data[8]->tagar !!}</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="carousel-item p-3">
+                <div class="row justify-content-center">
+                  <div class="col-md-12 d-block d-sm-none">
+                    <div class="card-box text-center py-5">
+                      <div class="img-card">
+                        @if($data[8]->gambar)
+                          <div style="max-height: 201; overflow:hidden;">
+                            <img
+                            src="{{ asset('img/' . $data[8]->gambar) }}"
+                            alt="Quottime"
+                            />
+                          </div>
+                        @else
+                          <img
+                            src="https://source.unsplash.com/random/201x201?{{ $data[8]->gambar }}"
+                            alt="Quottime"
+                          />
+                        @endif
+                      </div>
+                      <div class="img-body">
+                        <p>{!! $data[8]->user->nama !!}</p>
+                      </div>
+                      <div class="quote-text p-2">
+                        <p><i>" {!! $data[8]->isi !!} "</i></p>
+                      </div>
+                      <div class="tagar text-tagar">
+                        <p># {!! $data[8]->tagar !!}</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
             </div>
           </div>
         </div>
